@@ -9,7 +9,6 @@ import { Shop } from "./components/Shop/Shop";
 import { About } from "./components/About/About";
 
 function App() {
-    console.log("poney");
     return (
         <div className="App">
             <HashRouter>
