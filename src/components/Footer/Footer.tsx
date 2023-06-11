@@ -3,9 +3,9 @@ import "./Footer.scss";
 
 export const Footer: React.FC = (props) => {
     return (
-        <footer className="flex-row p-gf">
+        <footer>
             <svg
-                className="p-gf__triangle"
+                className="triangle"
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -15,42 +15,42 @@ export const Footer: React.FC = (props) => {
             >
                 <polygon points="0,480 0,0 1920,0 "></polygon>
             </svg>
-            <div className="p-gf__bg">
-                <div className="p-gf__bg__container">
-                    <div className="p-gf__bg__wrapper"></div>
-                    <div className="p-gf__bg__main">
-                        <div className="c-container">
-                            <div className="p-gf__logo">
+            <div className="bg">
+                <div className="bg__container">
+                    <div className="bg__wrapper"></div>
+                    <div className="bg__main">
+                        <div className="bg-container">
+                            <div className="logo">
                                 <img
-                                    src="https://cheesetart.com/wp-content/themes/bake/assets/images/common/logo--white.svg"
-                                    alt="BAKE CHEESE TART"
+                                    src="./logo--white.svg"
+                                    alt="KA logo white"
                                 />
                             </div>
-                            <div className="p-gf__info">
-                                <div className="p-gf__info__local">
+                            <div className="info">
+                                <div className="info__local">
                                     <a
-                                        className="p-gf__info__local__link c-pagelink"
+                                        className="info__local__link c-pagelink"
                                         href="/#bake_cheese_tart"
                                         data-hash="bake_cheese_tart"
                                     >
                                         BAKE CHEESE TART
                                     </a>
                                     <a
-                                        className="p-gf__info__local__link c-pagelink"
+                                        className="info__local__link c-pagelink"
                                         href="/#essence"
                                         data-hash="essence"
                                     >
                                         ESSENCE
                                     </a>
                                     <a
-                                        className="p-gf__info__local__link c-pagelink"
+                                        className="info__local__link c-pagelink"
                                         href="/#price"
                                         data-hash="price"
                                     >
                                         PRICE
                                     </a>
                                     <a
-                                        className="p-gf__info__local__link c-pagelink"
+                                        className="info__local__link c-pagelink"
                                         href="/#bite"
                                         data-hash="bite"
                                     >
@@ -58,28 +58,28 @@ export const Footer: React.FC = (props) => {
                                     </a>
                                     <div>
                                         <a
-                                            className="p-gf__info__local__link c-pagelink"
+                                            className="info__local__link c-pagelink"
                                             href="/#bake"
                                             data-hash="bake"
                                         >
                                             PHILOSOPHY
                                         </a>
                                         <a
-                                            className="p-gf__info__local__link c-pagelink"
+                                            className="info__local__link c-pagelink"
                                             href="/shop/"
                                             data-hash="shops"
                                         >
                                             SHOPS
                                         </a>
                                         <a
-                                            className="p-gf__info__local__link c-pagelink"
+                                            className="info__local__link c-pagelink"
                                             href="/news/"
                                             data-hash="news"
                                         >
                                             NEWS
                                         </a>
                                         <a
-                                            className="p-gf__info__local__link c-pagelink"
+                                            className="info__local__link c-pagelink"
                                             href="/#contact"
                                             data-hash="contact"
                                         >
@@ -87,10 +87,10 @@ export const Footer: React.FC = (props) => {
                                         </a>
                                     </div>
                                 </div>
-                                <ul className="p-gf__info__sns">
+                                <ul className="info__sns">
                                     <li>
                                         <a
-                                            className="p-gf__info__sns__link p-gf__info__sns__link--facebook"
+                                            className="info__sns__link info__sns__link--facebook"
                                             href="https://www.facebook.com/bakecheesetart/"
                                             target="_blank"
                                         >
@@ -102,7 +102,7 @@ export const Footer: React.FC = (props) => {
                                     </li>
                                     <li>
                                         <a
-                                            className="p-gf__info__sns__link p-gf__info__sns__link--twitter"
+                                            className="info__sns__link info__sns__link--twitter"
                                             href="https://twitter.com/bakecheesetart"
                                             target="_blank"
                                         >
@@ -114,7 +114,7 @@ export const Footer: React.FC = (props) => {
                                     </li>
                                     <li>
                                         <a
-                                            className="p-gf__info__sns__link p-gf__info__sns__link--instagram"
+                                            className="info__sns__link info__sns__link--instagram"
                                             href="https://www.instagram.com/bakecheesetart/"
                                             target="_blank"
                                         >
@@ -125,7 +125,7 @@ export const Footer: React.FC = (props) => {
                                         </a>
                                     </li>
                                 </ul>
-                                <p className="p-gf__info__copy">
+                                <p className="info__copy">
                                     Copyright © BAKE Inc. All rights reserved.
                                 </p>
                             </div>
