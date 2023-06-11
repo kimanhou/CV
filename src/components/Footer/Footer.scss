@@ -8,7 +8,10 @@ footer {
     position: relative;
     display: block;
     width: 100%;
-    color: #fff;
+    color: var(--bg);
+    a {
+        color: var(--bg);
+    }
 
     > svg {
         &.triangle {
@@ -112,11 +115,12 @@ footer {
                             box-sizing: border-box;
                             text-align: right;
                             color: var(--bg);
-                            a {
-                                color: var(--bg);
-                            }
+
                             p {
                                 margin: 0;
+                            }
+                            > .social-bar {
+                                margin-bottom: 0.8rem;
                             }
                         }
                     }

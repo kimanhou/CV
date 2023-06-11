@@ -1,4 +1,5 @@
 import React from "react";
+import { SocialBar } from "../Social";
 import "./Footer.scss";
 
 export const Footer: React.FC = (props) => {
@@ -27,36 +28,7 @@ export const Footer: React.FC = (props) => {
                                 />
                             </div>
                             <div className="info">
-                                <div className="info__sns">
-                                    <a
-                                        className="info__sns__link info__sns__link--facebook"
-                                        href="https://www.facebook.com/bakecheesetart/"
-                                        target="_blank"
-                                    >
-                                        <span className="c-icon c-icon--facebook_round"></span>
-                                        <span className="is-hidden">Mail</span>
-                                    </a>
-                                    <a
-                                        className="info__sns__link info__sns__link--twitter"
-                                        href="https://twitter.com/bakecheesetart"
-                                        target="_blank"
-                                    >
-                                        <span className="c-icon c-icon--twitter_round"></span>
-                                        <span className="is-hidden">
-                                            LinkedIn
-                                        </span>
-                                    </a>
-                                    <a
-                                        className="info__sns__link info__sns__link--instagram"
-                                        href="https://www.instagram.com/bakecheesetart/"
-                                        target="_blank"
-                                    >
-                                        <span className="c-icon c-icon--instagram_round"></span>
-                                        <span className="is-hidden">
-                                            Github
-                                        </span>
-                                    </a>
-                                </div>
+                                <SocialBar />
                                 <p className="info__copy">
                                     Made with &#129293; &copy; 2023
                                 </p>
