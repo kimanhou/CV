@@ -19,7 +19,7 @@ export const Footer: React.FC = (props) => {
                 <div className="bg__container">
                     <div className="bg__wrapper"></div>
                     <div className="bg__main">
-                        <div className="bg-container">
+                        <div className="bg__container">
                             <div className="logo">
                                 <img
                                     src="./logo--white.svg"
@@ -27,106 +27,38 @@ export const Footer: React.FC = (props) => {
                                 />
                             </div>
                             <div className="info">
-                                <div className="info__local">
+                                <div className="info__sns">
                                     <a
-                                        className="info__local__link c-pagelink"
-                                        href="/#bake_cheese_tart"
-                                        data-hash="bake_cheese_tart"
+                                        className="info__sns__link info__sns__link--facebook"
+                                        href="https://www.facebook.com/bakecheesetart/"
+                                        target="_blank"
                                     >
-                                        BAKE CHEESE TART
+                                        <span className="c-icon c-icon--facebook_round"></span>
+                                        <span className="is-hidden">Mail</span>
                                     </a>
                                     <a
-                                        className="info__local__link c-pagelink"
-                                        href="/#essence"
-                                        data-hash="essence"
+                                        className="info__sns__link info__sns__link--twitter"
+                                        href="https://twitter.com/bakecheesetart"
+                                        target="_blank"
                                     >
-                                        ESSENCE
+                                        <span className="c-icon c-icon--twitter_round"></span>
+                                        <span className="is-hidden">
+                                            LinkedIn
+                                        </span>
                                     </a>
                                     <a
-                                        className="info__local__link c-pagelink"
-                                        href="/#price"
-                                        data-hash="price"
+                                        className="info__sns__link info__sns__link--instagram"
+                                        href="https://www.instagram.com/bakecheesetart/"
+                                        target="_blank"
                                     >
-                                        PRICE
+                                        <span className="c-icon c-icon--instagram_round"></span>
+                                        <span className="is-hidden">
+                                            Github
+                                        </span>
                                     </a>
-                                    <a
-                                        className="info__local__link c-pagelink"
-                                        href="/#bite"
-                                        data-hash="bite"
-                                    >
-                                        HOW TO EAT
-                                    </a>
-                                    <div>
-                                        <a
-                                            className="info__local__link c-pagelink"
-                                            href="/#bake"
-                                            data-hash="bake"
-                                        >
-                                            PHILOSOPHY
-                                        </a>
-                                        <a
-                                            className="info__local__link c-pagelink"
-                                            href="/shop/"
-                                            data-hash="shops"
-                                        >
-                                            SHOPS
-                                        </a>
-                                        <a
-                                            className="info__local__link c-pagelink"
-                                            href="/news/"
-                                            data-hash="news"
-                                        >
-                                            NEWS
-                                        </a>
-                                        <a
-                                            className="info__local__link c-pagelink"
-                                            href="/#contact"
-                                            data-hash="contact"
-                                        >
-                                            CONTACT - FAQ
-                                        </a>
-                                    </div>
                                 </div>
-                                <ul className="info__sns">
-                                    <li>
-                                        <a
-                                            className="info__sns__link info__sns__link--facebook"
-                                            href="https://www.facebook.com/bakecheesetart/"
-                                            target="_blank"
-                                        >
-                                            <span className="c-icon c-icon--facebook_round"></span>
-                                            <span className="is-hidden">
-                                                Facebook
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            className="info__sns__link info__sns__link--twitter"
-                                            href="https://twitter.com/bakecheesetart"
-                                            target="_blank"
-                                        >
-                                            <span className="c-icon c-icon--twitter_round"></span>
-                                            <span className="is-hidden">
-                                                Twitter
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            className="info__sns__link info__sns__link--instagram"
-                                            href="https://www.instagram.com/bakecheesetart/"
-                                            target="_blank"
-                                        >
-                                            <span className="c-icon c-icon--instagram_round"></span>
-                                            <span className="is-hidden">
-                                                Instagram
-                                            </span>
-                                        </a>
-                                    </li>
-                                </ul>
                                 <p className="info__copy">
-                                    Copyright © BAKE Inc. All rights reserved.
+                                    Made with &#129293; &copy; 2023
                                 </p>
                             </div>
                         </div>

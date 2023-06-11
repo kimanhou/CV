@@ -54,11 +54,11 @@ footer {
                 position: absolute;
                 z-index: 10;
                 width: 100%;
-                > .bg-container {
+                > .bg__container {
                     position: relative;
                 }
 
-                > .bg-container,
+                > .bg__container,
                 body.is-top
                     .p-price
                     .p-price__container
@@ -90,7 +90,7 @@ footer {
                 }
                 > .bg__main {
                     bottom: 5.452562704%;
-                    > .bg-container {
+                    > .bg__container {
                         > .logo {
                             max-width: 100px;
                             > img {
@@ -110,6 +110,14 @@ footer {
                             -moz-box-sizing: border-box;
                             -webkit-box-sizing: border-box;
                             box-sizing: border-box;
+                            text-align: right;
+                            color: var(--bg);
+                            a {
+                                color: var(--bg);
+                            }
+                            p {
+                                margin: 0;
+                            }
                         }
                     }
                 }
@@ -123,7 +131,7 @@ footer {
         > .bg {
             > .bg__container {
                 > .bg__main {
-                    > .bg-container {
+                    > .bg__container {
                         > .info {
                             font-size: 1.04167vw;
                         }
