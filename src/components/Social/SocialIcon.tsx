@@ -26,7 +26,7 @@ export const SocialIcon: React.FC<ISocialIconProps> = (props) => {
             className={`social-icon ${props.media}`}
             href={getLink(props.media)}
             onMouseEnter={() => props.onHover()}
-            onMouseLeave={() => props.onHoverLeave}
+            onMouseLeave={() => props.onHoverLeave()}
         >
             <span></span>
             <span></span>

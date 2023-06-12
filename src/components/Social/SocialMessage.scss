@@ -1,15 +1,19 @@
 .social-bar-message {
     background-color: var(--bg);
     color: var(--fg);
-    padding: 0.8rem;
-    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     opacity: 0;
     pointer-events: none;
     transform: translateY(1rem);
     transition: all 300ms ease 200ms;
-    &.hidden {
-    }
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
     &.visible {
         opacity: 1;
         transform: translateY(0);

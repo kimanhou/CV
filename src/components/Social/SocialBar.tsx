@@ -5,38 +5,42 @@ import { SocialIconGithub } from "./SocialIconGithub";
 import { SocialIconLinkedin } from "./SocialIconLinkedin";
 import { SocialIconMail } from "./SocialIconMail";
 import { SocialMessage } from "./SocialMessage";
-import { getMessage } from "./utils";
 
 interface ISocialBarProps {}
 
 export const SocialBar: React.FC<ISocialBarProps> = (props) => {
-    const [message, setMessage] = useState<string>("");
-
-    function onIconHover(icon: SocialMediaEnum | null) {
-        if (icon === null) {
-            console.log("Icon null");
-            setMessage("");
-            return;
-        }
-
-        setMessage(getMessage(icon));
-    }
+    const [hoveredIcon, setHoveredIcon] = useState<SocialMediaEnum | null>(
+        null
+    );
 
     return (
         <div className="social-bar">
-            <SocialMessage message={message} />
+            <div className="social-bar-message-container">
+                <SocialMessage
+                    hoveredIcon={hoveredIcon}
+                    media={SocialMediaEnum.MAIL}
+                />
+                <SocialMessage
+                    hoveredIcon={hoveredIcon}
+                    media={SocialMediaEnum.LINKEDIN}
+                />
+                <SocialMessage
+                    hoveredIcon={hoveredIcon}
+                    media={SocialMediaEnum.GITHUB}
+                />
+            </div>
             <div className="social-bar-icons flex-row">
                 <SocialIconMail
-                    onHover={() => onIconHover(SocialMediaEnum.MAIL)}
-                    onHoverLeave={() => onIconHover(null)}
+                    onHover={() => setHoveredIcon(SocialMediaEnum.MAIL)}
+                    onHoverLeave={() => setHoveredIcon(null)}
                 />
                 <SocialIconLinkedin
-                    onHover={() => onIconHover(SocialMediaEnum.LINKEDIN)}
-                    onHoverLeave={() => onIconHover(null)}
+                    onHover={() => setHoveredIcon(SocialMediaEnum.LINKEDIN)}
+                    onHoverLeave={() => setHoveredIcon(null)}
                 />
                 <SocialIconGithub
-                    onHover={() => onIconHover(SocialMediaEnum.GITHUB)}
-                    onHoverLeave={() => onIconHover(null)}
+                    onHover={() => setHoveredIcon(SocialMediaEnum.GITHUB)}
+                    onHoverLeave={() => setHoveredIcon(null)}
                 />
             </div>
         </div>

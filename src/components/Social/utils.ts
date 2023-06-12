@@ -28,8 +28,10 @@ export function getLink(media: SocialMediaEnum) {
     }
 }
 
-export function getMessage(media: SocialMediaEnum) {
+export function getMessage(media: SocialMediaEnum | null) {
     switch (media) {
+        case null:
+            return "";
         case SocialMediaEnum.GITHUB:
             return "/kimanhou";
         case SocialMediaEnum.LINKEDIN:

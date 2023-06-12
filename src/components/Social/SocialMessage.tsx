@@ -1,15 +1,22 @@
 import React from "react";
+import { SocialMediaEnum } from "./SocialIcon";
 import "./SocialMessage.scss";
+import { getMessage } from "./utils";
 
 interface ISocialMessageProps {
-    message: string;
+    hoveredIcon: SocialMediaEnum | null;
+    media: SocialMediaEnum;
 }
 
 export const SocialMessage: React.FC<ISocialMessageProps> = (props) => {
-    const isVisibleClassName = props.message === "" ? "hidden" : "visible";
+    const isVisibleClassName =
+        props.hoveredIcon === props.media ? "visible" : "";
+
+    const message = getMessage(props.media);
+
     return (
         <div className={`social-bar-message ${isVisibleClassName}`}>
-            {props.message}
+            {message}
         </div>
     );
 };
