@@ -33,7 +33,7 @@ export function getMessage(media: SocialMediaEnum) {
         case SocialMediaEnum.GITHUB:
             return "/kimanhou";
         case SocialMediaEnum.LINKEDIN:
-            return "/kanguyenlu/";
+            return "/kanguyenlu";
         case SocialMediaEnum.MAIL:
             return "kanguyenlu@gmail.com";
         default:
