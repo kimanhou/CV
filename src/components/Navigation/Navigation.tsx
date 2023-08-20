@@ -8,13 +8,13 @@ const Navigation: React.FC<INavigationProps> = (props) => {
     return (
         <div id="navigation" className={`flex-row`}>
             <NavigationLink to="/" selected={true}>
-                Accueil
+                Intro
             </NavigationLink>
             <NavigationLink to="/about" selected={true}>
-                À propos
+                Work
             </NavigationLink>
             <NavigationLink to="/shop" selected={false}>
-                Boutique
+                Education
             </NavigationLink>
             <NavigationLink to="/contact" selected={false}>
                 Contact
