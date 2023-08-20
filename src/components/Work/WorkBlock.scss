@@ -1,0 +1,19 @@
+.work-block {
+    > .work-block-wrapper {
+        > .work-block-text {
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            height: 500px;
+            width: 200px;
+            justify-content: center;
+        }
+        > .work-block-image {
+            background-color: yellow;
+            border-radius: 10px;
+            height: 500px;
+            width: 200px;
+            justify-content: center;
+        }
+    }
+}

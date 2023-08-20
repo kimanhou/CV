@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.scss";
 import home from "./home.jpg";
 import { Contact } from "../Contact/Contact";
+import { Work } from "../Work/Work";
 
 export const Home: React.FC = (props) => {
     return (
@@ -13,6 +14,7 @@ export const Home: React.FC = (props) => {
                     alt="LE BEC Epicerie fine &amp; Arts de la table"
                 />
             </section>
+            <Work />
             <Contact />
         </>
     );

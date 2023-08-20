@@ -1,5 +1,7 @@
 import React from "react";
+import { SocialMediaEnum } from "../Social/SocialIcon";
 import "./Contact.scss";
+import ContactBlock from "./ContactBlock";
 
 export const Contact: React.FC = (props) => {
     return (
@@ -10,13 +12,15 @@ export const Contact: React.FC = (props) => {
                 xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink"
                 preserveAspectRatio="none"
-                viewBox="0 0 1440 140"
+                viewBox="0 0 1920 480"
                 xmlSpace="preserve"
             >
-                <polygon points="0,140 0,0 1440,0 " fill="#ffffff"></polygon>
+                <polygon points="0,480 0,0 1920,0 " fill="lightgrey"></polygon>
             </svg>
-            <div className="c-container c-container--top">
-                Contact - some content
+            <div className="c-container c-container--top flex-row">
+                <ContactBlock media={SocialMediaEnum.MAIL} />
+                <ContactBlock media={SocialMediaEnum.LINKEDIN} />
+                <ContactBlock media={SocialMediaEnum.GITHUB} />
             </div>
         </section>
     );
