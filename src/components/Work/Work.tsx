@@ -20,7 +20,10 @@ export const Work: React.FC = (props) => {
                 viewBox="0 0 1920 480"
                 xmlSpace="preserve"
             >
-                <polygon points="0,480 0,0 1920,0 " fill="#ffffff"></polygon>
+                <polygon
+                    points="1920,480 0,0 1920,0 "
+                    fill="lightpink"
+                ></polygon>
             </svg>
             <div className="c-container c-container--top flex-row">
                 <WorkBlock company={WorkEnum.RAKUTEN} />

@@ -3,6 +3,7 @@ import "./Home.scss";
 import home from "./home.jpg";
 import { Contact } from "../Contact/Contact";
 import { Work } from "../Work/Work";
+import { Intro } from "../Intro/Intro";
 
 export const Home: React.FC = (props) => {
     return (
@@ -14,6 +15,7 @@ export const Home: React.FC = (props) => {
                     alt="LE BEC Epicerie fine &amp; Arts de la table"
                 />
             </section>
+            <Intro />
             <Work />
             <Contact />
         </>
