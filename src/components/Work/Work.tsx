@@ -25,10 +25,18 @@ export const Work: React.FC = (props) => {
                     fill="lightpink"
                 ></polygon>
             </svg>
-            <div className="c-container c-container--top flex-row">
-                <WorkBlock company={WorkEnum.RAKUTEN} />
-                <WorkBlock company={WorkEnum.WORLD_TRIP} />
-                <WorkBlock company={WorkEnum.SOCGEN} />
+            <div className="c-container c-container--top">
+                <ul>
+                    <li>
+                        <WorkBlock company={WorkEnum.RAKUTEN} />
+                    </li>
+                    <li>
+                        <WorkBlock company={WorkEnum.WORLD_TRIP} />
+                    </li>
+                    <li>
+                        <WorkBlock company={WorkEnum.SOCGEN} />
+                    </li>
+                </ul>
             </div>
         </section>
     );

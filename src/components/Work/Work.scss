@@ -1,7 +1,51 @@
 #work {
-    background-color: lightgray;
     > .c-container {
         justify-content: center;
         gap: 20px;
+        > ul {
+            list-style-type: none;
+            li:last-child {
+                > .work-block {
+                    > .work-block-bottom-line {
+                        display: none;
+                    }
+                }
+            }
+            > li {
+                > .work-block {
+                    text-align: left;
+                    margin-bottom: 50px;
+                    > .work-block-header {
+                        font-size: 0.8rem;
+                        > .work-block-header-location,
+                        .work-block-header-current-position {
+                            color: var(--color-grey);
+                        }
+                        > .work-block-header-location {
+                            margin-left: 0.5rem;
+                        }
+                        > .work-block-header-current-position {
+                            margin-left: 2rem;
+                        }
+                    }
+                    > .work-block-tags {
+                        font-size: 0.8rem;
+                        margin-top: 2rem;
+                        > .work-block-tag {
+                            background-color: var(--color-light-grey);
+                            border-radius: 20px;
+                            margin-right: 1rem;
+                            padding: 2px 10px;
+                        }
+                    }
+                    > .work-block-bottom-line {
+                        height: 1px;
+                        width: 100%;
+                        background-color: var(--color-light-grey);
+                        margin-top: 50px;
+                    }
+                }
+            }
+        }
     }
 }

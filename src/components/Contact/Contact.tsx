@@ -15,7 +15,7 @@ export const Contact: React.FC = (props) => {
                 viewBox="0 0 1920 480"
                 xmlSpace="preserve"
             >
-                <polygon points="0,480 0,0 1920,0 " fill="lightgrey"></polygon>
+                <polygon points="0,480 0,0 1920,0 " fill="#ffffff"></polygon>
             </svg>
             <div className="c-container c-container--top flex-row">
                 <ContactBlock media={SocialMediaEnum.MAIL} />
