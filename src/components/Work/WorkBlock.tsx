@@ -1,6 +1,5 @@
 import React from "react";
 import { WorkEnum } from "./Work";
-import "./WorkBlock.scss";
 import WorkBlockHeader from "./WorkBlockHeader";
 import WorkBlockTags from "./WorkBlockTags";
 import { getWorkBlockInfo } from "./utils";

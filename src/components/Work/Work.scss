@@ -2,8 +2,7 @@
     > .c-container {
         justify-content: center;
         gap: 20px;
-        > ul {
-            list-style-type: none;
+        > ul#work-block-list {
             li:last-child {
                 > .work-block {
                     > .work-block-bottom-line {

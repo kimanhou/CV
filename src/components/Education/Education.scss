@@ -1,0 +1,21 @@
+#education {
+    text-align: left;
+    ul#education-block-list {
+        li:not(:last-child) {
+            margin-bottom: 50px;
+        }
+        > li {
+            > .education-block {
+                background-color: var(--color-light-grey);
+                padding: 2rem;
+                width: fit-content;
+                > .education-block-header {
+                    color: var(--color-grey);
+                }
+                > h2 {
+                    margin-block-end: 0;
+                }
+            }
+        }
+    }
+}

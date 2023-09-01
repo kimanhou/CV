@@ -1,4 +1,5 @@
 import React from "react";
+import Education from "../Education/Education";
 import "./Work.scss";
 import WorkBlock from "./WorkBlock";
 
@@ -26,7 +27,7 @@ export const Work: React.FC = (props) => {
                 ></polygon>
             </svg>
             <div className="c-container c-container--top">
-                <ul>
+                <ul id="work-block-list">
                     <li>
                         <WorkBlock company={WorkEnum.RAKUTEN} />
                     </li>
@@ -37,6 +38,7 @@ export const Work: React.FC = (props) => {
                         <WorkBlock company={WorkEnum.SOCGEN} />
                     </li>
                 </ul>
+                <Education />
             </div>
         </section>
     );
