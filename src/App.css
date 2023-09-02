@@ -7,6 +7,11 @@
     margin-right: auto;
     padding-left: 16px;
     padding-right: 16px;
+    font-family: Calibri;
+    font-size: 1.1rem;
+}
+
+html {
     scroll-behavior: smooth;
 }
 
