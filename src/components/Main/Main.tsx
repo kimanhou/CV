@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import Others from "../Others/Others";
 import SecondaryNavigation from "../SecondaryNavigation/SecondaryNavigation";
 import { Work } from "../Work/Work";
+import react from "./react.png";
 import "./Main.scss";
+import DownloadButton from "./DownloadButton";
 
 export enum MainTabEnum {
     WORK = "Work",
@@ -35,6 +37,11 @@ const Main: React.FC = (props) => {
                 />
                 {activeTab.toLocaleLowerCase() === "work" && <Work />}
                 {activeTab.toLocaleLowerCase() !== "work" && <Others />}
+
+                <a href={react} download="KimAnhNguyen - CV">
+                    Download
+                </a>
+                <DownloadButton />
             </div>
         </section>
     );
