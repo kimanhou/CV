@@ -16,13 +16,13 @@ const Skills: React.FC = (props) => {
                 <ul id="skills-block-list">
                     <li>
                         <SkillsBlock
-                            iconSrc={construction}
+                            iconSrc={language}
                             children={<>TypeScript, JavaScript, HTML/CSS</>}
                         />
                     </li>
                     <li>
                         <SkillsBlock
-                            iconSrc={language}
+                            iconSrc={construction}
                             children={
                                 <>
                                     <SkillsFramework
@@ -42,8 +42,8 @@ const Skills: React.FC = (props) => {
                             iconSrc={tool}
                             children={
                                 <>
-                                    GitHub, npm, Jenkins, Webpack, Jest,
-                                    Storybook
+                                    GitHub, npm, Jenkins, Webpack,<br></br>
+                                    Jest, Storybook
                                 </>
                             }
                         />

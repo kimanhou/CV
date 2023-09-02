@@ -9,10 +9,10 @@ interface IEducationBlockProps {
 const EducationBlock: React.FC<IEducationBlockProps> = (props) => {
     return (
         <div className="education-block">
-            <div className="education-block-header">
+            <div className="education-block-header font-size-s">
                 {props.date} &#x2022; {props.location}
             </div>
-            <h2>{props.text}</h2>
+            <h3>{props.text}</h3>
         </div>
     );
 };

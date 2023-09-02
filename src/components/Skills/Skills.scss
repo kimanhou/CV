@@ -2,7 +2,8 @@
     text-align: left;
     margin-bottom: 50px;
     > .skills-title {
-        font-size: 1rem;
+        font-size: 1.3rem;
+        font-weight: semi-bold;
     }
     > .skills-list-container {
         display: inline-flex;
@@ -30,7 +31,7 @@
                         width: 3rem;
                         border: solid 1.5px var(--color-grey);
                         border-radius: 10px;
-                        margin-right: 0.8rem;
+                        margin-right: 1.8rem;
                         > img {
                             width: 2.6rem;
                         }

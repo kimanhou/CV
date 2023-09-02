@@ -19,13 +19,13 @@
                 flex-wrap: wrap;
                 justify-content: flex-start;
                 > .education-block {
-                    padding: 2rem;
+                    padding: 1.2rem 2rem 1.4rem 1.2rem;
                     width: fit-content;
                     > .education-block-header {
-                        font-size: 0.8rem;
                         color: var(--color-grey);
                     }
-                    > h2 {
+                    > h3 {
+                        margin-block-start: 0.4rem;
                         margin-block-end: 0;
                     }
                 }

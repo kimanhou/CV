@@ -8,7 +8,7 @@ interface IWorkBlockHeaderProps {
 
 const WorkBlockHeader: React.FC<IWorkBlockHeaderProps> = (props) => {
     return (
-        <div className="work-block-header">
+        <div className="work-block-header font-size-s">
             From <b>{props.date}</b>
             <span className="work-block-header-location">
                 &#x2022; {props.location}

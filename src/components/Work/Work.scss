@@ -13,9 +13,9 @@
             > li {
                 > .work-block {
                     text-align: left;
-                    margin-bottom: 50px;
+                    margin-bottom: 2rem;
                     > .work-block-header {
-                        font-size: 0.8rem;
+                        margin-bottom: 0.8rem;
                         > .work-block-header-location,
                         .work-block-header-current-position {
                             color: var(--color-grey);
@@ -26,6 +26,13 @@
                         > .work-block-header-current-position {
                             margin-left: 2rem;
                         }
+                    }
+                    > h2 {
+                        margin-block-start: 0;
+                        margin-block-end: 0;
+                    }
+                    > p {
+                        margin-block-start: 0.2em;
                     }
                     > .work-block-tags {
                         font-size: 0.8rem;
@@ -41,7 +48,7 @@
                         height: 1px;
                         width: 100%;
                         background-color: var(--color-light-grey);
-                        margin-top: 50px;
+                        margin-top: 2rem;
                     }
                 }
             }
