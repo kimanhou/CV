@@ -2,8 +2,8 @@ import React from "react";
 import "./Home.scss";
 import home from "./home.jpg";
 import { Contact } from "../Contact/Contact";
-import { Work } from "../Work/Work";
 import { Intro } from "../Intro/Intro";
+import Main from "../Main/Main";
 
 export const Home: React.FC = (props) => {
     return (
@@ -16,7 +16,7 @@ export const Home: React.FC = (props) => {
                 />
             </section>
             <Intro />
-            <Work />
+            <Main />
             <Contact />
         </>
     );

@@ -1,18 +1,17 @@
 import React from "react";
 
 interface ISkillsBlockProps {
-    date: string;
-    location: string;
-    text: string;
+    iconSrc: string;
+    children: JSX.Element;
 }
 
 const SkillsBlock: React.FC<ISkillsBlockProps> = (props) => {
     return (
-        <div className="skills-block">
-            <div className="skills-block-header">
-                {props.date} &#x2022; {props.location}
+        <div className="skills-block flex-row">
+            <div className="skills-block-icon-container flex-row">
+                <img src={props.iconSrc} alt={`Skill icon`} />
             </div>
-            <h2>{props.text}</h2>
+            {props.children}
         </div>
     );
 };

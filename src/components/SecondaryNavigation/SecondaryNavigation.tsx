@@ -8,7 +8,9 @@ interface ISecondaryNavigationProps {
 const SecondaryNavigation: React.FC<ISecondaryNavigationProps> = (props) => {
     const tabs = ["Work", "Education"];
     const isActiveClassname = (tab: string) =>
-        tab === props.activeTab ? "active" : "";
+        tab.toLocaleLowerCase() === props.activeTab.toLocaleLowerCase()
+            ? "active"
+            : "";
 
     return (
         <div id="secondary-navigation">

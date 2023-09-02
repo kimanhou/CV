@@ -1,0 +1,36 @@
+#hobbies {
+    text-align: left;
+    > .hobbies-title {
+        font-size: 1.4rem;
+    }
+    > .hobbies-list-container {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: center;
+        :first-child {
+            margin-right: 2.5rem;
+        }
+        > ul.hobbies-block-list {
+            display: flex;
+            flex-direction: column;
+            li:not(:last-child) {
+                margin-bottom: 0.5rem;
+            }
+            > li {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                height: 3rem;
+                > .hobbies-block {
+                    width: fit-content;
+                    align-items: center;
+                    > img {
+                        width: 3rem;
+                        margin-right: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+}

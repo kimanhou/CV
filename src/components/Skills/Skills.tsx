@@ -1,24 +1,51 @@
 import React from "react";
 import "./Skills.scss";
 import SkillsBlock from "./SkillsBlock";
+import construction from "./construction.png";
+import language from "./language.png";
+import react from "./react.png";
+import tool from "./tool.png";
+import vue from "./vue.png";
+import SkillsFramework from "./SkillsFramework";
 
 const Skills: React.FC = (props) => {
     return (
         <section id="skills">
-            <div className="skills-list-container">
+            <div className="skills-title">Skills</div>
+            <div className="skills-list-container flex-row">
                 <ul id="skills-block-list">
                     <li>
                         <SkillsBlock
-                            date="From Sep 2013 to Sep 2015"
-                            location="Tokyo, Japan"
-                            text="Master’s degree at Keio University"
+                            iconSrc={construction}
+                            children={<>TypeScript, JavaScript, HTML/CSS</>}
                         />
                     </li>
                     <li>
                         <SkillsBlock
-                            date="From Sep 2011 to Sep 2013"
-                            location="Marseille, France"
-                            text="Master’s degree at Centrale Marseille"
+                            iconSrc={language}
+                            children={
+                                <>
+                                    <SkillsFramework
+                                        text="Vue.js"
+                                        iconSrc={vue}
+                                    />
+                                    <SkillsFramework
+                                        text="React"
+                                        iconSrc={react}
+                                    />
+                                </>
+                            }
+                        />
+                    </li>
+                    <li>
+                        <SkillsBlock
+                            iconSrc={tool}
+                            children={
+                                <>
+                                    GitHub, npm, Jenkins, Webpack, Jest,
+                                    Storybook
+                                </>
+                            }
                         />
                     </li>
                 </ul>
