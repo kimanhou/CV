@@ -1,0 +1,31 @@
+#secondary-navigation {
+    > .secondary-navigation-tabs-container {
+        > span {
+            margin-right: 3rem;
+            margin-bottom: 1rem;
+            color: var(--color-grey);
+            cursor: pointer;
+            &.active {
+                color: var(--fg);
+            }
+            &:hover {
+                color: var(--fg);
+            }
+        }
+    }
+
+    > .secondary-navigation-bottom-line {
+        > .secondary-navigation-bottom-line-black,
+        > .secondary-navigation-bottom-line-grey {
+            height: 1px;
+        }
+        > .secondary-navigation-bottom-line-black {
+            background-color: var(--fg);
+            width: 3rem;
+        }
+        > .secondary-navigation-bottom-line-grey {
+            background-color: var(--color-light-grey);
+            flex: 1;
+        }
+    }
+}

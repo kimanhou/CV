@@ -1,21 +1,21 @@
 import React from "react";
-import "./Education.scss";
-import EducationBlock from "./EducationBlock";
+import "./Skills.scss";
+import SkillsBlock from "./SkillsBlock";
 
-const Education: React.FC = (props) => {
+const Skills: React.FC = (props) => {
     return (
-        <section id="education">
-            <div className="education-list-container">
-                <ul id="education-block-list">
+        <section id="skills">
+            <div className="skills-list-container">
+                <ul id="skills-block-list">
                     <li>
-                        <EducationBlock
+                        <SkillsBlock
                             date="From Sep 2013 to Sep 2015"
                             location="Tokyo, Japan"
                             text="Master’s degree at Keio University"
                         />
                     </li>
                     <li>
-                        <EducationBlock
+                        <SkillsBlock
                             date="From Sep 2011 to Sep 2013"
                             location="Marseille, France"
                             text="Master’s degree at Centrale Marseille"
@@ -27,4 +27,4 @@ const Education: React.FC = (props) => {
     );
 };
 
-export default Education;
+export default Skills;

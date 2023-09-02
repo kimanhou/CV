@@ -1,10 +1,10 @@
-#education {
+#skills {
     text-align: left;
-    > .education-list-container {
+    > .skills-list-container {
         display: inline-flex;
         flex-direction: row;
         justify-content: center;
-        > ul#education-block-list {
+        > ul#skills-block-list {
             display: flex;
             flex-direction: column;
             li:not(:last-child) {
@@ -16,10 +16,10 @@
                 flex-direction: row;
                 flex-wrap: wrap;
                 justify-content: flex-start;
-                > .education-block {
+                > .skills-block {
                     padding: 2rem;
                     width: fit-content;
-                    > .education-block-header {
+                    > .skills-block-header {
                         font-size: 0.8rem;
                         color: var(--color-grey);
                     }

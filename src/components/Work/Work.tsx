@@ -1,5 +1,6 @@
 import React from "react";
 import Education from "../Education/Education";
+import SecondaryNavigation from "../SecondaryNavigation/SecondaryNavigation";
 import "./Work.scss";
 import WorkBlock from "./WorkBlock";
 
@@ -27,6 +28,7 @@ export const Work: React.FC = (props) => {
                 ></polygon>
             </svg>
             <div className="c-container c-container--top">
+                <SecondaryNavigation activeTab="Work" />
                 <ul id="work-block-list">
                     <li>
                         <WorkBlock company={WorkEnum.RAKUTEN} />
