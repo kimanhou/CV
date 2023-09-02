@@ -1,13 +1,15 @@
 import React from "react";
+import { MainTabEnum } from "../Main/Main";
 import "./SecondaryNavigation.scss";
 
 interface ISecondaryNavigationProps {
-    activeTab: string;
+    activeTab: MainTabEnum;
+    setActiveTab: (activeTab: MainTabEnum) => void;
 }
 
 const SecondaryNavigation: React.FC<ISecondaryNavigationProps> = (props) => {
-    const tabs = ["Work", "Education"];
-    const isActiveClassname = (tab: string) =>
+    const tabs = [MainTabEnum.WORK, MainTabEnum.OTHERS];
+    const isActiveClassname = (tab: MainTabEnum) =>
         tab.toLocaleLowerCase() === props.activeTab.toLocaleLowerCase()
             ? "active"
             : "";
@@ -16,7 +18,13 @@ const SecondaryNavigation: React.FC<ISecondaryNavigationProps> = (props) => {
         <div id="secondary-navigation">
             <div className="secondary-navigation-tabs-container flex-row">
                 {tabs.map((tab) => (
-                    <span className={`${isActiveClassname(tab)}`}>{tab}</span>
+                    <span
+                        key={tab}
+                        className={`${isActiveClassname(tab)}`}
+                        onClick={() => props.setActiveTab(tab)}
+                    >
+                        {tab}
+                    </span>
                 ))}
             </div>
 

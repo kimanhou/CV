@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Others from "../Others/Others";
 import SecondaryNavigation from "../SecondaryNavigation/SecondaryNavigation";
 import { Work } from "../Work/Work";
 import "./Main.scss";
 
+export enum MainTabEnum {
+    WORK = "Work",
+    OTHERS = "Education & others",
+}
+
 const Main: React.FC = (props) => {
+    const [activeTab, setActiveTab] = useState<MainTabEnum>(MainTabEnum.WORK);
+
     return (
         <section id="main">
             <svg
@@ -22,9 +29,12 @@ const Main: React.FC = (props) => {
                 ></polygon>
             </svg>
             <div className="c-container c-container--top">
-                <SecondaryNavigation activeTab="Work" />
-                <Work />
-                <Others />
+                <SecondaryNavigation
+                    activeTab={activeTab}
+                    setActiveTab={setActiveTab}
+                />
+                {activeTab.toLocaleLowerCase() === "work" && <Work />}
+                {activeTab.toLocaleLowerCase() !== "work" && <Others />}
             </div>
         </section>
     );
