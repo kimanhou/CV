@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "./DownloadButton.scss";
 
 const DownloadButton: React.FC = (props) => {
+    const [loadClassname, setLoadClassname] = useState("");
+
+    const onClickDownload = () => {
+        setLoadClassname("load");
+        setTimeout(() => {
+            setLoadClassname("load done");
+            setTimeout(() => {
+                setLoadClassname("");
+            }, 4000);
+        }, 1000);
+    };
+
     return (
-        <div className="btn-circle-download">
+        <div
+            className={`btn-circle-download ${loadClassname}`}
+            onClick={onClickDownload}
+        >
             <svg id="arrow" width="14px" height="20px" viewBox="17 14 14 20">
                 <path d="M24,15 L24,32"></path>
                 <polyline points="30 27 24 33 18 27"></polyline>

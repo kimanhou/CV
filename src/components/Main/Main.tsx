@@ -39,9 +39,8 @@ const Main: React.FC = (props) => {
                 {activeTab.toLocaleLowerCase() !== "work" && <Others />}
 
                 <a href={react} download="KimAnhNguyen - CV">
-                    Download
+                    <DownloadButton />
                 </a>
-                <DownloadButton />
             </div>
         </section>
     );

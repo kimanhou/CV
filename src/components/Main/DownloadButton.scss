@@ -1,12 +1,10 @@
-$color: #f8b4c4;
-
 .btn-circle-download {
     position: relative;
     height: 48px;
     width: 48px;
     margin: auto;
     border-radius: 100%;
-    background: #e8eaed;
+    background: var(--color-light-grey);
     cursor: pointer;
     overflow: hidden;
     transition: all 0.2s ease;
@@ -23,6 +21,18 @@ $color: #f8b4c4;
             rgba(white, 0)
         );
         transform: translateX(-100%);
+    }
+    &:hover {
+        > #arrow {
+            background: none;
+            > path,
+            > polyline {
+                stroke: var(--color-dark-pink);
+            }
+        }
+        svg {
+            background: rgba(248, 180, 196, 0.2);
+        }
     }
     svg {
         stroke-width: 2;
@@ -42,8 +52,12 @@ $color: #f8b4c4;
             position: absolute;
             top: 14px;
             left: 17px;
-            stroke: #9098a9;
+            stroke: var(--color-grey);
             transition: all 0.2s ease;
+            > path,
+            > polyline {
+                transition: all 0.2s ease;
+            }
         }
         &#check {
             position: absolute;
@@ -52,46 +66,37 @@ $color: #f8b4c4;
             stroke: white;
             transform: scale(0);
         }
-        &:hover {
-            background: rgba($color, 0.2);
-            #arrow {
-                path,
-                polyline {
-                    stroke: $color;
-                }
+    }
+    &.load {
+        background: var(--color-light-pink);
+        #arrow {
+            path,
+            polyline {
+                stroke: var(--color-dark-pink);
             }
         }
-        &.load {
-            background: rgba($color, 0.2);
-            #arrow {
-                path,
-                polyline {
-                    stroke: $color;
-                }
-            }
-            #border {
-                stroke: $color;
-                stroke-dasharray: 144;
-                stroke-dashoffset: 0;
-            }
+        #border {
+            stroke: var(--color-dark-pink);
+            stroke-dasharray: 144;
+            stroke-dashoffset: 0;
         }
-        &.done {
-            background: $color;
-            animation: rubberBand 0.8s;
-            &:after {
-                transform: translateX(50%);
-                transition: transform 0.4s ease;
-                transition-delay: 0.7s;
-            }
-            #border,
-            #arrow {
-                display: none;
-            }
-            #check {
-                transform: scale(1);
-                transition: all 0.2s ease;
-                transition-delay: 0.2s;
-            }
+    }
+    &.done {
+        background: var(--color-dark-pink);
+        animation: rubberBand 0.8s;
+        &:after {
+            transform: translateX(50%);
+            transition: transform 0.4s ease;
+            transition-delay: 0.7s;
+        }
+        #border,
+        #arrow {
+            display: none;
+        }
+        #check {
+            transform: scale(1);
+            transition: all 0.2s ease;
+            transition-delay: 0.2s;
         }
     }
 
