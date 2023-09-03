@@ -18,6 +18,7 @@ const DownloadButton: React.FC = (props) => {
         <div
             className={`btn-circle-download ${loadClassname}`}
             onClick={onClickDownload}
+            role="button"
         >
             <svg id="arrow" width="14px" height="20px" viewBox="17 14 14 20">
                 <path d="M24,15 L24,32"></path>
