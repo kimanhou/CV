@@ -21,12 +21,6 @@ export const Footer: React.FC = (props) => {
                     <div className="bg__wrapper"></div>
                     <div className="bg__main">
                         <div className="bg__container">
-                            <div className="logo">
-                                <img
-                                    src="./logo--white.svg"
-                                    alt="KA logo white"
-                                />
-                            </div>
                             <div className="info">
                                 <SocialBar />
                                 <p className="info__copy">

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Others from "../Others/Others";
-import SecondaryNavigation from "../SecondaryNavigation/SecondaryNavigation";
-import { Work } from "../Work/Work";
+import Others from "./Others/Others";
+import SecondaryNavigation from "./SecondaryNavigation/SecondaryNavigation";
+import { Work } from "./Work/Work";
 import "./Main.scss";
 import DownloadButton from "./DownloadButton";
 

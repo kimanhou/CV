@@ -1,5 +1,5 @@
 import React from "react";
-import { MainTabEnum } from "../Main/Main";
+import { MainTabEnum } from "../Main";
 import "./SecondaryNavigation.scss";
 
 interface ISecondaryNavigationProps {
