@@ -13,7 +13,7 @@ footer {
 
     > svg {
         &.triangle {
-            fill: #f0f0f0;
+            fill: var(--bg);
             -moz-transform: translateZ(0);
             -webkit-transform: translateZ(0);
             transform: translateZ(0);
@@ -22,7 +22,6 @@ footer {
             left: 0;
             z-index: 10;
             width: 100%;
-            fill: var(--color-dark-pink);
         }
     }
 

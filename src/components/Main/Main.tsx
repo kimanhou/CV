@@ -24,10 +24,7 @@ const Main: React.FC = (props) => {
                 viewBox="0 0 1920 480"
                 xmlSpace="preserve"
             >
-                <polygon
-                    points="1920,480 0,0 1920,0 "
-                    fill="lightpink"
-                ></polygon>
+                <polygon points="1920,480 0,0 1920,0 "></polygon>
             </svg>
             <div className="c-container c-container--top">
                 <SecondaryNavigation

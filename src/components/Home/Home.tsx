@@ -1,23 +1,14 @@
 import React from "react";
-import "./Home.scss";
-import home from "./home.jpg";
-import { Contact } from "../Contact/Contact";
-import { Intro } from "../Intro/Intro";
+import { Divider } from "../Divider/Divider";
 import Main from "../Main/Main";
+import { Intro } from "../Intro/Intro";
 
 export const Home: React.FC = (props) => {
     return (
-        <>
-            <section id="home">
-                <img
-                    src={home}
-                    className="home-img"
-                    alt="LE BEC Epicerie fine &amp; Arts de la table"
-                />
-            </section>
+        <section id="home">
             <Intro />
+            <Divider />
             <Main />
-            <Contact />
-        </>
+        </section>
     );
 };

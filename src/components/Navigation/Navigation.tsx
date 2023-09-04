@@ -13,11 +13,8 @@ const Navigation: React.FC<INavigationProps> = (props) => {
             <NavigationLink to="#work" selected={true}>
                 Work
             </NavigationLink>
-            <NavigationLink to="/shop" selected={false}>
-                Education
-            </NavigationLink>
-            <NavigationLink to="/contact" selected={false}>
-                Contact
+            <NavigationLink to="#education" selected={false}>
+                Education &amp; others
             </NavigationLink>
         </div>
     );

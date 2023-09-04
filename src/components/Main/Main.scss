@@ -1,4 +1,9 @@
 #main {
+    > svg.p-work__triangle {
+        > polygon {
+            fill: var(--color-light-pink);
+        }
+    }
     > .c-container {
         justify-content: center;
         gap: 20px;
