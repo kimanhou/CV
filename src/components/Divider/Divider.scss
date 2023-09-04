@@ -1,7 +1,10 @@
 #divider {
-    background-color: var(--color-light-pink);
-    > .c-container {
-        justify-content: center;
-        gap: 20px;
+    background-attachment: fixed;
+    background-size: 180px 180px;
+    background-image: url("/img/pattern.png");
+    background-repeat: repeat;
+    background-color: var(--color-magnolia);
+    > polygon {
+        fill: var(--bg);
     }
 }
