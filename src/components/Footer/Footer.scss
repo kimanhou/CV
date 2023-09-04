@@ -46,8 +46,10 @@ footer {
                 width: 100%;
                 height: 100%;
                 background-attachment: fixed;
+                background-size: 180px 180px;
                 background-image: url("/pattern.png");
                 background-repeat: repeat;
+                background-color: var(--color-magnolia);
             }
 
             > .bg__main {
