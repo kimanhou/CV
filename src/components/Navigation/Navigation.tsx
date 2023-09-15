@@ -10,10 +10,10 @@ const Navigation: React.FC<INavigationProps> = (props) => {
             <NavigationLink to="/" selected={true}>
                 Intro
             </NavigationLink>
-            <NavigationLink to="#work" selected={true}>
+            <NavigationLink to="secondary-navigation" selected={true}>
                 Work
             </NavigationLink>
-            <NavigationLink to="#education" selected={false}>
+            <NavigationLink to="secondary-navigation" selected={false}>
                 Education &amp; others
             </NavigationLink>
         </div>
