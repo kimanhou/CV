@@ -1,5 +1,6 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Resizable.scss";
+import { pauseEvent, setContainerHeight } from "./utils";
 
 interface IResizableProps {
     left: JSX.Element;
@@ -9,13 +10,14 @@ interface IResizableProps {
 const Resizable: React.FC<IResizableProps> = (props) => {
     const [isResizing, setIsResizing] = useState<boolean>(false);
     // const [lastDownX, setLastDownX] = useState<number>(0);
-    const containerRef = useRef(null);
+    const containerRef = useRef<HTMLDivElement>(null);
     const leftRef = useRef<HTMLDivElement>(null);
     const rightRef = useRef<HTMLDivElement>(null);
 
     const onMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
         setIsResizing(true);
         // setLastDownX(e.clientX);
+        pauseEvent(e);
     };
 
     const onMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -32,11 +34,25 @@ const Resizable: React.FC<IResizableProps> = (props) => {
         if (leftRef.current) {
             leftRef.current.style.width = `${offsetLeft}px`;
         }
+
+        setContainerHeight({
+            container: containerRef.current,
+            left: leftRef.current,
+            right: rightRef.current,
+        });
     };
 
     const onMouseUp = () => {
         setIsResizing(false);
     };
+
+    useEffect(() => {
+        setContainerHeight({
+            container: containerRef.current,
+            left: leftRef.current,
+            right: rightRef.current,
+        });
+    }, []);
 
     return (
         <div
@@ -45,7 +61,7 @@ const Resizable: React.FC<IResizableProps> = (props) => {
             onMouseMove={onMouseMove}
             onMouseUp={onMouseUp}
         >
-            <div className="resizable-left" ref={leftRef}>
+            <div className="resizable-col resizable-left" ref={leftRef}>
                 {props.left}
             </div>
 
@@ -53,7 +69,7 @@ const Resizable: React.FC<IResizableProps> = (props) => {
                 <div className="resizable-drag-line"></div>
             </div>
 
-            <div className="resizable-right" ref={rightRef}>
+            <div className="resizable-col resizable-right" ref={rightRef}>
                 {props.right}
             </div>
         </div>

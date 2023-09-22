@@ -33,7 +33,12 @@ const Main: React.FC = (props) => {
                 )}
 
                 {isResizable && (
-                    <Resizable left={<Work />} right={<Others />} />
+                    <>
+                        <Resizable left={<Work />} right={<Others />} />
+                        <a href="./CV.pdf" download="KimAnhNguyen - CV">
+                            <DownloadButton />
+                        </a>
+                    </>
                 )}
             </div>
         </section>
