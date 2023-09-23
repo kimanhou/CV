@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "./static/css/main.95bebae2.css",
+    "main.css": "./static/css/main.576054b6.css",
     "main.js": "./static/js/main.d8ad8e43.js",
     "static/js/787.d9a20797.chunk.js": "./static/js/787.d9a20797.chunk.js",
+    "static/media/calibri-regular.ttf": "./static/media/calibri-regular.82e3b1641976f5409e1f.ttf",
     "static/media/pattern.png": "./static/media/pattern.24d09f2ce351d55db8e4.png",
     "static/media/avatar.png": "./static/media/avatar.0b4098ec642cd1a226b7.png",
     "static/media/react.png": "./static/media/react.81ed438b18e24116794d.png",
@@ -10,12 +11,12 @@
     "static/media/construction.png": "./static/media/construction.55e60263c7735aff4f5a.png",
     "static/media/language.png": "./static/media/language.fb67869cad289ed41630.png",
     "index.html": "./index.html",
-    "main.95bebae2.css.map": "./static/css/main.95bebae2.css.map",
+    "main.576054b6.css.map": "./static/css/main.576054b6.css.map",
     "main.d8ad8e43.js.map": "./static/js/main.d8ad8e43.js.map",
     "787.d9a20797.chunk.js.map": "./static/js/787.d9a20797.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.95bebae2.css",
+    "static/css/main.576054b6.css",
     "static/js/main.d8ad8e43.js"
   ]
 }
