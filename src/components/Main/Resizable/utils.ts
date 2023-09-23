@@ -29,24 +29,32 @@ export const setColumnsWidth = ({
     right: HTMLDivElement | null;
     draggableLine: HTMLDivElement | null;
 }) => {
-    if (left == null) {
-        return;
-    }
-    const myReference =
+    if (left == null) return;
+
+    const marginApp = left.getBoundingClientRect().x;
+
+    let draggableLineX =
         ((window.innerWidth -
-            2 * left.getBoundingClientRect().x - // margin auto
+            2 * marginApp - // margin auto
             8 - // width of resizable-drag
             105 - // margin between left and resizable-drag
             35) * // margin between right and resizable-drag
             71.85) /
         100;
+
+    const rightWidth = window.innerWidth - draggableLineX - marginApp;
+
+    if (rightWidth < 400) {
+        draggableLineX = window.innerWidth - marginApp - 400 - 35 - 4;
+    }
+
     if (right !== null) {
-        right.style.left = `calc(${myReference}px + 2rem + 4px`;
+        right.style.left = `calc(${draggableLineX}px + 35px + 4px`;
     }
     if (draggableLine !== null) {
-        draggableLine.style.left = `calc(${myReference}px - 4px`;
+        draggableLine.style.left = `calc(${draggableLineX}px - 4px`;
     }
-    left.style.width = `calc(${myReference}px - 6rem - 4px)`;
+    left.style.width = `calc(${draggableLineX}px - 105px - 4px)`;
 };
 
 export const pauseEvent = (e: React.MouseEvent<HTMLDivElement>) => {

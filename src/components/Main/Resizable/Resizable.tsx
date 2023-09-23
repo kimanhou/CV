@@ -21,29 +21,29 @@ const Resizable: React.FC<IResizableProps> = (props) => {
 
     const onMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
         if (!isResizing) return;
+        if (!leftRef.current) return;
 
-        if (leftRef.current) {
-            const leftWidth =
-                e.clientX - leftRef.current?.getBoundingClientRect().x;
-            const rightWidth =
-                window.innerWidth -
-                e.clientX -
-                leftRef.current?.getBoundingClientRect().x;
-            if (rightWidth < 400 || leftWidth < 400) {
-                return;
-            }
-
-            const draggableLineX =
-                e.clientX - leftRef.current?.getBoundingClientRect().x;
-
-            leftRef.current.style.width = `calc(${draggableLineX}px - 6rem - 4px)`;
-            if (rightRef.current !== null) {
-                rightRef.current.style.left = `calc(${draggableLineX}px + 2rem + 4px)`;
-            }
-            if (draggableLineRef.current) {
-                draggableLineRef.current.style.left = `calc(${draggableLineX}px - 4px)`;
-            }
+        const leftWidth =
+            e.clientX - leftRef.current?.getBoundingClientRect().x;
+        const rightWidth =
+            window.innerWidth -
+            e.clientX -
+            leftRef.current?.getBoundingClientRect().x;
+        if (rightWidth < 400 || leftWidth < 400) {
+            return;
         }
+
+        const draggableLineX =
+            e.clientX - leftRef.current?.getBoundingClientRect().x;
+
+        leftRef.current.style.width = `calc(${draggableLineX}px - 6rem - 4px)`;
+        if (rightRef.current !== null) {
+            rightRef.current.style.left = `calc(${draggableLineX}px + 2rem + 4px)`;
+        }
+        if (draggableLineRef.current) {
+            draggableLineRef.current.style.left = `calc(${draggableLineX}px - 4px)`;
+        }
+
         setContainerHeight({
             container: containerRef.current,
             left: leftRef.current,
