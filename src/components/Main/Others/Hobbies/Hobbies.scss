@@ -35,3 +35,13 @@
         }
     }
 }
+
+@media only screen and (max-width: 768px) {
+    #hobbies {
+        > .hobbies-list-container {
+            :first-child {
+                margin-right: 1.5rem;
+            }
+        }
+    }
+}
