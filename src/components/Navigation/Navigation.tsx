@@ -43,7 +43,9 @@ const Navigation: React.FC<INavigationProps> = (props) => {
                 selected={false}
                 onClick={() => onTabClick(MainTabEnum.OTHERS)}
             >
-                Education &amp; others
+                {window.innerWidth < RESIZABLE_THRESHOLD
+                    ? "Education & others"
+                    : "Education"}
             </NavigationLink>
         </div>
     );
