@@ -72,6 +72,13 @@ const Resizable: React.FC<IResizableProps> = (props) => {
     }, []);
 
     window.addEventListener("resize", () => {
+        setContainerHeight({
+            container: containerRef.current,
+            left: leftRef.current,
+            right: rightRef.current,
+            draggableLine: draggableLineRef.current,
+        });
+
         setColumnsWidth({
             left: leftRef.current,
             right: rightRef.current,

@@ -12,14 +12,16 @@ export enum MainTabEnum {
     OTHERS = "Education & others",
 }
 
+export const RESIZABLE_THRESHOLD = 800;
+
 const Main: React.FC = (props) => {
     const [activeTab, setActiveTab] = useState<MainTabEnum>(MainTabEnum.WORK);
     const [isResizable, setIsResizable] = useState<boolean>(
-        window.innerWidth > 800
+        window.innerWidth > RESIZABLE_THRESHOLD
     );
 
     window.addEventListener("resize", () =>
-        setIsResizable(window.innerWidth > 800)
+        setIsResizable(window.innerWidth > RESIZABLE_THRESHOLD)
     );
 
     return (
