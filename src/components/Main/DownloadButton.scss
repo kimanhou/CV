@@ -8,6 +8,8 @@
     cursor: pointer;
     overflow: hidden;
     transition: all 0.2s ease;
+    margin-top: 3rem;
+    margin-bottom: 1px;
     &:after {
         content: "";
         position: relative;
