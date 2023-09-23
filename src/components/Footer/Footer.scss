@@ -16,6 +16,8 @@ footer {
             -webkit-transform: translateZ(0);
             transform: translateZ(0);
             width: 100%;
+            min-height: 200px;
+            margin-left: -1px;
         }
     }
     > #footer-background {
