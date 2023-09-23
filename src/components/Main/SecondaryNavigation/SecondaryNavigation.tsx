@@ -18,20 +18,27 @@ const SecondaryNavigation: React.FC<ISecondaryNavigationProps> = (props) => {
         <div id="secondary-navigation">
             <div className="secondary-navigation-tabs-container flex-row">
                 {tabs.map((tab) => (
-                    <span
-                        key={tab}
-                        className={`${isActiveClassname(tab)}`}
-                        onClick={() => props.setActiveTab(tab)}
-                    >
-                        {tab}
-                    </span>
+                    <div className="secondary-navigation-tab" key={tab}>
+                        <span
+                            className={`${isActiveClassname(tab)}`}
+                            onClick={() => props.setActiveTab(tab)}
+                        >
+                            {tab}
+                        </span>
+
+                        <div className="secondary-navigation-bottom-line flex-row">
+                            <div
+                                className={`secondary-navigation-bottom-line-black ${isActiveClassname(
+                                    tab
+                                )}`}
+                            ></div>
+                            <div className="secondary-navigation-bottom-line-grey"></div>
+                        </div>
+                    </div>
                 ))}
             </div>
 
-            <div className="secondary-navigation-bottom-line flex-row">
-                <div className="secondary-navigation-bottom-line-black"></div>
-                <div className="secondary-navigation-bottom-line-grey"></div>
-            </div>
+            <div className="secondary-navigation-bottom-line-grey"></div>
         </div>
     );
 };

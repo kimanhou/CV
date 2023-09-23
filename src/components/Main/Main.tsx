@@ -14,8 +14,12 @@ export enum MainTabEnum {
 
 export const RESIZABLE_THRESHOLD = 800;
 
-const Main: React.FC = (props) => {
-    const [activeTab, setActiveTab] = useState<MainTabEnum>(MainTabEnum.WORK);
+interface IMainProps {
+    activeTab: MainTabEnum;
+    setActiveTab: (activeTab: MainTabEnum) => void;
+}
+
+const Main: React.FC<IMainProps> = (props) => {
     const [isResizable, setIsResizable] = useState<boolean>(
         window.innerWidth > RESIZABLE_THRESHOLD
     );
@@ -30,11 +34,15 @@ const Main: React.FC = (props) => {
                 {!isResizable && (
                     <>
                         <SecondaryNavigation
-                            activeTab={activeTab}
-                            setActiveTab={setActiveTab}
+                            activeTab={props.activeTab}
+                            setActiveTab={props.setActiveTab}
                         />
-                        {activeTab.toLocaleLowerCase() === "work" && <Work />}
-                        {activeTab.toLocaleLowerCase() !== "work" && <Others />}
+                        {props.activeTab.toLocaleLowerCase() === "work" && (
+                            <Work />
+                        )}
+                        {props.activeTab.toLocaleLowerCase() !== "work" && (
+                            <Others />
+                        )}
                         <a href="./CV.pdf" download="KimAnhNguyen - CV">
                             <DownloadButton />
                         </a>
