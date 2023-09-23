@@ -18,7 +18,7 @@ footer {
             width: 100%;
         }
     }
-    > .background {
+    > #footer-background {
         position: absolute;
         top: 0;
         bottom: 0;
@@ -30,7 +30,7 @@ footer {
         background-repeat: repeat;
         background-color: var(--color-magnolia);
     }
-    > .bg__container {
+    > #footer-content {
         position: absolute;
         top: 0;
         bottom: 0;
@@ -40,7 +40,7 @@ footer {
             position: absolute;
             right: 0;
             bottom: 0;
-            padding: 0 3.333333333em 0 14.666666667em;
+            padding: 0 3rem 0 0;
             -moz-box-sizing: border-box;
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -55,65 +55,11 @@ footer {
     }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
     footer {
-        > svg {
-            &.triangle {
-                height: 25vw;
-            }
-        }
-        > .bg {
-            > .bg__container {
-                > .bg__main {
-                    bottom: 5.452562704%;
-                    > .bg__container {
-                        > .logo {
-                            max-width: 100px;
-                            > img {
-                                max-width: 120px;
-                                width: 8.33333vw;
-                                height: auto;
-                            }
-                        }
-                        > .info {
-                            position: absolute;
-                            right: 0;
-                            bottom: 0;
-                            z-index: 50;
-                            padding: 0 3.333333333em 0 14.666666667em;
-                            font-size: 15px;
-                            font-size: 1.07143rem;
-                            -moz-box-sizing: border-box;
-                            -webkit-box-sizing: border-box;
-                            box-sizing: border-box;
-                            text-align: right;
-                            color: var(--fg);
-
-                            p {
-                                margin: 0;
-                            }
-                            > .social-bar {
-                                margin-bottom: 0.8rem;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1440px) {
-    footer {
-        > .bg {
-            > .bg__container {
-                > .bg__main {
-                    > .bg__container {
-                        > .info {
-                            font-size: 1.04167vw;
-                        }
-                    }
-                }
+        > #footer-content {
+            > .info {
+                padding-right: 1rem;
             }
         }
     }

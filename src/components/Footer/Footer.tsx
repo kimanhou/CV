@@ -5,7 +5,7 @@ import "./Footer.scss";
 export const Footer: React.FC = (props) => {
     return (
         <footer>
-            <div className="background" />
+            <div id="footer-background" />
             <svg
                 className="triangle"
                 version="1.1"
@@ -17,12 +17,10 @@ export const Footer: React.FC = (props) => {
             >
                 <polygon points="0,480 0,0 1920,0 "></polygon>
             </svg>
-            <div className="bg__container">
+            <div id="footer-content">
                 <div className="info">
                     <SocialBar />
-                    <p className="info__copy">
-                        Made with &#128420; &copy; 2023
-                    </p>
+                    <p>Made with &#128420; &copy; 2023</p>
                 </div>
             </div>
         </footer>
