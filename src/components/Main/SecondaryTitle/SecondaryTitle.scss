@@ -1,0 +1,24 @@
+.secondary-title {
+    margin-bottom: 2rem;
+    > h3 {
+        font-size: 1.3rem;
+        text-align: left;
+        margin-block-start: 0;
+        margin-block-end: 0.8rem;
+        font-weight: normal;
+    }
+    > .secondary-title-bottom-line {
+        > .secondary-title-bottom-line-black,
+        > .secondary-title-bottom-line-grey {
+            height: 1px;
+        }
+        > .secondary-title-bottom-line-black {
+            background-color: var(--fg);
+            width: 3rem;
+        }
+        > .secondary-title-bottom-line-grey {
+            background-color: var(--color-light-grey);
+            flex: 1;
+        }
+    }
+}

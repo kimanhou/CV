@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { HashRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import { Header } from "./components/Header/Header";
+import { Footer } from "./components/Footer/Footer";
+import { Home } from "./components/Home/Home";
+import { Playground } from "./components/Playground/Playground";
+import { MainTabEnum } from "./components/Main/Main";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [activeTab, setActiveTab] = useState<MainTabEnum>(MainTabEnum.WORK);
+
+    return (
+        <div className="App">
+            <HashRouter>
+                <Header setActiveTab={setActiveTab} />
+                <Routes>
+                    <Route
+                        path={"/playground"}
+                        element={<Playground />}
+                    ></Route>
+                    <Route
+                        path={"/"}
+                        element={
+                            <Home
+                                activeTab={activeTab}
+                                setActiveTab={setActiveTab}
+                            />
+                        }
+                    ></Route>
+                </Routes>
+                <Footer />
+            </HashRouter>
+        </div>
+    );
 }
 
 export default App;
