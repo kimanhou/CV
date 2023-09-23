@@ -14,7 +14,13 @@ export enum MainTabEnum {
 
 const Main: React.FC = (props) => {
     const [activeTab, setActiveTab] = useState<MainTabEnum>(MainTabEnum.WORK);
-    const isResizable = true;
+    const [isResizable, setIsResizable] = useState<boolean>(
+        window.innerWidth > 800
+    );
+
+    window.addEventListener("resize", () =>
+        setIsResizable(window.innerWidth > 800)
+    );
 
     return (
         <section id="main">
@@ -38,7 +44,7 @@ const Main: React.FC = (props) => {
                         <Resizable
                             left={
                                 <>
-                                    <SecondaryTitle title="Work" />
+                                    <SecondaryTitle title={MainTabEnum.WORK} />
                                     <Work />
                                 </>
                             }
