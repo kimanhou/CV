@@ -5,11 +5,11 @@
         top: 0;
         &.resizable-left {
             left: 0;
-            width: calc(735px - 6rem - 4px);
+            width: calc(735px - 105px - 4px);
         }
         &.resizable-right {
             right: 0;
-            left: calc(735px + 2rem + 4px);
+            left: calc(735px + 35px + 4px);
         }
     }
     > .resizable-drag {

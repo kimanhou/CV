@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Resizable.scss";
-import { pauseEvent, setContainerHeight } from "./utils";
+import { pauseEvent, setColumnsWidth, setContainerHeight } from "./utils";
 
 interface IResizableProps {
     left: JSX.Element;
@@ -63,7 +63,21 @@ const Resizable: React.FC<IResizableProps> = (props) => {
             right: rightRef.current,
             draggableLine: draggableLineRef.current,
         });
+
+        setColumnsWidth({
+            left: leftRef.current,
+            right: rightRef.current,
+            draggableLine: draggableLineRef.current,
+        });
     }, []);
+
+    window.addEventListener("resize", () => {
+        setColumnsWidth({
+            left: leftRef.current,
+            right: rightRef.current,
+            draggableLine: draggableLineRef.current,
+        });
+    });
 
     return (
         <div
