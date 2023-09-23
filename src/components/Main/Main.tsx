@@ -5,6 +5,7 @@ import { Work } from "./Work/Work";
 import "./Main.scss";
 import DownloadButton from "./DownloadButton";
 import Resizable from "./Resizable/Resizable";
+import SecondaryTitle from "./SecondaryTitle/SecondaryTitle";
 
 export enum MainTabEnum {
     WORK = "Work",
@@ -34,8 +35,25 @@ const Main: React.FC = (props) => {
 
                 {isResizable && (
                     <>
-                        <Resizable left={<Work />} right={<Others />} />
-                        <a href="./CV.pdf" download="KimAnhNguyen - CV">
+                        <Resizable
+                            left={
+                                <>
+                                    <SecondaryTitle title="Work" />
+                                    <Work />
+                                </>
+                            }
+                            right={
+                                <>
+                                    <SecondaryTitle title="Education" />
+                                    <Others />
+                                </>
+                            }
+                        />
+                        <a
+                            href="./CV.pdf"
+                            download="KimAnhNguyen - CV"
+                            id="main-download-button"
+                        >
                             <DownloadButton />
                         </a>
                     </>

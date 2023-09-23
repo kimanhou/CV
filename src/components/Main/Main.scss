@@ -5,4 +5,10 @@
         justify-content: center;
         gap: 20px;
     }
+    #main-download-button {
+        > .btn-circle-download {
+            margin-top: 3rem;
+            margin-bottom: 1px;
+        }
+    }
 }

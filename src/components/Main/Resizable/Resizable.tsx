@@ -13,6 +13,7 @@ const Resizable: React.FC<IResizableProps> = (props) => {
     const containerRef = useRef<HTMLDivElement>(null);
     const leftRef = useRef<HTMLDivElement>(null);
     const rightRef = useRef<HTMLDivElement>(null);
+    const dragableLineRef = useRef<HTMLDivElement>(null);
 
     const onMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
         setIsResizing(true);
@@ -39,6 +40,7 @@ const Resizable: React.FC<IResizableProps> = (props) => {
             container: containerRef.current,
             left: leftRef.current,
             right: rightRef.current,
+            dragableLine: dragableLineRef.current,
         });
     };
 
@@ -51,6 +53,7 @@ const Resizable: React.FC<IResizableProps> = (props) => {
             container: containerRef.current,
             left: leftRef.current,
             right: rightRef.current,
+            dragableLine: dragableLineRef.current,
         });
     }, []);
 
@@ -65,7 +68,11 @@ const Resizable: React.FC<IResizableProps> = (props) => {
                 {props.left}
             </div>
 
-            <div className="resizable-drag" onMouseDown={onMouseDown}>
+            <div
+                className="resizable-drag"
+                onMouseDown={onMouseDown}
+                ref={dragableLineRef}
+            >
                 <div className="resizable-drag-line"></div>
             </div>
 
