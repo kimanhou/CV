@@ -2,20 +2,20 @@ export const setContainerHeight = ({
     container,
     left,
     right,
-    dragableLine,
+    draggableLine,
 }: {
     container: HTMLDivElement | null;
     left: HTMLDivElement | null;
     right: HTMLDivElement | null;
-    dragableLine: HTMLDivElement | null;
+    draggableLine: HTMLDivElement | null;
 }) => {
     if (left?.clientHeight !== undefined && right?.clientHeight !== undefined) {
         const maxHeight = Math.max(left.clientHeight, right.clientHeight);
         if (container !== null) {
             container.style.height = `${maxHeight}px`;
         }
-        if (dragableLine !== null) {
-            dragableLine.style.height = `${maxHeight}px`;
+        if (draggableLine !== null) {
+            draggableLine.style.height = `${maxHeight}px`;
         }
     }
 };
