@@ -40,7 +40,6 @@
 
 <br/>
 <br/>
-<br/>
 
 <!-- About Section -->
 # My favorite technologies
