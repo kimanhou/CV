@@ -32,7 +32,6 @@ const SecondaryNavigation: React.FC<ISecondaryNavigationProps> = (props) => {
                                     tab
                                 )}`}
                             ></div>
-                            <div className="secondary-navigation-bottom-line-grey"></div>
                         </div>
                     </div>
                 ))}
