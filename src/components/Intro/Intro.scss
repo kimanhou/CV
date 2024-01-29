@@ -1,7 +1,42 @@
 #intro {
     display: flex;
     justify-content: center;
-    img {
-        height: 80vh;
+    align-items: center;
+    height: 80vh;
+    flex: 0 0 100%;
+    >#intro-column-left {
+        flex: 2 1 0;
+        height: 100%;
+        #intro-box-2 {
+            margin-bottom: 10px;
+        }
+        #intro-box-4 {
+            margin-left: 10px;
+        }
+    }
+
+    >#intro-box-1 {
+        flex: 1 1 0;
+        height: calc(100% - 2px);
+        margin-left: 10px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: background-size 0.2s;
+        animation: zoom-in .4s ease-in 0s forwards;
+    }
+    .intro-box {
+        border: solid 1px var(--color-light-grey);
+        border-radius: 8px;
+    }
+
+}
+
+@keyframes zoom-in {
+    from {
+        background-size: contain;
+    }
+    to {
+        background-size: cover;
     }
 }

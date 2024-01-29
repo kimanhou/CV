@@ -20,7 +20,7 @@ export const Footer: React.FC = (props) => {
             <div id="footer-content">
                 <div className="info">
                     <SocialBar />
-                    <p>Made with &#128420; &copy; 2023</p>
+                    <p>Made with &#128420; &copy; 2024</p>
                 </div>
             </div>
         </footer>
