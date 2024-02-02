@@ -12,19 +12,45 @@
         }
         #intro-box-4 {
             margin-left: 10px;
+            background-attachment: fixed;
+            background-size: 180px 180px;
+            background-image: url("/img/pattern.svg");
+            background-repeat: repeat;
+            background-color: var(--color-magnolia);
+            border: none;
+            max-height: calc(80vh / 2 - 4px);
+            overflow: hidden;
+            >h1 {
+                animation: letter-spacing-animation .6s ease-in 1s forwards;
+                font-size: 3rem;
+                margin-block: 0;
+                font-weight: normal;
+                color: var(--color-grey);
+                background-color: var(--color-magnolia);
+            }
+            >.social-bar {
+                margin-top: 0;
+                animation: intro-box-4-init .4s ease-in 0s forwards;
+            }
         }
     }
 
-    >#intro-box-1 {
+    >#intro-box-1-container {
         flex: 1 1 0;
         height: calc(100% - 2px);
         margin-left: 10px;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        transition: background-size 0.2s;
-        animation: zoom-in .4s ease-in 0s forwards;
+        transition: height 0.2s;
+        align-items: flex-end;
+        >#intro-box-1 {
+            height: calc(100% - 2px);
+            animation: zoom-in .4s ease-in 0s forwards;
+            background-size: contain;
+            background-position: bottom;
+            background-repeat: no-repeat;
+            border: none;
+        }
     }
+    
     .intro-box {
         border: solid 1px var(--color-light-grey);
         border-radius: 8px;
@@ -34,9 +60,20 @@
 
 @keyframes zoom-in {
     from {
+        height: 50px;
         background-size: contain;
     }
     to {
+        height: calc(100% - 2px);
         background-size: cover;
+    }
+}
+
+@keyframes intro-box-4-init {
+    from {
+        margin-top: 500px;
+    }
+    to {
+        margin-top: 0;
     }
 }

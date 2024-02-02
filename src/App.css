@@ -30,6 +30,14 @@ html {
     flex: 1;
 }
 
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
 a {
     color: var(--fg);
     text-decoration: none;

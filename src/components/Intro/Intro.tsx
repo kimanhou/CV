@@ -1,6 +1,7 @@
 import React from "react";
 import "./Intro.scss";
 import avatar from "./avatar.png";
+import { SocialBar } from "components/Social";
 
 export const Intro: React.FC = (props) => {
     return (
@@ -13,19 +14,23 @@ export const Intro: React.FC = (props) => {
                     <div id="intro-box-3" className="flex-1 intro-box">
                         THREE
                     </div>
-                    <div id="intro-box-4" className="flex-1 intro-box">
-                        FOUR
+                    <div
+                        id="intro-box-4"
+                        className="flex-1 intro-box flex-column justify-content-center align-items-center"
+                    >
+                        <h1>WANT TO SAY 'HELLO' ?</h1>
+                        <SocialBar />
                     </div>
                 </div>
             </div>
-            <div
-                id="intro-box-1"
-                className="flex-1 flex-column intro-box"
-                style={{
-                    backgroundImage: `url(${avatar})`,
-                }}
-            >
-                ONE
+            <div id="intro-box-1-container" className="flex-row">
+                <div
+                    id="intro-box-1"
+                    className="flex-1 flex-column intro-box"
+                    style={{
+                        backgroundImage: `url(${avatar})`,
+                    }}
+                />
             </div>
         </section>
     );
