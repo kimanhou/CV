@@ -1,4 +1,5 @@
 import React from "react";
+import "./WorkBlockTags.scss";
 
 interface IWorkBlockTagsProps {
     tags: string[];
