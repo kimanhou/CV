@@ -1,0 +1,15 @@
+#intro-box-1-container {
+    flex: 1 1 0;
+    height: calc(100% - 2px);
+    margin-left: 10px;
+    transition: height 0.2s;
+    align-items: flex-end;
+    > #intro-box-1 {
+        height: calc(100% - 2px);
+        animation: intro-box-1-init 0.4s ease-in 0s forwards;
+        background-size: contain;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        border: none;
+    }
+}

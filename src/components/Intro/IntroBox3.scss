@@ -1,0 +1,29 @@
+#intro-box-3 {
+    padding-right: 40px;
+    overflow: hidden;
+    h1 {
+        text-orientation: unset;
+        writing-mode: unset;
+        transform: rotate(-90deg);
+        letter-spacing: 4px;
+        margin-block: 0;
+    }
+    .intro-box-3-h1 {
+        animation: intro-box-3-h1-init 0.4s ease-in 0s forwards;
+    }
+
+    > #intro-box-3-content {
+        img {
+            width: 5rem;
+        }
+        p {
+            margin-block-end: 0;
+        }
+        .intro-box-3-content {
+            animation: intro-box-3-content-init 0.4s ease-in 0s forwards;
+        }
+        .intro-box-3-tag {
+            right: -21rem;
+        }
+    }
+}
