@@ -42,8 +42,13 @@ export const Intro: React.FC = (props) => {
                         id="intro-box-4"
                         className="flex-1 intro-box flex-column justify-content-center align-items-center"
                     >
-                        <h1>WANT TO SAY 'HELLO' ?</h1>
-                        <SocialBar />
+                        <div
+                            id="intro-box-4-content"
+                            className="flex-column justify-content-center align-items-center"
+                        >
+                            <h1>WANT TO SAY 'HELLO' ?</h1>
+                            <SocialBar />
+                        </div>
                     </div>
                 </div>
             </div>
