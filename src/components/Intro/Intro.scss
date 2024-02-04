@@ -13,19 +13,38 @@
         }
         #intro-box-3 {
             padding-right: 40px;
-            >h1 {
-                text-orientation: unset;
-                writing-mode: unset;
-                transform: rotate(-90deg);
-                letter-spacing: 4px;
-                margin-block: 0;
+            overflow: hidden;
+            >#intro-box-3-h1-wrapper {
+                position: relative;
+                >h1 {
+                    text-orientation: unset;
+                    writing-mode: unset;
+                    transform: rotate(-90deg);
+                    letter-spacing: 4px;
+                    margin-block: 0;
+                    &.invisible {
+                        opacity: 0.2;
+                    }
+                    &.absolute {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                        // animation: intro-box-3-h1-init .4s ease-in 0s forwards;
+                    }
+                }
             }
+            
             >#intro-box-3-content {
-                >img {
+                img {
                     width: 5rem;
                 }
-                >p {
+                p {
                     margin-block-end: 0;
+                }
+                .intro-box-3-content {
+                    animation: intro-box-3-content-init .4s ease-in 0s forwards;
                 }
             }
         }
@@ -77,7 +96,7 @@
         align-items: flex-end;
         >#intro-box-1 {
             height: calc(100% - 2px);
-            animation: zoom-in .4s ease-in 0s forwards;
+            animation: intro-box-1-init .4s ease-in 0s forwards;
             background-size: contain;
             background-position: bottom;
             background-repeat: no-repeat;
@@ -92,7 +111,7 @@
 
 }
 
-@keyframes zoom-in {
+@keyframes intro-box-1-init {
     from {
         height: 50%;
         background-size: contain;
@@ -100,6 +119,24 @@
     to {
         height: calc(100% - 2px);
         background-size: cover;
+    }
+}
+
+@keyframes intro-box-3-h1-init {
+    from {
+        right: 100px;
+    }
+    to {
+        right: 0;
+    }
+}
+
+@keyframes intro-box-3-content-init {
+    from {
+        right: -300px;
+    }
+    to {
+        right: 0;
     }
 }
 
