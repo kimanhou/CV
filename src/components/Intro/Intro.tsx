@@ -3,7 +3,7 @@ import "./Intro.scss";
 import avatar from "./avatar.png";
 import computer from "./computer.png";
 import { SocialBar } from "components/Social";
-import WorkBlockTags from "components/Main/Work/Tags/WorkBlockTags";
+import Tag from "components/Main/Work/Tags/Tag";
 import { RAKUTEN_WORK_INFO } from "components/Main/Work/utils";
 import { Animator } from "components/common/Animator/Animator";
 
@@ -20,8 +20,9 @@ export const Intro: React.FC = (props) => {
                         className="flex-1 intro-box flex-row align-items-center justify-content-center"
                     >
                         <div id="intro-box-3-h1-wrapper">
-                            <h1 className="invisible">CURRENT POSITION</h1>
-                            <h1 className="absolute">CURRENT POSITION</h1>
+                            <Animator animationClassName="intro-box-3-h1">
+                                <h1>CURRENT POSITION</h1>
+                            </Animator>
                         </div>
                         <div
                             id="intro-box-3-content"
@@ -41,8 +42,23 @@ export const Intro: React.FC = (props) => {
                                     like a wild Pokemon ? Well, that's me.
                                 </p>
                             </Animator>
-
-                            <WorkBlockTags tags={RAKUTEN_WORK_INFO.tags} />
+                            <div
+                                className="flex-row"
+                                style={{ marginTop: "2rem" }}
+                            >
+                                {RAKUTEN_WORK_INFO.tags.map((tag, i) => (
+                                    <Animator
+                                        animationClassName="intro-box-3-tag"
+                                        animationStyle={{
+                                            animation: `intro-box-3-content-init 0.4s ease-in ${
+                                                0.8 + 0.1 * i
+                                            }s forwards`,
+                                        }}
+                                    >
+                                        <Tag tag={tag} key={i} />
+                                    </Animator>
+                                ))}
+                            </div>
                         </div>
                     </div>
                     <div

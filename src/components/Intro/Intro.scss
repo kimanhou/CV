@@ -5,7 +5,7 @@
     height: 80vh;
     flex: 0 0 100%;
     color: var(--color-grey);
-    >#intro-column-left {
+    > #intro-column-left {
         flex: 2 1 0;
         height: 100%;
         #intro-box-2 {
@@ -14,29 +14,18 @@
         #intro-box-3 {
             padding-right: 40px;
             overflow: hidden;
-            >#intro-box-3-h1-wrapper {
-                position: relative;
-                >h1 {
-                    text-orientation: unset;
-                    writing-mode: unset;
-                    transform: rotate(-90deg);
-                    letter-spacing: 4px;
-                    margin-block: 0;
-                    &.invisible {
-                        opacity: 0.2;
-                    }
-                    &.absolute {
-                        position: absolute;
-                        top: 0;
-                        right: 0;
-                        bottom: 0;
-                        left: 0;
-                        // animation: intro-box-3-h1-init .4s ease-in 0s forwards;
-                    }
-                }
+            h1 {
+                text-orientation: unset;
+                writing-mode: unset;
+                transform: rotate(-90deg);
+                letter-spacing: 4px;
+                margin-block: 0;
             }
-            
-            >#intro-box-3-content {
+            .intro-box-3-h1 {
+                animation: intro-box-3-h1-init 0.4s ease-in 0s forwards;
+            }
+
+            > #intro-box-3-content {
                 img {
                     width: 5rem;
                 }
@@ -44,7 +33,10 @@
                     margin-block-end: 0;
                 }
                 .intro-box-3-content {
-                    animation: intro-box-3-content-init .4s ease-in 0s forwards;
+                    animation: intro-box-3-content-init 0.4s ease-in 0s forwards;
+                }
+                .intro-box-3-tag {
+                    right: -21rem;
                 }
             }
         }
@@ -56,7 +48,7 @@
             min-width: 20rem;
             position: relative;
             &:before {
-                content: ' ';
+                content: " ";
                 display: block;
                 position: absolute;
                 left: 0;
@@ -69,46 +61,47 @@
                 background-image: url("/img/pattern.svg");
                 background-repeat: repeat;
                 background-color: var(--color-magnolia);
-              }
-            >#intro-box-4-content {
+            }
+            > #intro-box-4-content {
                 position: relative;
-                >h1 {
-                    animation: letter-spacing-animation .6s ease-in 1s forwards;
+                > h1 {
+                    animation: letter-spacing-animation 0.6s ease-in 1s forwards;
                     font-size: 3rem;
                     margin-block: 0;
                     font-weight: normal;
-                    text-shadow: -1px -1px 0 var(--color-magnolia), 1px -1px 0 var(--color-magnolia), -1px 1px 0 var(--color-magnolia), 1px 1px 0 var(--color-magnolia);
+                    text-shadow: -1px -1px 0 var(--color-magnolia),
+                        1px -1px 0 var(--color-magnolia),
+                        -1px 1px 0 var(--color-magnolia),
+                        1px 1px 0 var(--color-magnolia);
                 }
-                >.social-bar {
+                > .social-bar {
                     margin-top: 0;
-                    animation: intro-box-4-init .4s ease-in 0s forwards;
+                    animation: intro-box-4-init 0.4s ease-in 0s forwards;
                 }
             }
-            
         }
     }
 
-    >#intro-box-1-container {
+    > #intro-box-1-container {
         flex: 1 1 0;
         height: calc(100% - 2px);
         margin-left: 10px;
         transition: height 0.2s;
         align-items: flex-end;
-        >#intro-box-1 {
+        > #intro-box-1 {
             height: calc(100% - 2px);
-            animation: intro-box-1-init .4s ease-in 0s forwards;
+            animation: intro-box-1-init 0.4s ease-in 0s forwards;
             background-size: contain;
             background-position: bottom;
             background-repeat: no-repeat;
             border: none;
         }
     }
-    
+
     .intro-box {
         border: solid 1px var(--color-light-grey);
         border-radius: 8px;
     }
-
 }
 
 @keyframes intro-box-1-init {
