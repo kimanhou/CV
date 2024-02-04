@@ -27,3 +27,21 @@
         }
     }
 }
+
+@keyframes intro-box-3-h1-init {
+    from {
+        right: 100px;
+    }
+    to {
+        right: 0;
+    }
+}
+
+@keyframes intro-box-3-content-init {
+    from {
+        right: -300px;
+    }
+    to {
+        right: 0;
+    }
+}

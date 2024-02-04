@@ -20,21 +20,44 @@
         background-repeat: repeat;
         background-color: var(--color-magnolia);
     }
-    > #intro-box-4-content {
-        position: relative;
-        > h1 {
-            animation: letter-spacing-animation 0.6s ease-in 1s forwards;
-            font-size: 3rem;
-            margin-block: 0;
-            font-weight: normal;
-            text-shadow: -1px -1px 0 var(--color-magnolia),
-                1px -1px 0 var(--color-magnolia),
-                -1px 1px 0 var(--color-magnolia),
-                1px 1px 0 var(--color-magnolia);
-        }
-        > .social-bar {
-            margin-top: 0;
-            animation: intro-box-4-init 0.4s ease-in 0s forwards;
-        }
+
+    h1 {
+        animation: letter-spacing-animation 0.6s ease-in 1s forwards;
+        font-size: 3rem;
+        margin-block: 0;
+        font-weight: normal;
+        text-shadow: -1px -1px 0 var(--color-magnolia),
+            1px -1px 0 var(--color-magnolia), -1px 1px 0 var(--color-magnolia),
+            1px 1px 0 var(--color-magnolia);
+    }
+    .intro-box-4-h1 {
+        top: -9rem;
+        animation: intro-box-4-h1-init 0.4s ease-in 0s forwards;
+    }
+
+    .social-bar {
+        margin-top: 0;
+    }
+    .intro-box-4-social-bar {
+        top: 5rem;
+        animation: intro-box-4-social-bar-init 0.4s ease-in 0s forwards;
+    }
+}
+
+@keyframes intro-box-4-h1-init {
+    from {
+        top: -9rem;
+    }
+    to {
+        top: 0;
+    }
+}
+
+@keyframes intro-box-4-social-bar-init {
+    from {
+        top: 5rem;
+    }
+    to {
+        top: 0;
     }
 }

@@ -13,3 +13,14 @@
         border: none;
     }
 }
+
+@keyframes intro-box-1-init {
+    from {
+        height: 50%;
+        background-size: contain;
+    }
+    to {
+        height: calc(100% - 2px);
+        background-size: cover;
+    }
+}
