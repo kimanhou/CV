@@ -1,7 +1,7 @@
 import React from "react";
 import "./IntroBox3.scss";
 import computer from "./computer.png";
-import Tag from "components/Main/Work/Tags/Tag";
+import Tag from "components/common/Tag/Tag";
 import { RAKUTEN_WORK_INFO } from "components/Main/Work/utils";
 import { Animator } from "components/common/Animator/Animator";
 
@@ -27,13 +27,14 @@ export const IntroBox3: React.FC = (props) => {
                     </p>
                     <p>
                         You know when you're on a website and suddenly an ad pop
-                        up blows up in your face, like a wild Pokemon ? Well,
-                        that's me.
+                        up blows up into your face, like a wild Pokemon ?{" "}
+                        <br></br> Well, that's me.
                     </p>
                 </Animator>
                 <div className="flex-row" style={{ marginTop: "2rem" }}>
                     {RAKUTEN_WORK_INFO.tags.map((tag, i) => (
                         <Animator
+                            key={i}
                             animationClassName="intro-box-3-tag"
                             animationStyle={{
                                 animation: `intro-box-3-content-init 0.4s ease-in ${
@@ -41,7 +42,12 @@ export const IntroBox3: React.FC = (props) => {
                                 }s forwards`,
                             }}
                         >
-                            <Tag tag={tag} key={i} />
+                            <Tag
+                                tag={tag}
+                                noMarginRight={
+                                    i === RAKUTEN_WORK_INFO.tags.length - 1
+                                }
+                            />
                         </Animator>
                     ))}
                 </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { WorkEnum } from "./Work";
 import WorkBlockHeader from "./WorkBlockHeader";
-import WorkBlockTags from "./Tags/WorkBlockTags";
+import WorkBlockTags from "./WorkBlockTags";
 import { getWorkBlockInfo } from "./utils";
 
 interface IWorkBlockProps {

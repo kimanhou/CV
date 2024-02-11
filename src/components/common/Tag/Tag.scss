@@ -8,4 +8,7 @@
     text-align: center;
     color: var(--fg);
     font-size: 0.8rem;
+    &.no-margin-right {
+        margin-right: 0;
+    }
 }
