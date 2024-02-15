@@ -53,9 +53,9 @@ export const IntroBox3: React.FC = (props) => {
             >
                 <Animator animationClassName="intro-box-3-content">
                     <img src={computer} alt="Illustration of a laptop" />
-                    <p>
+                    <h4>
                         <b>Frontend Engineer</b> at <b>Rakuten</b>
-                    </p>
+                    </h4>
                     <p>
                         You know when you're on a website and suddenly an ad pop
                         up blows up into your face, like a wild Pokemon ?{" "}

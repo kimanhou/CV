@@ -16,8 +16,12 @@
         img {
             width: 5rem;
         }
+        h4 {
+            margin-block-end: 0;
+        }
         p {
             margin-block-end: 0;
+            color: var(--fg);
         }
         .intro-box-3-content {
             animation: intro-box-3-content-init 0.4s ease-in 0s forwards;

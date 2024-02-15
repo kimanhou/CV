@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import unicorn from "./unicorn.png";
 import "./IntroBox2.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
 
 export const IntroBox2: React.FC = (props) => {
     const [suspensionDots, setSuspensionDots] = useState("");
@@ -60,15 +62,23 @@ export const IntroBox2: React.FC = (props) => {
                     </div>
                     <p>
                         Hello beautiful souls ☀️<br></br>
-                        <br></br> Welcome to my website. Lorem ipsum dolor sit
-                        amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad
-                        minim veniam, quis nostrud exercitation ullamco laboris
-                        nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                        dolor in reprehenderit in voluptate velit esse cillum
-                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                        cupidatat non proident, sunt in culpa qui officia
-                        deserunt mollit anim id est laborum.
+                        <br></br> My name is Kim Anh and I currently live in
+                        Tokyo, Japan. As a passionate Frontend Engineer with a
+                        keen appreciation for design, I always keep an eye out
+                        for innovative UX and design concepts. <br></br>
+                        <br></br> My other passions include eating out,
+                        travelling, hiking and most recently, searching for the
+                        finest onsen in Japan. On my free time, I curate an
+                        online compilation of restaurants with my brother - a
+                        side project I very much enjoy as it blends my love for
+                        food and coding (it's a work in progress{" "}
+                        <a
+                            href="https://kimanhou.github.io/the-culinary-passport/#/tokyo"
+                            target="_blank"
+                        >
+                            <FontAwesomeIcon icon={faLink} />
+                        </a>
+                        ).
                     </p>
                 </div>
             </div>
