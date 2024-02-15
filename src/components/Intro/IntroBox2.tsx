@@ -75,6 +75,7 @@ export const IntroBox2: React.FC = (props) => {
                         <a
                             href="https://kimanhou.github.io/the-culinary-passport/#/tokyo"
                             target="_blank"
+                            rel="noreferrer"
                         >
                             <FontAwesomeIcon icon={faLink} />
                         </a>
