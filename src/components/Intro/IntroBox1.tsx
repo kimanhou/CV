@@ -1,4 +1,3 @@
-import React from "react";
 import avatar from "./avatar.png";
 import "./IntroBox1.scss";
 

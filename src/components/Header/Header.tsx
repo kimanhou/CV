@@ -1,4 +1,3 @@
-import React from "react";
 import { MainTabEnum } from "../Main/Main";
 import Navigation from "../Navigation/Navigation";
 import "./Header.scss";

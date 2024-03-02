@@ -1,4 +1,3 @@
-import React from "react";
 import "./NavigationLink.scss";
 import { Link, useLocation, matchPath } from "react-router-dom";
 import { scrollTo } from "./utils";

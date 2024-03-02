@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Others from "./Others/Others";
 import SecondaryNavigation from "./SecondaryNavigation/SecondaryNavigation";
 import { Work } from "./Work/Work";

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useIsMobile } from "hooks/useIsMobile";
 import computer from "./computer.png";
 import { RAKUTEN_WORK_INFO } from "components/Main/Work/utils";

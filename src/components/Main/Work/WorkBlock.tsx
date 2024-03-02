@@ -1,4 +1,4 @@
-import React from "react";
+import { Fragment } from "react";
 import { WorkEnum } from "./Work";
 import WorkBlockHeader from "./WorkBlockHeader";
 import WorkBlockTags from "./WorkBlockTags";
@@ -21,10 +21,10 @@ const WorkBlock: React.FC<IWorkBlockProps> = (props) => {
             <h2>{title}</h2>
             <p>
                 {description.map((line, i) => (
-                    <React.Fragment key={i}>
+                    <Fragment key={i}>
                         {line}
                         <br></br>
-                    </React.Fragment>
+                    </Fragment>
                 ))}
             </p>
             <WorkBlockTags tags={tags} />

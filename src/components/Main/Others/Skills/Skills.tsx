@@ -1,4 +1,3 @@
-import React from "react";
 import "./Skills.scss";
 import SkillsBlock from "./SkillsBlock";
 import construction from "./construction.png";

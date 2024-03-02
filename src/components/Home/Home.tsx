@@ -1,4 +1,3 @@
-import React from "react";
 import { Divider } from "../Divider/Divider";
 import Main, { MainTabEnum } from "../Main/Main";
 import { Intro } from "../Intro/Intro";

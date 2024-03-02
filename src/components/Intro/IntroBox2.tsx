@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import SlackReactionContainer from "components/common/SlackReaction/SlackReactionContainer";
 import unicorn from "./unicorn.png";
-import "./IntroBox2.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
+import "./IntroBox2.scss";
 
 export const IntroBox2: React.FC = (props) => {
     const [suspensionDots, setSuspensionDots] = useState("");
@@ -80,6 +81,13 @@ export const IntroBox2: React.FC = (props) => {
                             <FontAwesomeIcon icon={faLink} />
                         </a>
                         ).
+                        <SlackReactionContainer
+                            reactions={[
+                                { emoji: "🐛", count: 2, userReacted: true },
+                                { emoji: "❤️", count: 1, userReacted: false },
+                                { emoji: "✨", count: 3, userReacted: true },
+                            ]}
+                        />
                     </p>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { MainTabEnum, RESIZABLE_THRESHOLD } from "../Main/Main";
 import "./Navigation.scss";
 import NavigationLink from "./NavigationLink";

@@ -1,4 +1,3 @@
-import React from "react";
 import "./Intro.scss";
 import { IntroBox1 } from "./IntroBox1";
 import { IntroBox3 } from "./IntroBox3";

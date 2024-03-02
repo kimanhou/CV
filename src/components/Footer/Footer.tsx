@@ -1,4 +1,3 @@
-import React from "react";
 import { SocialBar } from "../Social";
 import "./Footer.scss";
 
