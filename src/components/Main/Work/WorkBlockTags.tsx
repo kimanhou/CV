@@ -1,5 +1,4 @@
-import React from "react";
-import Tag from "../../common/Tag/Tag";
+import AnimatedTags from "components/common/Tag/AnimatedTags";
 
 interface IWorkBlockTagsProps {
     tags: string[];
@@ -8,9 +7,7 @@ interface IWorkBlockTagsProps {
 const WorkBlockTags: React.FC<IWorkBlockTagsProps> = (props) => {
     return (
         <div className="work-block-tags flex-row" style={{ marginTop: "2rem" }}>
-            {props.tags.map((tag, i) => (
-                <Tag tag={tag} key={i} />
-            ))}
+            <AnimatedTags tags={props.tags} />
         </div>
     );
 };

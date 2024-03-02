@@ -7,7 +7,6 @@
         transform: rotate(-90deg);
         letter-spacing: 4px;
         margin-block: 0;
-        right: 100px;
     }
     .intro-box-3-h1 {
         animation: intro-box-3-h1-init 0.4s ease-in 0s forwards;
@@ -32,9 +31,6 @@
         }
         .intro-box-3-content-exit {
             animation: intro-box-3-content-exit 0.4s ease-in 0s forwards;
-        }
-        .intro-box-3-tag {
-            right: -21rem;
         }
     }
 }

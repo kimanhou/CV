@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useIsMobile } from "hooks/useIsMobile";
 import computer from "./computer.png";
-import Tag from "components/common/Tag/Tag";
 import { RAKUTEN_WORK_INFO } from "components/Main/Work/utils";
-import { Animator } from "components/common/Animator/Animator";
+import AnimatedTags from "components/common/Tag/AnimatedTags";
 import "./IntroBox3.scss";
+import AnimatorOnScroll from "components/common/Animator/AnimatorOnScroll";
 
 export const IntroBox3: React.FC = (props) => {
     const h1Ref = useRef<HTMLHeadingElement>(null);
@@ -43,18 +43,18 @@ export const IntroBox3: React.FC = (props) => {
             className="flex-1 intro-box flex-row align-items-center justify-content-center"
         >
             <div id="intro-box-3-h1-wrapper" style={getH1Style()}>
-                <Animator
+                <AnimatorOnScroll
                     animationClassName="intro-box-3-h1"
                     animationExitClassName="intro-box-3-h1-exit"
                 >
                     <h1 ref={h1Ref}>CURRENT POSITION</h1>
-                </Animator>
+                </AnimatorOnScroll>
             </div>
             <div
                 id="intro-box-3-content"
                 className="flex-column align-items-center"
             >
-                <Animator
+                <AnimatorOnScroll
                     animationClassName="intro-box-3-content"
                     animationExitClassName="intro-box-3-content-exit"
                 >
@@ -67,31 +67,9 @@ export const IntroBox3: React.FC = (props) => {
                         up blows up into your face, like a wild Pokemon ?{" "}
                         <br></br> Well, that's me.
                     </p>
-                </Animator>
+                </AnimatorOnScroll>
                 <div className="flex-row" style={{ marginTop: "2rem" }}>
-                    {RAKUTEN_WORK_INFO.tags.map((tag, i) => (
-                        <Animator
-                            key={i}
-                            animationClassName="intro-box-3-tag"
-                            animationStyleInit={{
-                                animation: `intro-box-3-content-init 0.4s ease-in ${
-                                    0.8 + 0.1 * i
-                                }s forwards`,
-                            }}
-                            animationStyleExit={{
-                                animation: `intro-box-3-content-exit 0.4s ease-in ${
-                                    0.8 + 0.1 * i
-                                }s forwards`,
-                            }}
-                        >
-                            <Tag
-                                tag={tag}
-                                noMarginRight={
-                                    i === RAKUTEN_WORK_INFO.tags.length - 1
-                                }
-                            />
-                        </Animator>
-                    ))}
+                    <AnimatedTags tags={RAKUTEN_WORK_INFO.tags} delay={0.8} />
                 </div>
             </div>
         </div>

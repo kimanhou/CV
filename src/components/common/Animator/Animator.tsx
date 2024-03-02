@@ -8,15 +8,15 @@ interface IAnimatorProps {
     animationExitClassName?: string;
     animationStyleInit?: CSSProperties;
     animationStyleExit?: CSSProperties;
+    start: boolean;
 }
 
-export const Animator: FC<IAnimatorProps> = (props) => {
+const Animator: FC<IAnimatorProps> = (props) => {
     const ref = useRef<HTMLDivElement>(null);
-    const isVisible = useIntersection({ element: ref, threshold: 1 });
-    const className = isVisible
+    const className = props.start
         ? props.animationClassName
         : props.animationExitClassName;
-    const style = isVisible
+    const style = props.start
         ? { ...props.animationStyleInit }
         : { ...props.animationStyleExit };
 
@@ -29,3 +29,5 @@ export const Animator: FC<IAnimatorProps> = (props) => {
         </div>
     );
 };
+
+export default Animator;

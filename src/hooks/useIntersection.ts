@@ -9,7 +9,7 @@ export const useIntersection = ({
     element,
     threshold,
 }: IUserIntersectionProps) => {
-    const [isVisible, setState] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
         if (!element.current) return;
@@ -17,7 +17,7 @@ export const useIntersection = ({
         const current = element.current;
         const observer = new IntersectionObserver(
             ([entry]) => {
-                setState(entry.isIntersecting);
+                setIsVisible(entry.isIntersecting);
             },
             { root: null, threshold }
         );
