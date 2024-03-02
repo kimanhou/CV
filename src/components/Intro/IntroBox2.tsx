@@ -81,14 +81,14 @@ export const IntroBox2: React.FC = (props) => {
                             <FontAwesomeIcon icon={faLink} />
                         </a>
                         ).
-                        <SlackReactionContainer
-                            reactions={[
-                                { emoji: "🐛", count: 2, userReacted: true },
-                                { emoji: "❤️", count: 1, userReacted: false },
-                                { emoji: "✨", count: 3, userReacted: true },
-                            ]}
-                        />
                     </p>
+                    <SlackReactionContainer
+                        reactions={[
+                            { emoji: "🎉", count: 2, userReacted: true },
+                            { emoji: "❤️", count: 1, userReacted: false },
+                            { emoji: "✨", count: 3, userReacted: true },
+                        ]}
+                    />
                 </div>
             </div>
         </div>

@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    min-height: 80vh;
     flex: 0 0 100%;
     color: var(--color-grey);
     > #intro-column-left {

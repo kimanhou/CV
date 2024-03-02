@@ -17,10 +17,10 @@ const SlackReactionContainer: FC<ISlackReactionContainerProps> = (props) => {
     return (
         <div className="slack-reaction-container flex-row">
             {reacted.map((reaction) => (
-                <SlackReaction {...reaction} />
+                <SlackReaction {...reaction} key={reaction.emoji} />
             ))}
             {unreacted.map((reaction) => (
-                <SlackReaction {...reaction} />
+                <SlackReaction {...reaction} key={reaction.emoji} />
             ))}
         </div>
     );
