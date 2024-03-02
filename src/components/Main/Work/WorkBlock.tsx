@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { WorkEnum } from "./Work";
 import WorkBlockHeader from "./WorkBlockHeader";
-import WorkBlockTags from "./WorkBlockTags";
+import AnimatedTags from "components/common/Tag/AnimatedTags";
 import { getWorkBlockInfo } from "./utils";
 
 interface IWorkBlockProps {
@@ -27,7 +27,7 @@ const WorkBlock: React.FC<IWorkBlockProps> = (props) => {
                     </Fragment>
                 ))}
             </p>
-            <WorkBlockTags tags={tags} />
+            <AnimatedTags tags={tags} />
             <div className="work-block-bottom-line" />
         </div>
     );

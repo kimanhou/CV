@@ -68,9 +68,8 @@ export const IntroBox3: React.FC = (props) => {
                         <br></br> Well, that's me.
                     </p>
                 </AnimatorOnScroll>
-                <div className="flex-row" style={{ marginTop: "2rem" }}>
-                    <AnimatedTags tags={RAKUTEN_WORK_INFO.tags} delay={0.8} />
-                </div>
+
+                <AnimatedTags tags={RAKUTEN_WORK_INFO.tags} delay={0.8} />
             </div>
         </div>
     );

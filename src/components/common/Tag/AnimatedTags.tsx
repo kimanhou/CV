@@ -10,7 +10,7 @@ interface IAnimatedTagsProps {
 const AnimatedTags: React.FC<IAnimatedTagsProps> = (props) => {
     const delay = props.delay ?? 0;
     return (
-        <>
+        <div className="flex-row" style={{ marginTop: "2rem" }}>
             {props.tags.map((tag, i) => (
                 <AnimatorOnScroll
                     key={i}
@@ -32,7 +32,7 @@ const AnimatedTags: React.FC<IAnimatedTagsProps> = (props) => {
                     />
                 </AnimatorOnScroll>
             ))}
-        </>
+        </div>
     );
 };
 
