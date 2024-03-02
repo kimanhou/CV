@@ -9,10 +9,16 @@ export const IntroBox4: React.FC = (props) => {
             id="intro-box-4"
             className="flex-1 intro-box flex-column justify-content-center align-items-center"
         >
-            <Animator animationClassName="intro-box-4-h1">
+            <Animator
+                animationClassName="intro-box-4-h1"
+                animationExitClassName="intro-box-4-h1-exit"
+            >
                 <h1>WANT TO SAY 'HELLO' ?</h1>
             </Animator>
-            <Animator animationClassName="intro-box-4-social-bar">
+            <Animator
+                animationClassName="intro-box-4-social-bar"
+                animationExitClassName="intro-box-4-social-bar-exit"
+            >
                 <SocialBar />
             </Animator>
         </div>

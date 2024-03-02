@@ -43,7 +43,10 @@ export const IntroBox3: React.FC = (props) => {
             className="flex-1 intro-box flex-row align-items-center justify-content-center"
         >
             <div id="intro-box-3-h1-wrapper" style={getH1Style()}>
-                <Animator animationClassName="intro-box-3-h1">
+                <Animator
+                    animationClassName="intro-box-3-h1"
+                    animationExitClassName="intro-box-3-h1-exit"
+                >
                     <h1 ref={h1Ref}>CURRENT POSITION</h1>
                 </Animator>
             </div>
@@ -51,7 +54,10 @@ export const IntroBox3: React.FC = (props) => {
                 id="intro-box-3-content"
                 className="flex-column align-items-center"
             >
-                <Animator animationClassName="intro-box-3-content">
+                <Animator
+                    animationClassName="intro-box-3-content"
+                    animationExitClassName="intro-box-3-content-exit"
+                >
                     <img src={computer} alt="Illustration of a laptop" />
                     <h4>
                         <b>Frontend Engineer</b> at <b>Rakuten</b>
@@ -67,8 +73,13 @@ export const IntroBox3: React.FC = (props) => {
                         <Animator
                             key={i}
                             animationClassName="intro-box-3-tag"
-                            animationStyle={{
+                            animationStyleInit={{
                                 animation: `intro-box-3-content-init 0.4s ease-in ${
+                                    0.8 + 0.1 * i
+                                }s forwards`,
+                            }}
+                            animationStyleExit={{
+                                animation: `intro-box-3-content-exit 0.4s ease-in ${
                                     0.8 + 0.1 * i
                                 }s forwards`,
                             }}

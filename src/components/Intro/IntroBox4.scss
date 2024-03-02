@@ -35,6 +35,10 @@
         top: -9rem;
         animation: intro-box-4-h1-init 0.4s ease-in 0s forwards;
     }
+    .intro-box-4-h1-exit {
+        top: -9rem;
+        animation: intro-box-4-h1-exit 0.4s ease-in 0s forwards;
+    }
 
     .social-bar {
         margin-top: 0;
@@ -42,6 +46,10 @@
     .intro-box-4-social-bar {
         top: 5rem;
         animation: intro-box-4-social-bar-init 0.4s ease-in 0s forwards;
+    }
+    .intro-box-4-social-bar-exit {
+        top: 5rem;
+        animation: intro-box-4-social-bar-exit 0.4s ease-in 0s forwards;
     }
 }
 
@@ -54,12 +62,30 @@
     }
 }
 
+@keyframes intro-box-4-h1-exit {
+    from {
+        top: 0;
+    }
+    to {
+        top: -9rem;
+    }
+}
+
 @keyframes intro-box-4-social-bar-init {
     from {
         top: 5rem;
     }
     to {
         top: 0;
+    }
+}
+
+@keyframes intro-box-4-social-bar-exit {
+    from {
+        top: 0;
+    }
+    to {
+        top: 5rem;
     }
 }
 

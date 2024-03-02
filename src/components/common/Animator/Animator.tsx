@@ -1,31 +1,29 @@
-import React, { useEffect, useRef, useState} from "react";
+import { CSSProperties, FC, useRef } from "react";
 import { useIntersection } from "hooks/useIntersection";
 import "./Animator.scss";
 
 interface IAnimatorProps {
     children: JSX.Element | JSX.Element[];
     animationClassName: string;
-    animationStyle?: React.CSSProperties;
+    animationExitClassName?: string;
+    animationStyleInit?: CSSProperties;
+    animationStyleExit?: CSSProperties;
 }
 
-export const Animator: React.FC<IAnimatorProps> = (props) => {
-    const [animationClassName, setAnimationClassName] = useState('');
+export const Animator: FC<IAnimatorProps> = (props) => {
     const ref = useRef<HTMLDivElement>(null);
-    const isVisible = useIntersection(ref, "-100px");
-
-    useEffect(() => {
-        if (isVisible) {
-          setAnimationClassName(props.animationClassName);
-        }
-      }, [isVisible, props.animationClassName]);
+    const isVisible = useIntersection({ element: ref, threshold: 1 });
+    const className = isVisible
+        ? props.animationClassName
+        : props.animationExitClassName;
+    const style = isVisible
+        ? { ...props.animationStyleInit }
+        : { ...props.animationStyleExit };
 
     return (
         <div className="animator-wrapper" ref={ref}>
             <div className="animator-invisible">{props.children}</div>
-            <div
-                className={`animator-absolute ${animationClassName}`}
-                style={{ ...props.animationStyle }}
-            >
+            <div className={`animator-absolute ${className}`} style={style}>
                 {props.children}
             </div>
         </div>
