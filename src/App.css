@@ -12,13 +12,13 @@
     font-size: 1.1rem;
 }
 
-html {
-    scroll-behavior: smooth;
+html, body {
+    position: relative;
+    overflow-x: hidden;
 }
 
-body {
-    width: 100vw;
-    overflow-x: hidden;
+html {
+    scroll-behavior: smooth;
 }
 
 .flex-row {

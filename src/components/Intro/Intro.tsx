@@ -12,7 +12,7 @@ export const Intro: React.FC = () => {
     const [leftHeight, setLeftHeight] = useState<string | undefined>(undefined);
 
     useEffect(() => {
-        setLeftHeight(`calc(${leftRef.current?.clientHeight}px + 20px)`);
+        setLeftHeight(`calc(${leftRef.current?.clientHeight}px + 20px + 4px)`);
     }, []);
 
     return (
