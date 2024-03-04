@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.3fd3b9a0.css",
-    "main.js": "./static/js/main.6e30edfb.js",
+    "main.js": "./static/js/main.99ae5416.js",
     "static/js/787.d9a20797.chunk.js": "./static/js/787.d9a20797.chunk.js",
     "static/media/calibri-regular.ttf": "./static/media/calibri-regular.82e3b1641976f5409e1f.ttf",
     "static/media/avatar.png": "./static/media/avatar.51baa6695f3ab0c16eab.png",
@@ -14,11 +14,11 @@
     "static/media/language.png": "./static/media/language.fb67869cad289ed41630.png",
     "index.html": "./index.html",
     "main.3fd3b9a0.css.map": "./static/css/main.3fd3b9a0.css.map",
-    "main.6e30edfb.js.map": "./static/js/main.6e30edfb.js.map",
+    "main.99ae5416.js.map": "./static/js/main.99ae5416.js.map",
     "787.d9a20797.chunk.js.map": "./static/js/787.d9a20797.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3fd3b9a0.css",
-    "static/js/main.6e30edfb.js"
+    "static/js/main.99ae5416.js"
   ]
 }
