@@ -1,7 +1,8 @@
 import { Dispatch, FC, useState } from "react";
 import SlackReaction from "components/common/SlackReaction/SlackReaction";
-import "./SlackReactionContainer.scss";
 import SlackAddReactionButton from "./SlackAddReactionButton";
+import { useIsMobile } from "hooks/useIsMobile";
+import "./SlackReactionContainer.scss";
 
 interface ISlackReactionContainerProps {
     reactions: Array<{
@@ -12,6 +13,7 @@ interface ISlackReactionContainerProps {
 }
 
 const SlackReactionContainer: FC<ISlackReactionContainerProps> = (props) => {
+    const isMobile = useIsMobile();
     const [slackReactions, setSlackReactions] = useState(props.reactions);
     const reacted = slackReactions
         .filter((t) => t.userReacted)
@@ -96,7 +98,7 @@ const SlackReactionContainer: FC<ISlackReactionContainerProps> = (props) => {
                     setCount={updateCount(reaction.emoji)}
                 />
             ))}
-            <SlackAddReactionButton addEmoji={addEmoji} />
+            {!isMobile && <SlackAddReactionButton addEmoji={addEmoji} />}
         </div>
     );
 };
