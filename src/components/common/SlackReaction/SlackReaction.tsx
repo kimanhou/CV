@@ -1,12 +1,12 @@
-import { Dispatch, FC, useState } from "react";
+import { Dispatch, FC, SetStateAction } from "react";
 import "./SlackReaction.scss";
 
 interface ISlackReactionProps {
     emoji: string;
     count: number;
     userReacted: boolean;
-    setUserReacted: Dispatch<React.SetStateAction<boolean>>;
-    setCount: Dispatch<React.SetStateAction<number>>;
+    setUserReacted: Dispatch<SetStateAction<boolean>>;
+    setCount: Dispatch<SetStateAction<number>>;
 }
 
 const SlackReaction: FC<ISlackReactionProps> = (props) => {

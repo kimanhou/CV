@@ -1,20 +1,33 @@
-import { Dispatch, FC, useState } from "react";
+import { Dispatch, FC, SetStateAction, useEffect, useState } from "react";
 import SlackReaction from "components/common/SlackReaction/SlackReaction";
 import SlackAddReactionButton from "./SlackAddReactionButton";
 import { useIsMobile } from "hooks/useIsMobile";
 import "./SlackReactionContainer.scss";
 
-interface ISlackReactionContainerProps {
-    reactions: Array<{
-        emoji: string;
-        count: number;
-        userReacted: boolean;
-    }>;
+interface ISlackReaction {
+    emoji: string;
+    count: number;
+    userReacted: boolean;
 }
 
-const SlackReactionContainer: FC<ISlackReactionContainerProps> = (props) => {
+const SlackReactionContainer: FC = () => {
     const isMobile = useIsMobile();
-    const [slackReactions, setSlackReactions] = useState(props.reactions);
+    const localStorageKey = "kanguyenSlackReactions";
+    const [slackReactions, setSlackReactions] = useState<Array<ISlackReaction>>(
+        () => {
+            const saved = localStorage.getItem(localStorageKey);
+            if (saved == null) {
+                return [
+                    { emoji: "🎉", count: 2, userReacted: true },
+                    { emoji: "❤️", count: 1, userReacted: false },
+                    { emoji: "✨", count: 3, userReacted: true },
+                ];
+            }
+
+            const parsed = JSON.parse(saved);
+            return parsed;
+        }
+    );
     const reacted = slackReactions
         .filter((t) => t.userReacted)
         .sort((a, b) => b.count - a.count);
@@ -79,6 +92,10 @@ const SlackReactionContainer: FC<ISlackReactionContainerProps> = (props) => {
                 ];
             });
         };
+
+    useEffect(() => {
+        localStorage.setItem(localStorageKey, JSON.stringify(slackReactions));
+    }, [slackReactions]);
 
     return (
         <div className="slack-reaction-container flex-row">

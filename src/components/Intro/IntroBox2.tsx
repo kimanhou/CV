@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import "./IntroBox2.scss";
 
-export const IntroBox2: React.FC = (props) => {
+export const IntroBox2: React.FC = () => {
     const [suspensionDots, setSuspensionDots] = useState("");
     const [isTyping, setIsTyping] = useState(true);
 
@@ -82,13 +82,7 @@ export const IntroBox2: React.FC = (props) => {
                         </a>
                         ).
                     </p>
-                    <SlackReactionContainer
-                        reactions={[
-                            { emoji: "🎉", count: 2, userReacted: true },
-                            { emoji: "❤️", count: 1, userReacted: false },
-                            { emoji: "✨", count: 3, userReacted: true },
-                        ]}
-                    />
+                    <SlackReactionContainer />
                 </div>
             </div>
         </div>
