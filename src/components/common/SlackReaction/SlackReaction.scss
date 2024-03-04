@@ -9,8 +9,20 @@
     font-size: 0.8rem;
     gap: 3px;
     cursor: pointer;
+    transition: border 0.4s;
     &.reacted {
         background-color: var(--color-light-grey);
         border: solid 1px var(--color-grey);
+    }
+    &:hover {
+        border: solid 1px var(--color-grey);
+    }
+}
+
+@supports (hanging-punctuation: first) and (-webkit-appearance: none) {
+    .slack-reaction {
+        > span.count {
+            margin-top: 2px;
+        }
     }
 }

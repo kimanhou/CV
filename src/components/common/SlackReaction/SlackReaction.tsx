@@ -1,33 +1,34 @@
-import { FC, useState } from "react";
+import { Dispatch, FC, useState } from "react";
 import "./SlackReaction.scss";
 
 interface ISlackReactionProps {
     emoji: string;
     count: number;
     userReacted: boolean;
+    setUserReacted: Dispatch<React.SetStateAction<boolean>>;
+    setCount: Dispatch<React.SetStateAction<number>>;
 }
 
 const SlackReaction: FC<ISlackReactionProps> = (props) => {
-    const [reacted, setReacted] = useState(props.userReacted);
-    const [count, setCount] = useState(props.count);
-
     const onClick = () => {
-        if (reacted) {
-            setCount((t) => t - 1);
+        if (props.userReacted) {
+            props.setCount((t) => t - 1);
         } else {
-            setCount((t) => t + 1);
+            props.setCount((t) => t + 1);
         }
 
-        setReacted((t) => !t);
+        props.setUserReacted((t) => !t);
     };
 
     return (
         <div
-            className={`slack-reaction flex-row ${reacted ? "reacted" : ""}`}
+            className={`slack-reaction flex-row ${
+                props.userReacted ? "reacted" : ""
+            }`}
             onClick={onClick}
         >
-            <div className="emoji">{props.emoji}</div>
-            <div className="count">{count}</div>
+            <span>{props.emoji}</span>
+            <span className="count">{props.count}</span>
         </div>
     );
 };

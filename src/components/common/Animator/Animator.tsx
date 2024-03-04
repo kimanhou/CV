@@ -1,5 +1,4 @@
 import { CSSProperties, FC, useRef } from "react";
-import { useIntersection } from "hooks/useIntersection";
 import "./Animator.scss";
 
 interface IAnimatorProps {
