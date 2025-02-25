@@ -2,6 +2,8 @@ import { SocialBar } from "../Social";
 import "./Footer.scss";
 
 export const Footer: React.FC = (props) => {
+    const currentYear = new Date().getFullYear();
+
     return (
         <footer>
             <div id="footer-background" />
@@ -19,7 +21,7 @@ export const Footer: React.FC = (props) => {
             <div id="footer-content">
                 <div className="info">
                     <SocialBar />
-                    <p>Made with &#128420; &copy; 2024</p>
+                    <p>Made with &#128420; &copy; {currentYear}</p>
                 </div>
             </div>
         </footer>
