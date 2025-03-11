@@ -1,4 +1,3 @@
-import React from "react";
 import "./Hobbies.scss";
 import HobbiesBlock from "./HobbiesBlock";
 import travel from "./travel.png";

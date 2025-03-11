@@ -12,6 +12,11 @@
     font-size: 1.1rem;
 }
 
+html, body {
+    position: relative;
+    overflow-x: hidden;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -24,6 +29,18 @@ html {
 .flex-column {
     display: flex;
     flex-direction: column;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
 }
 
 a {

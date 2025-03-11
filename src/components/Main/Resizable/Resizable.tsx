@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./Resizable.scss";
 import { pauseEvent, setColumnsWidth, setContainerHeight } from "./utils";
 

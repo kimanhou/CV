@@ -1,4 +1,3 @@
-import React from "react";
 import { SocialMediaEnum } from "./SocialIcon";
 import "./SocialMessage.scss";
 import { getMessage } from "./utils";

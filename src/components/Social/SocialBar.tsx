@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./SocialBar.scss";
 import { SocialMediaEnum } from "./SocialIcon";
 import { SocialIconGithub } from "./SocialIconGithub";

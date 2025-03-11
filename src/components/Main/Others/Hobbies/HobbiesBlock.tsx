@@ -1,5 +1,3 @@
-import React from "react";
-
 interface IHobbiesBlockProps {
     iconSrc: string;
     text: string;

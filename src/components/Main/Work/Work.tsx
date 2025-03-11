@@ -1,4 +1,3 @@
-import React from "react";
 import "./Work.scss";
 import WorkBlock from "./WorkBlock";
 

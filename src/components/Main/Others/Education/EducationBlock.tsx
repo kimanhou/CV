@@ -1,5 +1,3 @@
-import React from "react";
-
 interface IEducationBlockProps {
     date: string;
     location: string;
