@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { WorkEnum } from "./Work";
 import WorkBlockHeader from "./WorkBlockHeader";
-import AnimatedTags from "components/common/Tag/AnimatedTags";
+import AnimatedTags from "@/components/common/Tag/AnimatedTags";
 import { getWorkBlockInfo } from "./utils";
 
 interface IWorkBlockProps {

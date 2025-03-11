@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import "./SocialIcon.scss";
 import { getLink, getIconDefinition } from "./utils";
 

@@ -1,6 +1,6 @@
 import "./IntroBox4.scss";
-import { SocialBar } from "components/Social";
-import AnimatorOnScroll from "components/common/Animator/AnimatorOnScroll";
+import { SocialBar } from "@/components/Social";
+import AnimatorOnScroll from "@/components/common/Animator/AnimatorOnScroll";
 
 export const IntroBox4: React.FC = (props) => {
     return (

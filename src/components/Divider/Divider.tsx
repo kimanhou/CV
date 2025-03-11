@@ -1,9 +1,15 @@
+import pattern from "@/img/pattern.svg";
 import "./Divider.scss";
 
 export const Divider: React.FC = (props) => {
     return (
         <div id="divider">
-            <div id="divider-background"></div>
+            <div
+                id="divider-background"
+                style={{
+                    backgroundImage: `url(${pattern})`,
+                }}
+            ></div>
             <svg
                 id="divider-svg"
                 version="1.1"

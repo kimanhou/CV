@@ -1,4 +1,4 @@
-import Tag from "components/common/Tag/Tag";
+import Tag from "@/components/common/Tag/Tag";
 import AnimatorOnScroll from "../Animator/AnimatorOnScroll";
 import "./AnimatedTags.scss";
 

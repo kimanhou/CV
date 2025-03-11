@@ -1,5 +1,5 @@
 import { CSSProperties, FC, useRef } from "react";
-import { useIntersection } from "hooks/useIntersection";
+import { useIntersection } from "@/hooks/useIntersection";
 import Animator from "./Animator";
 import "./AnimatorOnScroll.scss";
 

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import SlackReactionContainer from "components/common/SlackReaction/SlackReactionContainer";
+import SlackReactionContainer from "@/components/common/SlackReaction/SlackReactionContainer";
 import unicorn from "./unicorn.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";

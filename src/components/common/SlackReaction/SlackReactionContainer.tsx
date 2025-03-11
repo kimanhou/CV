@@ -1,7 +1,7 @@
 import { Dispatch, FC, useEffect, useState } from "react";
-import SlackReaction from "components/common/SlackReaction/SlackReaction";
+import SlackReaction from "@/components/common/SlackReaction/SlackReaction";
+import { useIsMobile } from "@/hooks/useIsMobile";
 import SlackAddReactionButton from "./SlackAddReactionButton";
-import { useIsMobile } from "hooks/useIsMobile";
 import "./SlackReactionContainer.scss";
 
 interface ISlackReaction {

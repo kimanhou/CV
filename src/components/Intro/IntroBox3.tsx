@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
-import { useIsMobile } from "hooks/useIsMobile";
+import { useIsMobile } from "@/hooks/useIsMobile";
+import { RAKUTEN_WORK_INFO } from "@/components/Main/Work/utils";
+import AnimatedTags from "@/components/common/Tag/AnimatedTags";
+import AnimatorOnScroll from "@/components/common/Animator/AnimatorOnScroll";
 import computer from "./computer.png";
-import { RAKUTEN_WORK_INFO } from "components/Main/Work/utils";
-import AnimatedTags from "components/common/Tag/AnimatedTags";
 import "./IntroBox3.scss";
-import AnimatorOnScroll from "components/common/Animator/AnimatorOnScroll";
 
 export const IntroBox3: React.FC = (props) => {
     const h1Ref = useRef<HTMLHeadingElement>(null);

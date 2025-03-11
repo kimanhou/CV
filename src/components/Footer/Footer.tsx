@@ -1,4 +1,5 @@
 import { SocialBar } from "../Social";
+import pattern from "@/img/pattern.svg";
 import "./Footer.scss";
 
 export const Footer: React.FC = (props) => {
@@ -6,7 +7,12 @@ export const Footer: React.FC = (props) => {
 
     return (
         <footer>
-            <div id="footer-background" />
+            <div
+                id="footer-background"
+                style={{
+                    backgroundImage: `url(${pattern})`,
+                }}
+            />
             <svg
                 className="triangle"
                 version="1.1"
