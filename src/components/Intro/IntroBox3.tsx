@@ -3,8 +3,8 @@ import { useIsMobile } from "@/hooks/useIsMobile";
 import { RAKUTEN_WORK_INFO } from "@/components/Main/Work/utils";
 import AnimatedTags from "@/components/common/Tag/AnimatedTags";
 import AnimatorOnScroll from "@/components/common/Animator/AnimatorOnScroll";
-import computer from "./computer.png";
-import "./IntroBox3.scss";
+import computer from "@/img/computer.png";
+import styles from "./IntroBox3.module.scss";
 
 const IntroBox3: FC = (props) => {
     const h1Ref = useRef<HTMLHeadingElement>(null);
@@ -38,25 +38,19 @@ const IntroBox3: FC = (props) => {
     }, [isMobile]);
 
     return (
-        <div
-            id="intro-box-3"
-            className="flex-1 intro-box flex-row align-items-center justify-content-center"
-        >
-            <div id="intro-box-3-h1-wrapper" style={getH1Style()}>
+        <div className={styles.introBox3}>
+            <div className={styles.introBox3H1Wrapper} style={getH1Style()}>
                 <AnimatorOnScroll
-                    animationClassName="intro-box-3-h1"
-                    animationExitClassName="intro-box-3-h1-exit"
+                    animationClassName={styles.introBox3H1Init}
+                    animationExitClassName={styles.introBox3H1Exit}
                 >
                     <h1 ref={h1Ref}>CURRENT POSITION</h1>
                 </AnimatorOnScroll>
             </div>
-            <div
-                id="intro-box-3-content"
-                className="flex-column align-items-center"
-            >
+            <div className={styles.introBox3Content}>
                 <AnimatorOnScroll
-                    animationClassName="intro-box-3-content"
-                    animationExitClassName="intro-box-3-content-exit"
+                    animationClassName={styles.introBox3ContentInit}
+                    animationExitClassName={styles.introBox3ContentExit}
                 >
                     <img src={computer} alt="Illustration of a laptop" />
                     <h4>

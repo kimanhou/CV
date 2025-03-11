@@ -1,6 +1,13 @@
-#intro-box-3 {
+@use "@/mixins.scss" as *;
+
+div.intro-box-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
     padding: 1rem 3.5rem 1rem 1rem;
     overflow: hidden;
+    @include border-light-grey;
     h1 {
         text-orientation: unset;
         writing-mode: unset;
@@ -8,14 +15,17 @@
         letter-spacing: 4px;
         margin-block: 0;
     }
-    .intro-box-3-h1 {
+    .intro-box-3-h1-init {
         animation: intro-box-3-h1-init 0.4s ease-in 0s forwards;
     }
     .intro-box-3-h1-exit {
         animation: intro-box-3-h1-exit 0.4s ease-in 0s forwards;
     }
 
-    > #intro-box-3-content {
+    > div.intro-box-3-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         img {
             width: 5rem;
         }
@@ -26,7 +36,7 @@
             margin-block-end: 0;
             color: var(--fg);
         }
-        .intro-box-3-content {
+        .intro-box-3-content-init {
             animation: intro-box-3-content-init 0.4s ease-in 0s forwards;
         }
         .intro-box-3-content-exit {

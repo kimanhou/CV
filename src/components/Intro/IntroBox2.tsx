@@ -1,15 +1,15 @@
 import { FC, useEffect, useState } from "react";
 import SlackReactionContainer from "@/components/common/SlackReaction/SlackReactionContainer";
-import unicorn from "./unicorn.png";
+import unicorn from "@/img/unicorn.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
-import "./IntroBox2.scss";
+import styles from "./IntroBox2.module.scss";
 
 const IntroBox2: FC = () => {
     const [suspensionDots, setSuspensionDots] = useState("");
     const [isTyping, setIsTyping] = useState(true);
 
-    const slackMessageClassName = isTyping ? "" : "visible";
+    const slackMessageClassName = isTyping ? "" : styles.visible;
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -39,25 +39,29 @@ const IntroBox2: FC = () => {
     };
 
     return (
-        <div id="intro-box-2" className="flex-column flex-1 intro-box">
+        <div className={styles.introBox2}>
             {isTyping && (
-                <p className="typing-message font-size-small">
+                <p className={styles.typingMessage}>
                     <b>Kim Anh</b> is typing
                     {suspensionDots}
                 </p>
             )}
             <div
-                className={`intro-box-2-slack-message flex-row ${slackMessageClassName}`}
+                className={`${styles.introBox2SlackMessage} ${slackMessageClassName}`}
             >
                 <img
-                    className="intro-box-2-slack-message-img"
+                    className={styles.introBox2SlackMessageImg}
                     src={unicorn}
                     alt="Unicorn avatar"
                 />
-                <div className="intro-box-2-slack-message-text">
-                    <div className="intro-box-2-slack-message-text-header">
+                <div className={styles.introBox2SlackMessageText}>
+                    <div className={styles.introBox2SlackMessageTextHeader}>
                         <b>Kim Anh Nguyen</b>
-                        <span className="intro-box-2-slack-message-text-header-time">
+                        <span
+                            className={
+                                styles.introBox2SlackMessageTextHeaderTime
+                            }
+                        >
                             {getCurrentTime()}
                         </span>
                     </div>

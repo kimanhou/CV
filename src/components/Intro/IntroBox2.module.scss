@@ -1,15 +1,22 @@
-#intro-box-2 {
+@use "@/mixins.scss" as *;
+
+div.intro-box-2 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     margin-bottom: 10px;
     align-items: flex-start;
     padding: 2rem 1.5rem;
     position: relative;
-    > p.font-size-small.typing-message {
+    @include border-light-grey;
+    > p.typing-message {
         font-size: 0.8rem;
         position: absolute;
         top: 2rem;
         left: 1.5rem;
     }
     > .intro-box-2-slack-message {
+        display: flex;
         opacity: 0;
         transition: opacity 2s;
         &.visible {
