@@ -1,3 +1,4 @@
+import { FC } from "react";
 import "./Tag.scss";
 
 interface ITagProps {
@@ -5,7 +6,7 @@ interface ITagProps {
     noMarginRight?: boolean;
 }
 
-const Tag: React.FC<ITagProps> = (props) => {
+const Tag: FC<ITagProps> = (props) => {
     const noMarginRightClassName = props.noMarginRight ? "no-margin-right" : "";
 
     return <div className={`tag ${noMarginRightClassName}`}>{props.tag}</div>;

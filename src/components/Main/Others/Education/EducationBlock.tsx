@@ -1,10 +1,12 @@
+import { FC } from "react";
+
 interface IEducationBlockProps {
     date: string;
     location: string;
     text: string;
 }
 
-const EducationBlock: React.FC<IEducationBlockProps> = (props) => {
+const EducationBlock: FC<IEducationBlockProps> = (props) => {
     return (
         <div className="education-block">
             <div className="education-block-header font-size-s">

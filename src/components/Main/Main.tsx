@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { FC, useState } from "react";
 import Others from "./Others/Others";
 import SecondaryNavigation from "./SecondaryNavigation/SecondaryNavigation";
 import { Work } from "./Work/Work";
@@ -19,7 +19,7 @@ interface IMainProps {
     setActiveTab: (activeTab: MainTabEnum) => void;
 }
 
-const Main: React.FC<IMainProps> = (props) => {
+const Main: FC<IMainProps> = (props) => {
     const [isResizable, setIsResizable] = useState<boolean>(
         window.innerWidth > RESIZABLE_THRESHOLD
     );

@@ -1,4 +1,4 @@
-import "./Skills.scss";
+import { FC } from "react";
 import SkillsBlock from "./SkillsBlock";
 import construction from "./construction.png";
 import language from "./language.png";
@@ -6,8 +6,9 @@ import react from "./react.png";
 import tool from "./tool.png";
 import vue from "./vue.png";
 import SkillsFramework from "./SkillsFramework";
+import "./Skills.scss";
 
-const Skills: React.FC = (props) => {
+const Skills: FC = (props) => {
     return (
         <section id="skills">
             <div className="skills-title">Skills</div>

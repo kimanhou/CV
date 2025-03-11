@@ -1,9 +1,11 @@
+import { FC } from "react";
+
 interface ISkillsFrameworkProps {
     iconSrc: string;
     text: string;
 }
 
-const SkillsFramework: React.FC<ISkillsFrameworkProps> = (props) => {
+const SkillsFramework: FC<ISkillsFrameworkProps> = (props) => {
     return (
         <div className="skills-framework flex-row">
             <span>{props.text}</span>

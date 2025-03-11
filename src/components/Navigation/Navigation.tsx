@@ -1,13 +1,13 @@
-import { useState } from "react";
+import { FC, useState } from "react";
 import { MainTabEnum, RESIZABLE_THRESHOLD } from "../Main/Main";
-import "./Navigation.scss";
 import NavigationLink from "./NavigationLink";
+import "./Navigation.scss";
 
 interface INavigationProps {
     setActiveTab: (activeTab: MainTabEnum) => void;
 }
 
-const Navigation: React.FC<INavigationProps> = (props) => {
+const Navigation: FC<INavigationProps> = (props) => {
     const getTo = (tabId: string) => {
         return window.innerWidth < RESIZABLE_THRESHOLD
             ? "secondary-navigation"

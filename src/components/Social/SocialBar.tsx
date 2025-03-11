@@ -1,14 +1,14 @@
-import { useState } from "react";
-import "./SocialBar.scss";
+import { FC, useState } from "react";
 import { SocialMediaEnum } from "./SocialIcon";
 import { SocialIconGithub } from "./SocialIconGithub";
 import { SocialIconLinkedin } from "./SocialIconLinkedin";
 import { SocialIconMail } from "./SocialIconMail";
 import { SocialMessage } from "./SocialMessage";
+import "./SocialBar.scss";
 
 interface ISocialBarProps {}
 
-export const SocialBar: React.FC<ISocialBarProps> = (props) => {
+export const SocialBar: FC<ISocialBarProps> = (props) => {
     const [hoveredIcon, setHoveredIcon] = useState<SocialMediaEnum | null>(
         null
     );

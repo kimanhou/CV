@@ -1,6 +1,7 @@
+import { FC } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./SocialIcon.scss";
 import { getLink, getIconDefinition } from "./utils";
+import "./SocialIcon.scss";
 
 export enum SocialMediaEnum {
     GITHUB = "github",
@@ -19,7 +20,7 @@ interface ISocialIconProps {
     onHoverLeave: () => void;
 }
 
-export const SocialIcon: React.FC<ISocialIconProps> = (props) => {
+export const SocialIcon: FC<ISocialIconProps> = (props) => {
     return (
         <a
             className={`social-icon ${props.media}`}

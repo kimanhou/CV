@@ -1,4 +1,4 @@
-import "./Hobbies.scss";
+import { FC } from "react";
 import HobbiesBlock from "./HobbiesBlock";
 import travel from "./travel.png";
 import tiny from "./tiny.png";
@@ -6,8 +6,9 @@ import sport from "./sport.png";
 import music from "./music.png";
 import food from "./food.png";
 import dog from "./dog.png";
+import "./Hobbies.scss";
 
-const Hobbies: React.FC = (props) => {
+const Hobbies: FC = (props) => {
     return (
         <section id="hobbies">
             <div className="hobbies-title">Hobbies</div>

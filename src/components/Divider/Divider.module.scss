@@ -1,7 +1,7 @@
-#divider {
+div.divider {
     position: relative;
     font-size: 0;
-    > #divider-background {
+    > div.divider-background {
         position: absolute;
         top: 1px;
         bottom: 1px;
@@ -12,7 +12,7 @@
         background-repeat: repeat;
         background-color: var(--color-magnolia);
     }
-    > #divider-svg {
+    > svg.divider-svg {
         -moz-transform: translateZ(0);
         -webkit-transform: translateZ(0);
         transform: translateZ(0);

@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { MainTabEnum } from "../Main";
 import "./SecondaryNavigation.scss";
 
@@ -6,7 +7,7 @@ interface ISecondaryNavigationProps {
     setActiveTab: (activeTab: MainTabEnum) => void;
 }
 
-const SecondaryNavigation: React.FC<ISecondaryNavigationProps> = (props) => {
+const SecondaryNavigation: FC<ISecondaryNavigationProps> = (props) => {
     const tabs = [MainTabEnum.WORK, MainTabEnum.OTHERS];
     const isActiveClassname = (tab: MainTabEnum) =>
         tab.toLocaleLowerCase() === props.activeTab.toLocaleLowerCase()

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import { RAKUTEN_WORK_INFO } from "@/components/Main/Work/utils";
 import AnimatedTags from "@/components/common/Tag/AnimatedTags";
@@ -6,7 +6,7 @@ import AnimatorOnScroll from "@/components/common/Animator/AnimatorOnScroll";
 import computer from "./computer.png";
 import "./IntroBox3.scss";
 
-export const IntroBox3: React.FC = (props) => {
+const IntroBox3: FC = (props) => {
     const h1Ref = useRef<HTMLHeadingElement>(null);
     const [h1Height, setH1Height] = useState<number | null>(null);
     const [h1Width, setH1Width] = useState<number | null>(null);
@@ -74,3 +74,5 @@ export const IntroBox3: React.FC = (props) => {
         </div>
     );
 };
+
+export default IntroBox3;

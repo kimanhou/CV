@@ -1,10 +1,11 @@
+import { FC } from "react";
 import {
     ISocialIconCommonProps,
     SocialIcon,
     SocialMediaEnum,
 } from "./SocialIcon";
 
-export const SocialIconMail: React.FC<ISocialIconCommonProps> = (props) => {
+export const SocialIconMail: FC<ISocialIconCommonProps> = (props) => {
     return (
         <SocialIcon
             media={SocialMediaEnum.MAIL}

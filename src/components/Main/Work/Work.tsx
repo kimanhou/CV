@@ -1,5 +1,6 @@
-import "./Work.scss";
+import { FC } from "react";
 import WorkBlock from "./WorkBlock";
+import "./Work.scss";
 
 export enum WorkEnum {
     SOCGEN = "Société Générale",
@@ -7,7 +8,7 @@ export enum WorkEnum {
     RAKUTEN = "Rakuten",
 }
 
-export const Work: React.FC = (props) => {
+export const Work: FC = (props) => {
     return (
         <section id="work">
             <div className="c-container c-container--top">

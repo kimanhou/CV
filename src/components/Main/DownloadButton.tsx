@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { FC, useState } from "react";
 import "./DownloadButton.scss";
 
-const DownloadButton: React.FC = (props) => {
+const DownloadButton: FC = (props) => {
     const [loadClassname, setLoadClassname] = useState("");
 
     const onClickDownload = () => {

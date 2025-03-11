@@ -1,7 +1,8 @@
+import { FC } from "react";
 import "./Education.scss";
 import EducationBlock from "./EducationBlock";
 
-const Education: React.FC = (props) => {
+const Education: FC = (props) => {
     return (
         <section id="education">
             <div className="education-list-container">

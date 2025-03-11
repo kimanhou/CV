@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import SlackReactionContainer from "@/components/common/SlackReaction/SlackReactionContainer";
 import unicorn from "./unicorn.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import "./IntroBox2.scss";
 
-export const IntroBox2: React.FC = () => {
+const IntroBox2: FC = () => {
     const [suspensionDots, setSuspensionDots] = useState("");
     const [isTyping, setIsTyping] = useState(true);
 
@@ -88,3 +88,5 @@ export const IntroBox2: React.FC = () => {
         </div>
     );
 };
+
+export default IntroBox2;

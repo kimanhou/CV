@@ -1,3 +1,4 @@
+import { FC } from "react";
 import Tag from "@/components/common/Tag/Tag";
 import AnimatorOnScroll from "../Animator/AnimatorOnScroll";
 import "./AnimatedTags.scss";
@@ -7,7 +8,7 @@ interface IAnimatedTagsProps {
     delay?: number;
 }
 
-const AnimatedTags: React.FC<IAnimatedTagsProps> = (props) => {
+const AnimatedTags: FC<IAnimatedTagsProps> = (props) => {
     const delay = props.delay ?? 0;
     return (
         <div className="flex-row" style={{ marginTop: "2rem" }}>

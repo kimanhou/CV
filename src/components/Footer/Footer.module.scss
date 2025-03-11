@@ -1,26 +1,20 @@
-footer {
+footer.footer {
     font-size: 0.8rem;
     justify-content: center;
     align-items: center;
     position: relative;
     display: block;
     width: 100%;
-    a {
-        color: var(--fg);
+    > svg.footer-triangle {
+        fill: var(--bg);
+        -moz-transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        width: 100%;
+        min-height: 200px;
+        margin-left: -1px;
     }
-
-    > svg {
-        &.triangle {
-            fill: var(--bg);
-            -moz-transform: translateZ(0);
-            -webkit-transform: translateZ(0);
-            transform: translateZ(0);
-            width: 100%;
-            min-height: 200px;
-            margin-left: -1px;
-        }
-    }
-    > #footer-background {
+    > div.footer-background {
         position: absolute;
         top: 0;
         bottom: 0;
@@ -31,13 +25,13 @@ footer {
         background-repeat: repeat;
         background-color: var(--color-magnolia);
     }
-    > #footer-content {
+    > div.footer-content {
         position: absolute;
         top: 0;
         bottom: 0;
         right: 0;
         left: 0;
-        > .info {
+        > div.footer-info {
             position: absolute;
             right: 0;
             bottom: 0;

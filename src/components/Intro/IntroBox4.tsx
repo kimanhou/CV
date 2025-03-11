@@ -1,8 +1,9 @@
-import "./IntroBox4.scss";
+import { FC } from "react";
 import { SocialBar } from "@/components/Social";
 import AnimatorOnScroll from "@/components/common/Animator/AnimatorOnScroll";
+import "./IntroBox4.scss";
 
-export const IntroBox4: React.FC = (props) => {
+const IntroBox4: FC = (props) => {
     return (
         <div
             id="intro-box-4"
@@ -23,3 +24,5 @@ export const IntroBox4: React.FC = (props) => {
         </div>
     );
 };
+
+export default IntroBox4;

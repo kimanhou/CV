@@ -1,17 +1,18 @@
+import { FC } from "react";
 import pattern from "@/img/pattern.svg";
-import "./Divider.scss";
+import styles from "./Divider.module.scss";
 
-export const Divider: React.FC = (props) => {
+const Divider: FC = (props) => {
     return (
-        <div id="divider">
+        <div className={styles.divider}>
             <div
-                id="divider-background"
+                className={styles.dividerBackground}
                 style={{
                     backgroundImage: `url(${pattern})`,
                 }}
             ></div>
             <svg
-                id="divider-svg"
+                className={styles.dividerSvg}
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -25,3 +26,5 @@ export const Divider: React.FC = (props) => {
         </div>
     );
 };
+
+export default Divider;

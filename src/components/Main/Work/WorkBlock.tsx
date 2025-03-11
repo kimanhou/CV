@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { FC, Fragment } from "react";
 import { WorkEnum } from "./Work";
 import WorkBlockHeader from "./WorkBlockHeader";
 import AnimatedTags from "@/components/common/Tag/AnimatedTags";
@@ -8,7 +8,7 @@ interface IWorkBlockProps {
     company: WorkEnum;
 }
 
-const WorkBlock: React.FC<IWorkBlockProps> = (props) => {
+const WorkBlock: FC<IWorkBlockProps> = (props) => {
     const { date, location, isCurrentPosition, title, description, tags } =
         getWorkBlockInfo(props.company);
     return (

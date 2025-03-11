@@ -1,13 +1,13 @@
-import { useEffect, useRef, useState } from "react";
-import "./Resizable.scss";
+import { FC, useEffect, useRef, useState } from "react";
 import { pauseEvent, setColumnsWidth, setContainerHeight } from "./utils";
+import "./Resizable.scss";
 
 interface IResizableProps {
     left: JSX.Element;
     right: JSX.Element;
 }
 
-const Resizable: React.FC<IResizableProps> = (props) => {
+const Resizable: FC<IResizableProps> = (props) => {
     const [isResizing, setIsResizing] = useState<boolean>(false);
     const containerRef = useRef<HTMLDivElement>(null);
     const leftRef = useRef<HTMLDivElement>(null);

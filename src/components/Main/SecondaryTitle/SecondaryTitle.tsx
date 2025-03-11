@@ -1,10 +1,11 @@
+import { FC } from "react";
 import "./SecondaryTitle.scss";
 
 interface ISecondaryTitleProps {
     title: string;
 }
 
-const SecondaryTitle: React.FC<ISecondaryTitleProps> = (props) => {
+const SecondaryTitle: FC<ISecondaryTitleProps> = (props) => {
     return (
         <div className="secondary-title">
             <h3>{props.title}</h3>

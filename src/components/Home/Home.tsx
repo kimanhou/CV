@@ -1,13 +1,14 @@
-import { Divider } from "../Divider/Divider";
-import Main, { MainTabEnum } from "../Main/Main";
-import { Intro } from "../Intro/Intro";
+import { FC } from "react";
+import Intro from "@/components/Intro/Intro";
+import Divider from "@/components/Divider/Divider";
+import Main, { MainTabEnum } from "@/components/Main/Main";
 
 interface IHomeProps {
     activeTab: MainTabEnum;
     setActiveTab: (activeTab: MainTabEnum) => void;
 }
 
-export const Home: React.FC<IHomeProps> = (props) => {
+const Home: FC<IHomeProps> = (props) => {
     return (
         <section id="home">
             <Intro />
@@ -19,3 +20,5 @@ export const Home: React.FC<IHomeProps> = (props) => {
         </section>
     );
 };
+
+export default Home;

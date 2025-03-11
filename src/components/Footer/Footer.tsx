@@ -1,21 +1,21 @@
-import { SocialBar } from "../Social";
+import { FC } from "react";
+import { SocialBar } from "@/components/Social";
 import pattern from "@/img/pattern.svg";
-import "./Footer.scss";
+import styles from "./Footer.module.scss";
 
-export const Footer: React.FC = (props) => {
+const Footer: FC = (props) => {
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer>
+        <footer className={styles.footer}>
             <div
-                id="footer-background"
+                className={styles.footerBackground}
                 style={{
                     backgroundImage: `url(${pattern})`,
                 }}
             />
             <svg
-                className="triangle"
-                version="1.1"
+                className={styles.footerTriangle}
                 xmlns="http://www.w3.org/2000/svg"
                 xmlnsXlink="http://www.w3.org/1999/xlink"
                 preserveAspectRatio="none"
@@ -24,8 +24,8 @@ export const Footer: React.FC = (props) => {
             >
                 <polygon points="0,480 0,0 1920,0 "></polygon>
             </svg>
-            <div id="footer-content">
-                <div className="info">
+            <div className={styles.footerContent}>
+                <div className={styles.footerInfo}>
                     <SocialBar />
                     <p>Made with &#128420; &copy; {currentYear}</p>
                 </div>
@@ -33,3 +33,5 @@ export const Footer: React.FC = (props) => {
         </footer>
     );
 };
+
+export default Footer;

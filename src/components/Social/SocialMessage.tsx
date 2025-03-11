@@ -1,13 +1,14 @@
+import { FC } from "react";
 import { SocialMediaEnum } from "./SocialIcon";
-import "./SocialMessage.scss";
 import { getMessage } from "./utils";
+import "./SocialMessage.scss";
 
 interface ISocialMessageProps {
     hoveredIcon: SocialMediaEnum | null;
     media: SocialMediaEnum;
 }
 
-export const SocialMessage: React.FC<ISocialMessageProps> = (props) => {
+export const SocialMessage: FC<ISocialMessageProps> = (props) => {
     const isVisibleClassName =
         props.hoveredIcon === props.media ? "visible" : "";
 

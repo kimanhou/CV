@@ -1,6 +1,7 @@
-import "./NavigationLink.scss";
+import { FC } from "react";
 import { Link, useLocation, matchPath } from "react-router-dom";
 import { scrollTo } from "./utils";
+import "./NavigationLink.scss";
 
 interface INavigationLinkProps {
     to: string;
@@ -9,7 +10,7 @@ interface INavigationLinkProps {
     onClick?: () => void;
 }
 
-const NavigationLink: React.FC<INavigationLinkProps> = (props) => {
+const NavigationLink: FC<INavigationLinkProps> = (props) => {
     const { pathname } = useLocation();
     const selectedClassName = matchPath(pathname, props.to) ? "selected" : "";
 

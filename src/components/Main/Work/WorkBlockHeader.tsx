@@ -1,10 +1,12 @@
+import { FC } from "react";
+
 interface IWorkBlockHeaderProps {
     date: string;
     location: string;
     isCurrentPosition: boolean;
 }
 
-const WorkBlockHeader: React.FC<IWorkBlockHeaderProps> = (props) => {
+const WorkBlockHeader: FC<IWorkBlockHeaderProps> = (props) => {
     return (
         <div className="work-block-header font-size-s">
             From <b>{props.date}</b>

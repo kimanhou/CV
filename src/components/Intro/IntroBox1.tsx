@@ -6,7 +6,7 @@ interface IIntroBox1Props {
     height?: string;
 }
 
-export const IntroBox1: FC<IIntroBox1Props> = (props) => {
+const IntroBox1: FC<IIntroBox1Props> = (props) => {
     return (
         <div
             id="intro-box-1-container"
@@ -23,3 +23,5 @@ export const IntroBox1: FC<IIntroBox1Props> = (props) => {
         </div>
     );
 };
+
+export default IntroBox1;
