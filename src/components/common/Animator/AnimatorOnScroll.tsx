@@ -1,7 +1,7 @@
 import { CSSProperties, FC, useRef } from "react";
 import { useIntersection } from "@/hooks/useIntersection";
-import Animator from "./Animator";
-import "./AnimatorOnScroll.scss";
+import Animator from "@/components/common/Animator/Animator";
+import styles from "./AnimatorOnScroll.module.scss";
 
 interface IAnimatorOnScrollProps {
     children: JSX.Element | JSX.Element[];
@@ -17,8 +17,8 @@ const AnimatorOnScroll: FC<IAnimatorOnScrollProps> = (props) => {
     const { children, ...rest } = props;
 
     return (
-        <div className="animator-on-scroll">
-            <div className="vertical-intersection-detector" ref={ref} />
+        <div className={styles.animatorOnScroll}>
+            <div className={styles.verticalIntersectionDetector} ref={ref} />
             <Animator start={isVisible} {...rest}>
                 {children}
             </Animator>

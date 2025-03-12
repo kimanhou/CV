@@ -1,6 +1,6 @@
-.animator-on-scroll {
+div.animator-on-scroll {
     position: relative;
-    > .vertical-intersection-detector {
+    > div.vertical-intersection-detector {
         position: absolute;
         top: 0;
         left: 0;

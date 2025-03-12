@@ -1,6 +1,6 @@
-#slack-add-reaction-button-container {
+div.slack-add-reaction-button-container {
     position: relative;
-    > #slack-add-reaction-button {
+    > button.slack-add-reaction-button {
         border: solid 1px var(--color-light-grey);
         background-color: transparent;
         border-radius: 20px;
@@ -17,7 +17,7 @@
             border: solid 1px var(--color-grey);
         }
     }
-    > aside.EmojiPickerReact {
+    > aside:global(.EmojiPickerReact) {
         position: absolute;
         z-index: 1;
     }

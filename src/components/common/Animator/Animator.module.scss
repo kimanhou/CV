@@ -1,9 +1,9 @@
-.animator-wrapper {
+div.animator-wrapper {
     position: relative;
-    > .animator-invisible {
+    > div.animator-invisible {
         opacity: 0;
     }
-    > .animator-absolute {
+    > div:global(.animator-absolute) {
         position: absolute;
         top: 0;
         right: 0;

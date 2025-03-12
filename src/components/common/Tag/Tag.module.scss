@@ -1,4 +1,4 @@
-.tag {
+div.tag {
     background-color: var(--color-light-grey);
     border-radius: 20px;
     margin-right: 1rem;
@@ -14,7 +14,7 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .tag {
+    div.tag {
         margin-right: 0.9rem;
     }
 }

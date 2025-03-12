@@ -1,5 +1,8 @@
-.animated-tags.animator-absolute {
-    right: -400px;
+div.animated-tags {
+    display: flex;
+    div.animated-tags-class-name:global(.animator-absolute) {
+        right: -400px;
+    }
 }
 
 @keyframes animated-tags-init {

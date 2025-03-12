@@ -1,5 +1,5 @@
 import { Dispatch, FC, SetStateAction } from "react";
-import "./SlackReaction.scss";
+import styles from "./SlackReaction.module.scss";
 
 interface ISlackReactionProps {
     emoji: string;
@@ -22,13 +22,13 @@ const SlackReaction: FC<ISlackReactionProps> = (props) => {
 
     return (
         <div
-            className={`slack-reaction flex-row ${
-                props.userReacted ? "reacted" : ""
+            className={`${styles.slackReaction} ${
+                props.userReacted ? styles.reacted : ""
             }`}
             onClick={onClick}
         >
             <span>{props.emoji}</span>
-            <span className="count">{props.count}</span>
+            <span className={styles.count}>{props.count}</span>
         </div>
     );
 };
