@@ -6,7 +6,7 @@ import styles from "./Others.module.scss";
 
 const Others: FC = (props) => {
     return (
-        <div className={styles.others}>
+        <div className={styles.others} id="others">
             <Education />
             <Skills />
             <Hobbies />

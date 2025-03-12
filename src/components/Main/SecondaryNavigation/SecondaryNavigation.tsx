@@ -15,7 +15,7 @@ const SecondaryNavigation: FC<ISecondaryNavigationProps> = (props) => {
             : "";
 
     return (
-        <div className={styles.secondaryNavigation}>
+        <div className={styles.secondaryNavigation} id="secondary-navigation">
             <div className={styles.secondaryNavigationTabsContainer}>
                 {tabs.map((tab) => (
                     <div className={styles.secondaryNavigationTab} key={tab}>

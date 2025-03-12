@@ -10,7 +10,7 @@ export enum WorkEnum {
 
 export const Work: FC = (props) => {
     return (
-        <section className={styles.work}>
+        <section className={styles.work} id="work">
             <div className={styles.container}>
                 <ul className={styles.workBlockList}>
                     <li>

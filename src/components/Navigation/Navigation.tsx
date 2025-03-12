@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 import { MainTabEnum, RESIZABLE_THRESHOLD } from "../Main/Main";
 import NavigationLink from "./NavigationLink";
-import "./Navigation.scss";
+import styles from "./Navigation.module.scss";
 
 interface INavigationProps {
     setActiveTab: (activeTab: MainTabEnum) => void;
@@ -27,7 +27,7 @@ const Navigation: FC<INavigationProps> = (props) => {
     };
 
     return (
-        <div id="navigation" className={`flex-row`}>
+        <div className={styles.navigation}>
             <NavigationLink to="/" selected={true}>
                 Intro
             </NavigationLink>
