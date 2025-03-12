@@ -1,11 +1,11 @@
-#education {
+section.education {
     text-align: left;
     margin-bottom: 50px;
-    > .education-list-container {
+    > div.education-list-container {
         display: inline-flex;
         flex-direction: row;
         justify-content: center;
-        > ul#education-block-list {
+        > ul.education-block-list {
             display: flex;
             flex-direction: column;
             margin-block-start: 0;
@@ -18,17 +18,6 @@
                 flex-direction: row;
                 flex-wrap: wrap;
                 justify-content: flex-start;
-                > .education-block {
-                    padding: 1.2rem 2rem 1.4rem 1.2rem;
-                    width: fit-content;
-                    > .education-block-header {
-                        color: var(--color-grey);
-                    }
-                    > h3 {
-                        margin-block-start: 0.4rem;
-                        margin-block-end: 0;
-                    }
-                }
             }
         }
     }

@@ -1,11 +1,11 @@
 import { FC, useState } from "react";
-import Others from "./Others/Others";
-import SecondaryNavigation from "./SecondaryNavigation/SecondaryNavigation";
-import { Work } from "./Work/Work";
-import "./Main.scss";
-import DownloadButton from "./DownloadButton";
-import Resizable from "./Resizable/Resizable";
-import SecondaryTitle from "./SecondaryTitle/SecondaryTitle";
+import SecondaryNavigation from "@/components/Main/SecondaryNavigation/SecondaryNavigation";
+import { Work } from "@/components/Main/Work/Work";
+import Others from "@/components/Main/Others/Others";
+import DownloadButton from "@/components/Main/DownloadButton";
+import Resizable from "@/components/Main/Resizable/Resizable";
+import SecondaryTitle from "@/components/Main/SecondaryTitle/SecondaryTitle";
+import styles from "./Main.module.scss";
 
 export enum MainTabEnum {
     WORK = "Work",
@@ -29,8 +29,8 @@ const Main: FC<IMainProps> = (props) => {
     );
 
     return (
-        <section id="main">
-            <div className="c-container c-container--top">
+        <section className={styles.main}>
+            <div className={styles.container}>
                 {!isResizable && (
                     <>
                         <SecondaryNavigation

@@ -1,4 +1,5 @@
 import { FC } from "react";
+import styles from "./SkillsFramework.module.scss";
 
 interface ISkillsFrameworkProps {
     iconSrc: string;
@@ -7,7 +8,7 @@ interface ISkillsFrameworkProps {
 
 const SkillsFramework: FC<ISkillsFrameworkProps> = (props) => {
     return (
-        <div className="skills-framework flex-row">
+        <div className={styles.skillsFramework}>
             <span>{props.text}</span>
             <img
                 src={props.iconSrc}

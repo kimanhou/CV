@@ -1,4 +1,4 @@
-.btn-circle-download {
+div.btn-circle-download {
     position: relative;
     height: 48px;
     width: 48px;
@@ -25,7 +25,7 @@
         transform: translateX(-100%);
     }
     &:hover {
-        > #arrow {
+        > .arrow {
             background: none;
             > path,
             > polyline {
@@ -41,7 +41,7 @@
         stroke-linecap: round;
         stroke-linejoin: round;
         fill: none;
-        &#border {
+        &.border {
             position: absolute;
             top: 0;
             left: 0;
@@ -50,7 +50,7 @@
             stroke-dashoffset: 144;
             transition: all 0.9s linear;
         }
-        &#arrow {
+        &.arrow {
             position: absolute;
             top: 14px;
             left: 17px;
@@ -61,7 +61,7 @@
                 transition: all 0.2s ease;
             }
         }
-        &#check {
+        &.check {
             position: absolute;
             top: 17px;
             left: 13px;
@@ -71,13 +71,13 @@
     }
     &.load {
         background: var(--color-light-pink);
-        #arrow {
+        .arrow {
             path,
             polyline {
                 stroke: var(--color-dark-pink);
             }
         }
-        #border {
+        .border {
             stroke: var(--color-dark-pink);
             stroke-dasharray: 144;
             stroke-dashoffset: 0;
@@ -91,11 +91,11 @@
             transition: transform 0.4s ease;
             transition-delay: 0.7s;
         }
-        #border,
-        #arrow {
+        .border,
+        .arrow {
             display: none;
         }
-        #check {
+        .check {
             transform: scale(1);
             transition: all 0.2s ease;
             transition-delay: 0.2s;

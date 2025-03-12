@@ -1,7 +1,7 @@
-#main {
+section.main {
     position: relative;
     min-height: 100vh;
-    > .c-container {
+    > div.container {
         justify-content: center;
         gap: 20px;
     }

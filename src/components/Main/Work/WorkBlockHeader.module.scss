@@ -1,0 +1,14 @@
+div.work-block-header {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+    > span.work-block-header-location,
+    span.work-block-header-current-position {
+        color: var(--color-grey);
+    }
+    > span.work-block-header-location {
+        margin-left: 0.5rem;
+    }
+    > span.work-block-header-current-position {
+        margin-left: 2rem;
+    }
+}

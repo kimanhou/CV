@@ -1,8 +1,9 @@
-#secondary-navigation {
+div.secondary-navigation {
     margin-bottom: 2rem;
     scroll-margin: 2rem;
-    > .secondary-navigation-tabs-container {
-        > .secondary-navigation-tab {
+    > div.secondary-navigation-tabs-container {
+        display: flex;
+        > div.secondary-navigation-tab {
             > span {
                 margin-right: 3rem;
                 color: var(--color-grey);
@@ -16,7 +17,8 @@
                     color: var(--fg);
                 }
             }
-            > .secondary-navigation-bottom-line {
+            > div.secondary-navigation-bottom-line {
+                display: flex;
                 margin-top: 0.8rem;
                 > .secondary-navigation-bottom-line-black,
                 > .secondary-navigation-bottom-line-grey {

@@ -1,0 +1,9 @@
+div.hobbies-block {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    > img {
+        width: 3rem;
+        margin-right: 0.8rem;
+    }
+}

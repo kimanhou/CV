@@ -1,14 +1,15 @@
-#hobbies {
+@use "@/mixins.scss" as *;
+
+section.hobbies {
     text-align: left;
-    > .hobbies-title {
-        font-size: 1.3rem;
-        font-weight: semi-bold;
+    > h4.hobbies-title {
+        @include main-others-h4;
     }
-    > .hobbies-list-container {
+    > div.hobbies-list-container {
         display: inline-flex;
         flex-direction: row;
         justify-content: center;
-        :first-child {
+        :first-child:not(img) {
             margin-right: 2.5rem;
         }
         > ul.hobbies-block-list {
@@ -23,23 +24,15 @@
                 flex-wrap: wrap;
                 justify-content: flex-start;
                 height: 3rem;
-                > .hobbies-block {
-                    width: fit-content;
-                    align-items: center;
-                    > img {
-                        width: 3rem;
-                        margin-right: 0.8rem;
-                    }
-                }
             }
         }
     }
 }
 
 @media only screen and (max-width: 768px) {
-    #hobbies {
-        > .hobbies-list-container {
-            :first-child {
+    section.hobbies {
+        > div.hobbies-list-container {
+            :first-child:not(img) {
                 margin-right: 1.5rem;
             }
         }

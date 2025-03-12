@@ -1,0 +1,9 @@
+div.skills-framework {
+    display: flex;
+    align-items: center;
+    margin-right: 3rem;
+    > img {
+        width: 2rem;
+        margin-left: 0.8rem;
+    }
+}

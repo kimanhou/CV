@@ -1,4 +1,5 @@
 import { FC } from "react";
+import styles from "./EducationBlock.module.scss";
 
 interface IEducationBlockProps {
     date: string;
@@ -8,8 +9,8 @@ interface IEducationBlockProps {
 
 const EducationBlock: FC<IEducationBlockProps> = (props) => {
     return (
-        <div className="education-block">
-            <div className="education-block-header font-size-s">
+        <div className={styles.educationBlock}>
+            <div className={styles.educationBlockHeader}>
                 {props.date} &#x2022; {props.location}
             </div>
             <h3>{props.text}</h3>

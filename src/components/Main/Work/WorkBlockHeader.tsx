@@ -1,4 +1,5 @@
 import { FC } from "react";
+import styles from "./WorkBlockHeader.module.scss";
 
 interface IWorkBlockHeaderProps {
     date: string;
@@ -8,13 +9,13 @@ interface IWorkBlockHeaderProps {
 
 const WorkBlockHeader: FC<IWorkBlockHeaderProps> = (props) => {
     return (
-        <div className="work-block-header font-size-s">
+        <div className={styles.workBlockHeader}>
             From <b>{props.date}</b>
-            <span className="work-block-header-location">
+            <span className={styles.workBlockHeaderLocation}>
                 &#x2022; {props.location}
             </span>
             {props.isCurrentPosition && (
-                <span className="work-block-header-current-position">
+                <span className={styles.workBlockHeaderCurrentPosition}>
                     ⭐ Current position
                 </span>
             )}

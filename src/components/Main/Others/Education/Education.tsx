@@ -1,12 +1,12 @@
 import { FC } from "react";
-import "./Education.scss";
-import EducationBlock from "./EducationBlock";
+import EducationBlock from "@/components/Main/Others/Education/EducationBlock";
+import styles from "./Education.module.scss";
 
 const Education: FC = (props) => {
     return (
-        <section id="education">
-            <div className="education-list-container">
-                <ul id="education-block-list">
+        <section className={styles.education}>
+            <div className={styles.educationListContainer}>
+                <ul className={styles.educationBlockList}>
                     <li>
                         <EducationBlock
                             date="From Sep 2013 to Sep 2015"

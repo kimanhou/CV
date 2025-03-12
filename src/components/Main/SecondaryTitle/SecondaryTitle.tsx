@@ -1,5 +1,5 @@
 import { FC } from "react";
-import "./SecondaryTitle.scss";
+import styles from "./SecondaryTitle.module.scss";
 
 interface ISecondaryTitleProps {
     title: string;
@@ -7,11 +7,11 @@ interface ISecondaryTitleProps {
 
 const SecondaryTitle: FC<ISecondaryTitleProps> = (props) => {
     return (
-        <div className="secondary-title">
+        <div className={styles.secondaryTitle}>
             <h3>{props.title}</h3>
-            <div className="secondary-title-bottom-line flex-row">
-                <div className="secondary-title-bottom-line-black"></div>
-                <div className="secondary-title-bottom-line-grey"></div>
+            <div className={styles.secondaryTitleBottomLine}>
+                <div className={styles.secondaryTitleBottomLineBlack}></div>
+                <div className={styles.secondaryTitleBottomLineGrey}></div>
             </div>
         </div>
     );

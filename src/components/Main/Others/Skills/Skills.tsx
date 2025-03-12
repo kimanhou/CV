@@ -1,19 +1,19 @@
 import { FC } from "react";
 import SkillsBlock from "./SkillsBlock";
-import construction from "./construction.png";
-import language from "./language.png";
-import react from "./react.png";
-import tool from "./tool.png";
-import vue from "./vue.png";
 import SkillsFramework from "./SkillsFramework";
-import "./Skills.scss";
+import construction from "@/img/construction.png";
+import language from "@/img/language.png";
+import react from "@/img/react.png";
+import tool from "@/img/tool.png";
+import vue from "@/img/vue.png";
+import styles from "./Skills.module.scss";
 
 const Skills: FC = (props) => {
     return (
-        <section id="skills">
-            <div className="skills-title">Skills</div>
-            <div className="skills-list-container flex-row">
-                <ul id="skills-block-list">
+        <section className={styles.skills}>
+            <h4 className={styles.skillsTitle}>Skills</h4>
+            <div className={styles.skillsListContainer}>
+                <ul className={styles.skillsBlockList}>
                     <li>
                         <SkillsBlock
                             iconSrc={language}
