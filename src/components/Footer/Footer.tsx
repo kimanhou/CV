@@ -26,7 +26,7 @@ const Footer: FC = (props) => {
             </svg>
             <div className={styles.footerContent}>
                 <div className={styles.footerInfo}>
-                    <SocialBar />
+                    <SocialBar hasMarginBottom />
                     <p>Made with &#128420; &copy; {currentYear}</p>
                 </div>
             </div>

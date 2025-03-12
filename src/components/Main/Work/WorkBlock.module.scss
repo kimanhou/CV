@@ -13,8 +13,5 @@ div.work-block {
         width: 100%;
         background-color: var(--color-light-grey);
         margin-top: 2rem;
-        &:last-of-type {
-            display: none;
-        }
     }
 }

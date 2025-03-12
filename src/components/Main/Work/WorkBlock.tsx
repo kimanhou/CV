@@ -13,7 +13,7 @@ const WorkBlock: FC<IWorkBlockProps> = (props) => {
     const { date, location, isCurrentPosition, title, description, tags } =
         getWorkBlockInfo(props.company);
     return (
-        <div className={styles.workBlock}>
+        <div className={`${styles.workBlock} work-block`}>
             <WorkBlockHeader
                 date={date}
                 location={location}
@@ -29,7 +29,9 @@ const WorkBlock: FC<IWorkBlockProps> = (props) => {
                 ))}
             </p>
             <AnimatedTags tags={tags} />
-            <div className={styles.workBlockBottomLine} />
+            <div
+                className={`${styles.workBlockBottomLine} work-block-bottom-line`}
+            />
         </div>
     );
 };
