@@ -50,9 +50,9 @@ footer.footer {
 }
 
 @media only screen and (max-width: 768px) {
-    footer {
-        > #footer-content {
-            > .info {
+    footer.footer {
+        > div.footer-content {
+            > div.footer-info {
                 padding-right: 1rem;
             }
         }

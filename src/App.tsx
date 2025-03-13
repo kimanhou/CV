@@ -5,13 +5,13 @@ import Footer from "@/components/Footer/Footer";
 import Home from "@/components/Home/Home";
 import { Playground } from "@/components/Playground/Playground";
 import { MainTabEnum } from "@/components/Main/Main";
-import "./App.css";
+import styles from "./App.module.scss";
 
 const App = () => {
     const [activeTab, setActiveTab] = useState<MainTabEnum>(MainTabEnum.WORK);
 
     return (
-        <div className="App">
+        <div className={styles.app}>
             <HashRouter>
                 <Header setActiveTab={setActiveTab} />
                 <Routes>
