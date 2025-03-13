@@ -33,8 +33,8 @@
         "build": "tsc && vite build",
         "serve": "vite preview",
         "eject": "react-scripts eject",
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d build",
+        "predeploy": "npm run build -- --config vite.config.test-env.ts",
+        "deploy": "gh-pages --dist dist --dest env/${TEST_ENV_NAME:-test}",
         "test": "vitest",
         "test:coverage": "vitest run --coverage --watch=false"
     },
