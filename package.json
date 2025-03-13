@@ -57,9 +57,9 @@
         ]
     },
     "devDependencies": {
-        "@vitest/coverage-v8": "^3.0.8",
+        "@vitest/coverage-v8": "3.0.8",
         "gh-pages": "5.0.0",
-        "jsdom": "^26.0.0",
-        "vitest": "^3.0.8"
+        "jsdom": "26.0.0",
+        "vitest": "3.0.8"
     }
 }
