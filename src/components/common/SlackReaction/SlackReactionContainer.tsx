@@ -15,21 +15,21 @@ const SlackReactionContainer: FC = () => {
     const localStorageKey = "kanguyenSlackReactions";
     const [slackReactions, setSlackReactions] = useState<Array<ISlackReaction>>(
         () => {
-            const saved = localStorage.getItem(localStorageKey);
-            if (saved == null) {
-                return [
-                    { emoji: "🎉", count: 2, userReacted: true },
-                    { emoji: "❤️", count: 1, userReacted: false },
-                    { emoji: "✨", count: 3, userReacted: true },
-                    { emoji: "🚀", count: 1, userReacted: false },
-                    { emoji: "💚", count: 1, userReacted: true },
-                    { emoji: "💡", count: 4, userReacted: false },
-                    { emoji: "📱", count: 1, userReacted: false },
-                ];
-            }
+            // const saved = localStorage.getItem(localStorageKey);
+            // if (saved == null) {
+            return [
+                { emoji: "🎉", count: 2, userReacted: true },
+                { emoji: "❤️", count: 1, userReacted: false },
+                { emoji: "✨", count: 3, userReacted: true },
+                { emoji: "🚀", count: 1, userReacted: false },
+                { emoji: "💚", count: 1, userReacted: true },
+                { emoji: "💡", count: 4, userReacted: false },
+                { emoji: "📱", count: 1, userReacted: false },
+            ];
+            // }
 
-            const parsed = JSON.parse(saved);
-            return parsed;
+            // const parsed = JSON.parse(saved);
+            // return parsed;
         }
     );
     const reacted = slackReactions
