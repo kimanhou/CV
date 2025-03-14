@@ -1,13 +1,13 @@
-import { useEffect, useRef, useState } from "react";
-import "./Resizable.scss";
+import { FC, useEffect, useRef, useState } from "react";
 import { pauseEvent, setColumnsWidth, setContainerHeight } from "./utils";
+import styles from "./Resizable.module.scss";
 
 interface IResizableProps {
     left: JSX.Element;
     right: JSX.Element;
 }
 
-const Resizable: React.FC<IResizableProps> = (props) => {
+const Resizable: FC<IResizableProps> = (props) => {
     const [isResizing, setIsResizing] = useState<boolean>(false);
     const containerRef = useRef<HTMLDivElement>(null);
     const leftRef = useRef<HTMLDivElement>(null);
@@ -88,24 +88,30 @@ const Resizable: React.FC<IResizableProps> = (props) => {
 
     return (
         <div
-            className="resizable flex-row"
+            className={styles.resizable}
             ref={containerRef}
             onMouseMove={onMouseMove}
             onMouseUp={onMouseUp}
         >
-            <div className="resizable-col resizable-left" ref={leftRef}>
+            <div
+                className={`${styles.resizableCol} ${styles.resizableLeft}`}
+                ref={leftRef}
+            >
                 {props.left}
             </div>
 
             <div
-                className="resizable-drag"
+                className={styles.resizableDrag}
                 onMouseDown={onMouseDown}
                 ref={draggableLineRef}
             >
-                <div className="resizable-drag-line"></div>
+                <div className={styles.resizableDragLine}></div>
             </div>
 
-            <div className="resizable-col resizable-right" ref={rightRef}>
+            <div
+                className={`${styles.resizableCol} ${styles.resizableRight}`}
+                ref={rightRef}
+            >
                 {props.right}
             </div>
         </div>

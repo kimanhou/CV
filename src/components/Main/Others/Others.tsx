@@ -1,11 +1,12 @@
-import Education from "./Education/Education";
-import Skills from "./Skills/Skills";
-import Hobbies from "./Hobbies/Hobbies";
-import "./Others.scss";
+import { FC } from "react";
+import Education from "@/components/Main/Others/Education/Education";
+import Skills from "@/components/Main/Others/Skills/Skills";
+import Hobbies from "@/components/Main/Others/Hobbies/Hobbies";
+import styles from "./Others.module.scss";
 
-const Others: React.FC = (props) => {
+const Others: FC = (props) => {
     return (
-        <div id="others">
+        <div className={styles.others} id="others">
             <Education />
             <Skills />
             <Hobbies />

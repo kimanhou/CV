@@ -1,11 +1,14 @@
+import { FC } from "react";
+import styles from "./SkillsFramework.module.scss";
+
 interface ISkillsFrameworkProps {
     iconSrc: string;
     text: string;
 }
 
-const SkillsFramework: React.FC<ISkillsFrameworkProps> = (props) => {
+const SkillsFramework: FC<ISkillsFrameworkProps> = (props) => {
     return (
-        <div className="skills-framework flex-row">
+        <div className={styles.skillsFramework}>
             <span>{props.text}</span>
             <img
                 src={props.iconSrc}

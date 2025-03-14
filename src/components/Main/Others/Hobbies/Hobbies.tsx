@@ -1,18 +1,19 @@
-import "./Hobbies.scss";
-import HobbiesBlock from "./HobbiesBlock";
-import travel from "./travel.png";
-import tiny from "./tiny.png";
-import sport from "./sport.png";
-import music from "./music.png";
-import food from "./food.png";
-import dog from "./dog.png";
+import { FC } from "react";
+import HobbiesBlock from "@/components/Main/Others/Hobbies/HobbiesBlock";
+import travel from "@/img/travel.png";
+import tiny from "@/img/tiny.png";
+import sport from "@/img/sport.png";
+import music from "@/img/music.png";
+import food from "@/img/food.png";
+import dog from "@/img/dog.png";
+import styles from "./Hobbies.module.scss";
 
-const Hobbies: React.FC = (props) => {
+const Hobbies: FC = (props) => {
     return (
-        <section id="hobbies">
-            <div className="hobbies-title">Hobbies</div>
-            <div className="hobbies-list-container flex-row">
-                <ul className="hobbies-block-list">
+        <section className={styles.hobbies}>
+            <h4 className={styles.hobbiesTitle}>Hobbies</h4>
+            <div className={styles.hobbiesListContainer}>
+                <ul className={styles.hobbiesBlockList}>
                     <li>
                         <HobbiesBlock iconSrc={travel} text="Travels" />
                     </li>
@@ -23,7 +24,7 @@ const Hobbies: React.FC = (props) => {
                         <HobbiesBlock iconSrc={music} text="Music" />
                     </li>
                 </ul>
-                <ul className="hobbies-block-list">
+                <ul className={styles.hobbiesBlockList}>
                     <li>
                         <HobbiesBlock iconSrc={sport} text="Sport" />
                     </li>

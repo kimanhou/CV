@@ -1,0 +1,28 @@
+@use "@/mixins.scss" as *;
+
+section.skills {
+    text-align: left;
+    margin-bottom: 50px;
+    > h4.skills-title {
+        @include main-others-h4;
+    }
+    > div.skills-list-container {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: center;
+        > ul.skills-block-list {
+            display: flex;
+            flex-direction: column;
+            li:not(:last-child) {
+                margin-bottom: 0.8rem;
+            }
+            > li {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                height: 3rem;
+            }
+        }
+    }
+}

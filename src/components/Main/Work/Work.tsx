@@ -1,5 +1,6 @@
-import "./Work.scss";
-import WorkBlock from "./WorkBlock";
+import { FC } from "react";
+import WorkBlock from "@/components/Main/Work/WorkBlock";
+import styles from "./Work.module.scss";
 
 export enum WorkEnum {
     SOCGEN = "Société Générale",
@@ -7,11 +8,11 @@ export enum WorkEnum {
     RAKUTEN = "Rakuten",
 }
 
-export const Work: React.FC = (props) => {
+export const Work: FC = (props) => {
     return (
-        <section id="work">
-            <div className="c-container c-container--top">
-                <ul id="work-block-list">
+        <section className={styles.work} id="work">
+            <div className={styles.container}>
+                <ul className={styles.workBlockList}>
                     <li>
                         <WorkBlock company={WorkEnum.RAKUTEN} />
                     </li>

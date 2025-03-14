@@ -1,12 +1,12 @@
-import { useEffect, useRef, useState } from "react";
-import { IntroBox1 } from "./IntroBox1";
-import { IntroBox2 } from "./IntroBox2";
-import { IntroBox3 } from "./IntroBox3";
-import { IntroBox4 } from "./IntroBox4";
-import { useIsMobile } from "hooks/useIsMobile";
-import "./Intro.scss";
+import { FC, useEffect, useRef, useState } from "react";
+import IntroBox1 from "./IntroBox1";
+import IntroBox2 from "./IntroBox2";
+import IntroBox3 from "./IntroBox3";
+import IntroBox4 from "./IntroBox4";
+import { useIsMobile } from "@/hooks/useIsMobile";
+import styles from "./Intro.module.scss";
 
-export const Intro: React.FC = () => {
+const Intro: FC = () => {
     const isMobile = useIsMobile();
     const leftRef = useRef<HTMLDivElement>(null);
     const [leftHeight, setLeftHeight] = useState<string | undefined>(undefined);
@@ -16,16 +16,12 @@ export const Intro: React.FC = () => {
     }, []);
 
     return (
-        <section id="intro" className="flex-row">
+        <section className={styles.intro}>
             {!isMobile && (
                 <>
-                    <div
-                        id="intro-column-left"
-                        className="flex-column"
-                        ref={leftRef}
-                    >
+                    <div className={styles.introColumnLeft} ref={leftRef}>
                         <IntroBox2 />
-                        <div className="flex-row flex-1">
+                        <div className={styles.introSecondLine}>
                             <IntroBox3 />
                             <IntroBox4 />
                         </div>
@@ -43,3 +39,5 @@ export const Intro: React.FC = () => {
         </section>
     );
 };
+
+export default Intro;

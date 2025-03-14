@@ -1,0 +1,121 @@
+a.social-icon {
+    display: block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-grey);
+    transition: 0.5s;
+    background-color: var(--color-magnolia);
+    &:hover {
+        > span:nth-child(1) {
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s;
+        }
+        > span:nth-child(3) {
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.5s;
+        }
+        > span:nth-child(2) {
+            transform: scale(1);
+            transform-origin: top;
+            transition: transform 0.5s;
+        }
+        > span:nth-child(4) {
+            transform: scale(1);
+            transform-origin: bottom;
+            transition: transform 0.5s;
+        }
+    }
+    > span {
+        position: absolute;
+        transition: transform 0.5s;
+        &:nth-child(1),
+        &:nth-child(3) {
+            width: 100%;
+            height: 3px;
+            background: var(--color-grey);
+        }
+        &:nth-child(1) {
+            top: 0;
+            left: 0;
+            transform-origin: right;
+        }
+
+        &:nth-child(3) {
+            bottom: 0;
+            left: 0;
+            transform-origin: left;
+        }
+
+        &:nth-child(2),
+        &:nth-child(4) {
+            width: 3px;
+            height: 100%;
+            background: var(--fg);
+        }
+        &:nth-child(2) {
+            top: 0;
+            left: 0;
+            transform: scale(0);
+            transform-origin: bottom;
+        }
+
+        &:nth-child(4) {
+            top: 0;
+            right: 0;
+            transform: scale(0);
+            transform-origin: top;
+        }
+    }
+
+    &:global(.github):hover {
+        color: var(--color-medium-pink);
+    }
+    &:global(.github):hover span {
+        color: var(--color-medium-pink);
+    }
+    &:global(.github) {
+        > span {
+            &:nth-child(2),
+            &:nth-child(4) {
+                background: var(--color-medium-pink);
+            }
+        }
+    }
+    &:global(.linkedin):hover {
+        color: #0a66c2;
+    }
+    &:global(.linkedin):hover span {
+        background: #0a66c2;
+    }
+    &:global(.linkedin) {
+        > span {
+            &:nth-child(2),
+            &:nth-child(4) {
+                background: #0a66c2;
+            }
+        }
+    }
+    &:global(.mail):hover {
+        color: #ea4335;
+    }
+    &:global(.mail):hover span {
+        background: #4285f4;
+    }
+    &:global(.mail) {
+        > span {
+            &:nth-child(2) {
+                background: #34a853;
+            }
+            &:nth-child(4) {
+                background: #fbbc05;
+            }
+        }
+    }
+}

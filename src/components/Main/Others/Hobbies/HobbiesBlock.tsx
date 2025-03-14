@@ -1,11 +1,14 @@
+import { FC } from "react";
+import styles from "./HobbiesBlock.module.scss";
+
 interface IHobbiesBlockProps {
     iconSrc: string;
     text: string;
 }
 
-const HobbiesBlock: React.FC<IHobbiesBlockProps> = (props) => {
+const HobbiesBlock: FC<IHobbiesBlockProps> = (props) => {
     return (
-        <div className="hobbies-block flex-row">
+        <div className={styles.hobbiesBlock}>
             <img src={props.iconSrc} alt={`Hobby ${props.text} icon`} />
             <span>{props.text}</span>
         </div>

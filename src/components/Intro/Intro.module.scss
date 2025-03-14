@@ -1,0 +1,28 @@
+section.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    flex: 0 0 100%;
+    color: var(--color-grey);
+    margin-bottom: 1rem;
+    > div.intro-column-left {
+        display: flex;
+        flex-direction: column;
+        flex: 2 1 0;
+        height: 100%;
+        > div.intro-second-line {
+            flex: 1;
+            display: flex;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    section.intro {
+        flex-direction: column;
+        height: unset;
+        gap: 1rem;
+        margin-bottom: 4rem;
+    }
+}

@@ -1,12 +1,15 @@
+import { FC } from "react";
+import styles from "./SkillsBlock.module.scss";
+
 interface ISkillsBlockProps {
     iconSrc: string;
     children: JSX.Element;
 }
 
-const SkillsBlock: React.FC<ISkillsBlockProps> = (props) => {
+const SkillsBlock: FC<ISkillsBlockProps> = (props) => {
     return (
-        <div className="skills-block flex-row">
-            <div className="skills-block-icon-container flex-row">
+        <div className={styles.skillsBlock}>
+            <div className={styles.skillsBlockIconContainer}>
                 <img src={props.iconSrc} alt={`Skill icon`} />
             </div>
             {props.children}

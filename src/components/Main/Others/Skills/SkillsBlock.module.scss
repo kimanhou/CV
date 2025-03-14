@@ -1,0 +1,18 @@
+div.skills-block {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    > div.skills-block-icon-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 3rem;
+        width: 3rem;
+        border: solid 1.5px var(--color-grey);
+        border-radius: 10px;
+        margin-right: 1.8rem;
+        > img {
+            width: 2.6rem;
+        }
+    }
+}

@@ -1,25 +1,30 @@
-import "./IntroBox4.scss";
-import { SocialBar } from "components/Social";
-import AnimatorOnScroll from "components/common/Animator/AnimatorOnScroll";
+import { FC } from "react";
+import { SocialBar } from "@/components/Social";
+import AnimatorOnScroll from "@/components/common/Animator/AnimatorOnScroll";
+import pattern from "@/img/pattern.svg";
+import styles from "./IntroBox4.module.scss";
 
-export const IntroBox4: React.FC = (props) => {
+const IntroBox4: FC = (props) => {
     return (
-        <div
-            id="intro-box-4"
-            className="flex-1 intro-box flex-column justify-content-center align-items-center"
-        >
+        <div className={styles.introBox4}>
+            <div
+                className={styles.background}
+                style={{ backgroundImage: `url(${pattern})` }}
+            />
             <AnimatorOnScroll
-                animationClassName="intro-box-4-h1"
-                animationExitClassName="intro-box-4-h1-exit"
+                animationClassName={styles.introBox4H1Init}
+                animationExitClassName={styles.introBox4H1Exit}
             >
                 <h1>WANT TO SAY 'HELLO' ?</h1>
             </AnimatorOnScroll>
             <AnimatorOnScroll
-                animationClassName="intro-box-4-social-bar"
-                animationExitClassName="intro-box-4-social-bar-exit"
+                animationClassName={styles.introBox4SocialBarInit}
+                animationExitClassName={styles.introBox4SocialBarExit}
             >
                 <SocialBar />
             </AnimatorOnScroll>
         </div>
     );
 };
+
+export default IntroBox4;

@@ -1,27 +1,28 @@
-import Tag from "components/common/Tag/Tag";
-import AnimatorOnScroll from "../Animator/AnimatorOnScroll";
-import "./AnimatedTags.scss";
+import { FC } from "react";
+import Tag from "@/components/common/Tag/Tag";
+import AnimatorOnScroll from "@/components/common/Animator/AnimatorOnScroll";
+import styles from "./AnimatedTags.module.scss";
 
 interface IAnimatedTagsProps {
     tags: string[];
     delay?: number;
 }
 
-const AnimatedTags: React.FC<IAnimatedTagsProps> = (props) => {
+const AnimatedTags: FC<IAnimatedTagsProps> = (props) => {
     const delay = props.delay ?? 0;
     return (
-        <div className="flex-row" style={{ marginTop: "2rem" }}>
+        <div className={styles.animatedTags} style={{ marginTop: "2rem" }}>
             {props.tags.map((tag, i) => (
                 <AnimatorOnScroll
                     key={i}
-                    animationClassName="animated-tags"
+                    animationClassName={styles.animatedTagsClassName}
                     animationStyleInit={{
-                        animation: `animated-tags-init 0.4s ease-in ${
+                        animation: `${styles.animatedTagsInit} 0.4s ease-in ${
                             delay + 0.1 * i
                         }s forwards`,
                     }}
                     animationStyleExit={{
-                        animation: `animated-tags-exit 0.4s ease-in ${
+                        animation: `${styles.animatedTagsExit} 0.4s ease-in ${
                             delay + 0.1 * i
                         }s forwards`,
                     }}

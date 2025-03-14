@@ -1,5 +1,5 @@
 import { CSSProperties, FC, useRef } from "react";
-import "./Animator.scss";
+import styles from "./Animator.module.scss";
 
 interface IAnimatorProps {
     children: JSX.Element | JSX.Element[];
@@ -20,8 +20,8 @@ const Animator: FC<IAnimatorProps> = (props) => {
         : { ...props.animationStyleExit };
 
     return (
-        <div className="animator-wrapper" ref={ref}>
-            <div className="animator-invisible">{props.children}</div>
+        <div className={styles.animatorWrapper} ref={ref}>
+            <div className={styles.animatorInvisible}>{props.children}</div>
             <div className={`animator-absolute ${className}`} style={style}>
                 {props.children}
             </div>

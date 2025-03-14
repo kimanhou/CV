@@ -1,0 +1,91 @@
+@use "@/mixins.scss" as *;
+
+div.intro-box-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 1rem 3.5rem 1rem 1rem;
+    overflow: hidden;
+    @include border-light-grey;
+    h1 {
+        text-orientation: unset;
+        writing-mode: unset;
+        transform: rotate(-90deg);
+        letter-spacing: 4px;
+        margin-block: 0;
+    }
+    .intro-box-3-h1-init {
+        animation: intro-box-3-h1-init 0.4s ease-in 0s forwards;
+    }
+    .intro-box-3-h1-exit {
+        animation: intro-box-3-h1-exit 0.4s ease-in 0s forwards;
+    }
+
+    > div.intro-box-3-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+            width: 5rem;
+        }
+        h4 {
+            margin-block-end: 0;
+        }
+        p {
+            margin-block-end: 0;
+            color: var(--fg);
+        }
+        .intro-box-3-content-init {
+            animation: intro-box-3-content-init 0.4s ease-in 0s forwards;
+        }
+        .intro-box-3-content-exit {
+            animation: intro-box-3-content-exit 0.4s ease-in 0s forwards;
+        }
+    }
+}
+
+@keyframes intro-box-3-h1-init {
+    from {
+        right: 100px;
+    }
+    to {
+        right: 0;
+    }
+}
+
+@keyframes intro-box-3-h1-exit {
+    from {
+        right: 0;
+    }
+    to {
+        right: 100px;
+    }
+}
+
+@keyframes intro-box-3-content-init {
+    from {
+        right: -300px;
+    }
+    to {
+        right: 0;
+    }
+}
+
+@keyframes intro-box-3-content-exit {
+    from {
+        right: 0;
+    }
+    to {
+        right: -300px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    div.intro-box-3 {
+        padding: 1rem;
+        h1 {
+            white-space: nowrap;
+        }
+    }
+}

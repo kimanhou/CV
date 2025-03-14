@@ -1,17 +1,17 @@
 import { useState } from "react";
 import { HashRouter, Route, Routes } from "react-router-dom";
-import "./App.css";
-import { Header } from "./components/Header/Header";
-import { Footer } from "./components/Footer/Footer";
-import { Home } from "./components/Home/Home";
-import { Playground } from "./components/Playground/Playground";
-import { MainTabEnum } from "./components/Main/Main";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
+import Home from "@/components/Home/Home";
+import { Playground } from "@/components/Playground/Playground";
+import { MainTabEnum } from "@/components/Main/Main";
+import styles from "./App.module.scss";
 
-function App() {
+const App = () => {
     const [activeTab, setActiveTab] = useState<MainTabEnum>(MainTabEnum.WORK);
 
     return (
-        <div className="App">
+        <div className={styles.app}>
             <HashRouter>
                 <Header setActiveTab={setActiveTab} />
                 <Routes>
@@ -33,6 +33,6 @@ function App() {
             </HashRouter>
         </div>
     );
-}
+};
 
 export default App;

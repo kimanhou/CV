@@ -1,0 +1,55 @@
+@use "@/mixins.scss" as *;
+
+div.intro-box-2 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 10px;
+    align-items: flex-start;
+    padding: 2rem 1.5rem;
+    position: relative;
+    @include border-light-grey;
+    > p.typing-message {
+        font-size: 0.8rem;
+        position: absolute;
+        top: 2rem;
+        left: 1.5rem;
+    }
+    > .intro-box-2-slack-message {
+        display: flex;
+        opacity: 0;
+        transition: opacity 2s;
+        &.visible {
+            opacity: 1;
+        }
+        > img.intro-box-2-slack-message-img {
+            width: 4rem;
+            height: 4rem;
+            margin-right: 0.5rem;
+        }
+        > .intro-box-2-slack-message-text {
+            text-align: left;
+            > .intro-box-2-slack-message-text-header {
+                > .intro-box-2-slack-message-text-header-time {
+                    color: #b1b0b4;
+                    margin-left: 1rem;
+                    font-size: 0.9rem;
+                }
+            }
+            > p {
+                margin-block-end: 0;
+                margin-block-start: 0.1rem;
+                color: var(--fg);
+                a {
+                    color: var(--color-grey);
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    div.intro-box-2 {
+        margin-bottom: 0;
+    }
+}

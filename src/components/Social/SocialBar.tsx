@@ -1,21 +1,27 @@
-import { useState } from "react";
-import "./SocialBar.scss";
+import { FC, useState } from "react";
 import { SocialMediaEnum } from "./SocialIcon";
-import { SocialIconGithub } from "./SocialIconGithub";
-import { SocialIconLinkedin } from "./SocialIconLinkedin";
-import { SocialIconMail } from "./SocialIconMail";
-import { SocialMessage } from "./SocialMessage";
+import SocialIconGithub from "./SocialIconGithub";
+import SocialIconLinkedin from "./SocialIconLinkedin";
+import SocialIconMail from "./SocialIconMail";
+import SocialMessage from "./SocialMessage";
+import styles from "./SocialBar.module.scss";
 
-interface ISocialBarProps {}
+interface ISocialBarProps {
+    hasMarginBottom?: boolean;
+}
 
-export const SocialBar: React.FC<ISocialBarProps> = (props) => {
+export const SocialBar: FC<ISocialBarProps> = (props) => {
     const [hoveredIcon, setHoveredIcon] = useState<SocialMediaEnum | null>(
         null
     );
 
+    const hasMarginBottomClassName = props.hasMarginBottom
+        ? styles.hasMarginBottom
+        : "";
+
     return (
-        <div className="social-bar">
-            <div className="social-bar-message-container">
+        <div className={`${styles.socialBar} ${hasMarginBottomClassName}`}>
+            <div className={styles.socialBarMessageContainer}>
                 <SocialMessage
                     hoveredIcon={hoveredIcon}
                     media={SocialMediaEnum.MAIL}
@@ -29,7 +35,7 @@ export const SocialBar: React.FC<ISocialBarProps> = (props) => {
                     media={SocialMediaEnum.GITHUB}
                 />
             </div>
-            <div className="social-bar-icons flex-row">
+            <div className={styles.socialBarIcons}>
                 <SocialIconMail
                     onHover={() => setHoveredIcon(SocialMediaEnum.MAIL)}
                     onHoverLeave={() => setHoveredIcon(null)}

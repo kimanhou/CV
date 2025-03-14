@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 import EmojiPicker, { EmojiClickData } from "emoji-picker-react";
-import "./SlackAddReactionButton.scss";
+import styles from "./SlackAddReactionButton.module.scss";
 
 interface ISlackAddReactionButtonProps {
     addEmoji: (emoji: any) => void;
@@ -19,8 +19,8 @@ const SlackAddReactionButton: FC<ISlackAddReactionButtonProps> = (props) => {
     };
 
     return (
-        <div id="slack-add-reaction-button-container">
-            <button id="slack-add-reaction-button" onClick={onClick}>
+        <div className={styles.slackAddReactionButtonContainer}>
+            <button className={styles.slackAddReactionButton} onClick={onClick}>
                 +
             </button>
             {showPicker && <EmojiPicker onEmojiClick={onEmojiClick} />}

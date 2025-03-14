@@ -1,0 +1,12 @@
+div.education-block {
+    padding: 1.2rem 2rem 1.4rem 1.2rem;
+    width: fit-content;
+    > div.education-block-header {
+        color: var(--color-grey);
+        font-size: 0.9rem;
+    }
+    > h3 {
+        margin-block-start: 0.4rem;
+        margin-block-end: 0;
+    }
+}

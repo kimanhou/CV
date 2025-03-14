@@ -1,10 +1,11 @@
+import { FC } from "react";
 import {
     ISocialIconCommonProps,
     SocialIcon,
     SocialMediaEnum,
 } from "./SocialIcon";
 
-export const SocialIconLinkedin: React.FC<ISocialIconCommonProps> = (props) => {
+const SocialIconLinkedin: FC<ISocialIconCommonProps> = (props) => {
     return (
         <SocialIcon
             media={SocialMediaEnum.LINKEDIN}
@@ -13,3 +14,5 @@ export const SocialIconLinkedin: React.FC<ISocialIconCommonProps> = (props) => {
         />
     );
 };
+
+export default SocialIconLinkedin;

@@ -1,0 +1,24 @@
+section.education {
+    text-align: left;
+    margin-bottom: 50px;
+    > div.education-list-container {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: center;
+        > ul.education-block-list {
+            display: flex;
+            flex-direction: column;
+            margin-block-start: 0;
+            li:not(:last-child) {
+                margin-bottom: 1.4rem;
+            }
+            > li {
+                background-color: var(--color-light-grey);
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+            }
+        }
+    }
+}

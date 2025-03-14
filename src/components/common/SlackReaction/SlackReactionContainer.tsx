@@ -1,8 +1,8 @@
 import { Dispatch, FC, useEffect, useState } from "react";
-import SlackReaction from "components/common/SlackReaction/SlackReaction";
-import SlackAddReactionButton from "./SlackAddReactionButton";
-import { useIsMobile } from "hooks/useIsMobile";
-import "./SlackReactionContainer.scss";
+import SlackReaction from "@/components/common/SlackReaction/SlackReaction";
+import SlackAddReactionButton from "@/components/common/SlackReaction/SlackAddReactionButton";
+import { useIsMobile } from "@/hooks/useIsMobile";
+import styles from "./SlackReactionContainer.module.scss";
 
 interface ISlackReaction {
     emoji: string;
@@ -98,7 +98,7 @@ const SlackReactionContainer: FC = () => {
     }, [slackReactions]);
 
     return (
-        <div className="slack-reaction-container flex-row">
+        <div className={styles.slackReactionContainer}>
             {reacted.map((reaction) => (
                 <SlackReaction
                     {...reaction}

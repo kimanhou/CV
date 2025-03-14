@@ -1,0 +1,16 @@
+section.work {
+    scroll-margin: 6rem;
+    > div.container {
+        justify-content: center;
+        gap: 20px;
+        > ul.work-block-list {
+            li:last-child {
+                > div:global(.work-block) {
+                    > div:global(.work-block-bottom-line) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

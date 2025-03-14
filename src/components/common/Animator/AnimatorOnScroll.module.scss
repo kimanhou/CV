@@ -1,0 +1,10 @@
+div.animator-on-scroll {
+    position: relative;
+    > div.vertical-intersection-detector {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 1px;
+        width: 100vw;
+    }
+}

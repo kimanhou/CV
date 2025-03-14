@@ -1,0 +1,23 @@
+div.divider {
+    position: relative;
+    font-size: 0;
+    > div.divider-background {
+        position: absolute;
+        top: 1px;
+        bottom: 1px;
+        left: 1px;
+        right: 1px;
+        background-attachment: fixed;
+        background-size: 180px 180px;
+        background-repeat: repeat;
+        background-color: var(--color-magnolia);
+    }
+    > svg.divider-svg {
+        -moz-transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        > polygon {
+            fill: var(--bg);
+        }
+    }
+}
