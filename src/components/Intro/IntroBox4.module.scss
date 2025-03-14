@@ -8,13 +8,12 @@ div.intro-box-4 {
     justify-content: center;
     margin-left: 10px;
     padding: 1rem;
-    border: none;
     max-height: calc(80vh / 2 - 4px);
     overflow: hidden;
     min-width: 20rem;
     position: relative;
     @include border-light-grey;
-    &:before {
+    > div.background {
         content: " ";
         display: block;
         position: absolute;
@@ -25,7 +24,6 @@ div.intro-box-4 {
         opacity: 0.6;
         background-attachment: fixed;
         background-size: 180px 180px;
-        background-image: url("/CV/img/pattern.svg");
         background-repeat: repeat;
         background-color: var(--color-magnolia);
     }
@@ -47,7 +45,6 @@ div.intro-box-4 {
         top: -9rem;
         animation: intro-box-4-h1-exit 0.4s ease-in 0s forwards;
     }
-
     .social-bar {
         margin-top: 0;
     }
