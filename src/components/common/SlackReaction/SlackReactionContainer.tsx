@@ -21,6 +21,10 @@ const SlackReactionContainer: FC = () => {
                     { emoji: "🎉", count: 2, userReacted: true },
                     { emoji: "❤️", count: 1, userReacted: false },
                     { emoji: "✨", count: 3, userReacted: true },
+                    { emoji: "🚀", count: 1, userReacted: false },
+                    { emoji: "💚", count: 1, userReacted: true },
+                    { emoji: "💡", count: 4, userReacted: false },
+                    { emoji: "📱", count: 1, userReacted: false },
                 ];
             }
 
