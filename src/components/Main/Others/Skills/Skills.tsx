@@ -26,12 +26,12 @@ const Skills: FC = (props) => {
                             children={
                                 <>
                                     <SkillsFramework
-                                        text="Vue.js"
-                                        iconSrc={vue}
-                                    />
-                                    <SkillsFramework
                                         text="React"
                                         iconSrc={react}
+                                    />
+                                    <SkillsFramework
+                                        text="Vue.js"
+                                        iconSrc={vue}
                                     />
                                 </>
                             }
