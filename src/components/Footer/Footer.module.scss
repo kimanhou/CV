@@ -3,6 +3,7 @@ footer.footer {
     position: relative;
     display: block;
     width: 100%;
+    color: var(--text-color-on-pattern);
     > svg.footer-triangle {
         fill: var(--bg);
         -moz-transform: translateZ(0);

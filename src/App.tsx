@@ -5,15 +5,22 @@ import Footer from "@/components/Footer/Footer";
 import Home from "@/components/Home/Home";
 import { Playground } from "@/components/Playground/Playground";
 import { MainTabEnum } from "@/components/Main/Main";
+import { useDarkMode } from "./hooks/useDarkMode";
 import styles from "./App.module.scss";
 
 const App = () => {
     const [activeTab, setActiveTab] = useState<MainTabEnum>(MainTabEnum.WORK);
+    const [isDarkMode, setIsDarkMode] = useState(useDarkMode());
+    const darkModeClassName = isDarkMode ? styles.darkMode : "";
 
     return (
-        <div className={styles.app}>
+        <div className={`${styles.app} ${darkModeClassName}`}>
             <HashRouter>
-                <Header setActiveTab={setActiveTab} />
+                <Header
+                    setActiveTab={setActiveTab}
+                    isDarkMode={isDarkMode}
+                    setIsDarkMode={setIsDarkMode}
+                />
                 <Routes>
                     <Route
                         path={"/playground"}
