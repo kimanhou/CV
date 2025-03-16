@@ -1,0 +1,34 @@
+div.dark-mode-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    background-color: var(--fg);
+    z-index: -1;
+    &.active {
+        animation: dark-mode-activation-animation 2s cubic-bezier(1, 0, 0, 1) 1s
+            forwards;
+    }
+}
+
+// @keyframes dark-mode-activation-animation {
+//     0% {
+//         height: 0;
+//     }
+//     50% {
+//         height: 100vh;
+//     }
+//     100% {
+//         height: 0;
+//     }
+// }
+
+@keyframes dark-mode-activation-animation {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 50vh;
+    }
+}
