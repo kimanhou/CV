@@ -7,6 +7,7 @@ import styles from "./IntroBox4.module.scss";
 const IntroBox4: FC = (props) => {
     return (
         <div className={styles.introBox4}>
+            <div className={styles.backgroundBackground} />
             <div
                 className={styles.background}
                 style={{ backgroundImage: `url(${pattern})` }}
