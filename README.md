@@ -31,7 +31,7 @@
 # About me
 
 <p>
- <img align="right" height="100" src="/src/img/avatar.png" alt="Avatar" />
+ <img align="right" height="250" src="/src/img/avatar.png" alt="Avatar" />
   
  ✌️ &emsp; Enjoy programming and designing websites <br/><br/>
  ❤️ &emsp; Love travelling, eating, hiking and dogs <br/><br/>
