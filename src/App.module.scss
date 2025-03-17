@@ -27,8 +27,8 @@ html {
     background-color: var(--bg);
     color: var(--fg);
     &:has(.app.dark-mode) {
-        --bg: #1e2022;
-        --fg: #f7f7f7;
+        --bg: var(--dark-mode-background);
+        --fg: var(--dark-mode-foreground);
         --color-grey: rgb(240, 241, 240);
         --color-light-grey: rgb(103, 103, 103);
     }
