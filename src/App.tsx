@@ -5,7 +5,9 @@ import Footer from "@/components/Footer/Footer";
 import Home from "@/components/Home/Home";
 import { MainTabEnum } from "@/components/Main/Main";
 import DarkModeBackground from "@/components/DarkModeBackground/DarkModeBackground";
-import { useDarkMode } from "@/hooks/useDarkMode";
+import useDarkMode from "@/hooks/useDarkMode";
+import useEffectSkipFirstRender from "@/hooks/useEffectSkipFirstRender";
+import { setTheme } from "@/localStorageUtils";
 import styles from "./App.module.scss";
 
 const App = () => {
@@ -15,7 +17,9 @@ const App = () => {
         isDarkMode ? styles.darkMode : ""
     );
 
-    useEffect(() => {
+    useEffectSkipFirstRender(() => {
+        setTheme(isDarkMode ? "dark" : "light");
+
         setTimeout(() => {
             setDarkModeClassName(isDarkMode ? styles.darkMode : "");
         }, 1000);
