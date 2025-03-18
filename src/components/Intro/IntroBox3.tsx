@@ -44,7 +44,7 @@ const IntroBox3: FC = (props) => {
                     animationClassName={styles.introBox3H1Init}
                     animationExitClassName={styles.introBox3H1Exit}
                 >
-                    <h1 ref={h1Ref}>CURRENT POSITION</h1>
+                    <h1 ref={h1Ref}>LATEST POSITION</h1>
                 </AnimatorOnScroll>
             </div>
             <div className={styles.introBox3Content}>
@@ -63,7 +63,10 @@ const IntroBox3: FC = (props) => {
                     </p>
                 </AnimatorOnScroll>
 
-                <AnimatedTags tags={RAKUTEN_WORK_INFO.tags} delay={0.8} />
+                <AnimatedTags
+                    tags={["React", "TypeScript", "Vue.js", "JavaScript"]}
+                    delay={0.8}
+                />
             </div>
         </div>
     );

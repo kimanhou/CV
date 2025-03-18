@@ -12,8 +12,8 @@ const Intro: FC = () => {
     const [leftHeight, setLeftHeight] = useState<string | undefined>(undefined);
 
     useEffect(() => {
-        setLeftHeight(`calc(${leftRef.current?.clientHeight}px + 20px + 4px)`);
-    }, []);
+        setLeftHeight(`calc(${leftRef.current?.clientHeight}px)`);
+    }, [leftRef.current]);
 
     return (
         <section className={styles.intro}>
