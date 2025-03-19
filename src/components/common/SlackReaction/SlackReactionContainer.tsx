@@ -2,9 +2,13 @@ import { Dispatch, FC, useEffect, useState } from "react";
 import SlackReaction from "@/components/common/SlackReaction/SlackReaction";
 import SlackAddReactionButton from "@/components/common/SlackReaction/SlackAddReactionButton";
 import { useIsMobile } from "@/hooks/useIsMobile";
+import {
+    getSlackReactions,
+    setSlackReactions as setSlackReactionsInLocalStorage,
+} from "@/localStorageUtils";
 import styles from "./SlackReactionContainer.module.scss";
 
-interface ISlackReaction {
+export interface ISlackReaction {
     emoji: string;
     count: number;
     userReacted: boolean;
@@ -12,10 +16,9 @@ interface ISlackReaction {
 
 const SlackReactionContainer: FC = () => {
     const isMobile = useIsMobile();
-    const localStorageKey = "kanguyenSlackReactions";
     const [slackReactions, setSlackReactions] = useState<Array<ISlackReaction>>(
         () => {
-            const saved = localStorage.getItem(localStorageKey);
+            const saved = getSlackReactions();
             if (saved == null) {
                 return [
                     { emoji: "🎉", count: 2, userReacted: true },
@@ -94,7 +97,7 @@ const SlackReactionContainer: FC = () => {
         };
 
     useEffect(() => {
-        localStorage.setItem(localStorageKey, JSON.stringify(slackReactions));
+        setSlackReactionsInLocalStorage(slackReactions);
     }, [slackReactions]);
 
     return (

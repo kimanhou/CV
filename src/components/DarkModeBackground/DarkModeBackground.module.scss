@@ -1,0 +1,80 @@
+div.dark-mode-background {
+    > div.dark-mode-background-white {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 0;
+        background-color: white; // background of the loading gif
+        &.is-animated {
+            animation: dark-mode-activation-animation 2s
+                cubic-bezier(1, 0, 0, 1) 0s forwards;
+        }
+    }
+    > div.content {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        letter-spacing: 4px;
+        color: var(--color-medium-pink);
+        gap: 10px;
+        font-size: 1.2rem;
+        font-family: Calibri;
+        > img.loading-gif {
+            height: 150px;
+        }
+    }
+
+    > div.dark-mode-background-black {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 0;
+        background-color: var(--dark-mode-background);
+        &.is-animated {
+            animation: dark-mode-activation-bottom-animation 2s
+                cubic-bezier(1, 0, 0, 1) 0s forwards;
+        }
+    }
+}
+
+@keyframes dark-mode-activation-animation {
+    0% {
+        height: 0;
+    }
+    30% {
+        height: 0;
+    }
+    60% {
+        height: 100vh;
+    }
+    90% {
+        height: 0;
+    }
+    100% {
+        height: 0;
+    }
+}
+
+@keyframes dark-mode-activation-bottom-animation {
+    0% {
+        height: 0;
+    }
+    30% {
+        height: 100vh;
+    }
+    60% {
+        height: 0;
+    }
+    90% {
+        height: 100vh;
+    }
+    100% {
+        height: 0;
+    }
+}
