@@ -1,17 +1,26 @@
 import { WorkEnum } from "./Work";
 
 export const RAKUTEN_WORK_INFO = {
-    date: "October 2022",
+    date: "October 2022 to September 2024",
     location: "Tokyo, Japan",
-    isCurrentPosition: true,
+    isCurrentPosition: false,
     title: "Frontend engineer at Rakuten Group Inc.",
     description: [
-        "Designing and implementing web features on an in-house marketing tool, working on both the JavaScript SDK and Frontend teams",
-        "Identifying and resolving user experience issues",
-        "Improving the team’s processes and CI/CD pipeline",
-        "Mentoring junior members",
+        "Designed and implemented web features on an in-house marketing tool, working on both the JavaScript SDK and Frontend teams",
+        "Initiated architectural changes: gradual use of React instead of Vue, migration from create-react-app to Vite, creation of a common component library",
+        "Improved test coverage, with the help of Storybook and snapshot testing",
+        "Improved and standardized the team’s processes and CI/CD pipeline",
+        "Identified and resolved user experience issues",
+        "Mentored junior members",
     ],
-    tags: ["React", "TypeScript", "Vue.js", "JavaScript"],
+    tags: [
+        "React",
+        "TypeScript",
+        "Vue.js",
+        "JavaScript",
+        "Jenkins",
+        "Storybook",
+    ],
 };
 
 export const WORLD_TRIP_INFO = {

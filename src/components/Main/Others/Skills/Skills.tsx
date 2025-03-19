@@ -42,8 +42,8 @@ const Skills: FC = (props) => {
                             iconSrc={tool}
                             children={
                                 <>
-                                    GitHub, npm, Jenkins, Webpack,<br></br>
-                                    Jest, Storybook
+                                    Git, Jenkins,<br></br> Webpack, Vite,
+                                    Storybook
                                 </>
                             }
                         />

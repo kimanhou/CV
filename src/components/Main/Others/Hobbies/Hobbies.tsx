@@ -2,7 +2,7 @@ import { FC } from "react";
 import HobbiesBlock from "@/components/Main/Others/Hobbies/HobbiesBlock";
 import travel from "@/img/travel.png";
 import tiny from "@/img/tiny.png";
-import sport from "@/img/sport.png";
+import snorkel from "@/img/snorkel.png";
 import music from "@/img/music.png";
 import food from "@/img/food.png";
 import dog from "@/img/dog.png";
@@ -26,7 +26,7 @@ const Hobbies: FC = (props) => {
                 </ul>
                 <ul className={styles.hobbiesBlockList}>
                     <li>
-                        <HobbiesBlock iconSrc={sport} text="Sport" />
+                        <HobbiesBlock iconSrc={snorkel} text="Scuba diving" />
                     </li>
                     <li>
                         <HobbiesBlock iconSrc={dog} text="Dogs" />
